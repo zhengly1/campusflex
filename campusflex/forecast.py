@@ -16,12 +16,13 @@ Deterministic guards applied to every interpreter's output (``NoticeForecaster.u
   phrase for weather) – never from a clock time or any other number – and anchors its start
   to a whole clock token of the notice;
 * at most one adjustment per (source_id, kind);
-* contradictions (Table 10, "Two notices contradict each other → use the later notice"):
-  two adjustments of the same kind whose windows overlap make two different statements about
-  the same quantity over the same period, so only the later notice is kept and the pair is
-  reported in ``Forecast.conflicts`` (for L4 to flag to the administrator). This does not
-  distinguish a revision from an independent concurrent event of the same kind; with no
-  deterministic way to tell them apart the later notice wins, as the PDF prescribes.
+* contradictions (Table 10, "Two notices contradict each other → use the later notice; L4
+  flags it to the administrator"): two adjustments of the same kind whose windows overlap and
+  that concern the same place are two statements about the same event, so only the later
+  notice is kept and the pair is reported in ``Forecast.conflicts``; L4 turns each entry into
+  an administrator alert (``l4_negotiator.conflict_alerts``). Notices that name different
+  places (LT-A vs Hall C, B201 vs A102) are independent events and both apply. A notice that
+  names no known place is treated as being about the same event (the PDF's rule).
 """
 from __future__ import annotations
 
@@ -31,7 +32,7 @@ from typing import Any, Protocol
 
 import numpy as np
 
-from .config import STEP_MIN, PlannerConfig, parse_clock
+from .config import ROOM_IDS, STEP_MIN, PlannerConfig, parse_clock
 from .scenarios import Notice
 from .state import Snapshot
 
@@ -227,8 +228,36 @@ def ground_adjustment(adj: dict[str, Any], notices: dict[str, Notice], screen: b
     return None
 
 
+_PLACES: frozenset[str] | None = None
+
+
+def notice_places(text: str) -> frozenset[str]:
+    """Places a notice names: the corpus venues (LT-A, Hall C, ...), room ids and buildings."""
+    global _PLACES
+    if _PLACES is None:
+        import json
+        from pathlib import Path
+
+        corpus = Path(__file__).resolve().parent.parent / "data" / "notice_corpus.json"
+        try:
+            venues = json.loads(corpus.read_text()).get("places", [])
+        except (OSError, ValueError):
+            venues = []
+        _PLACES = frozenset(str(v) for v in venues)
+    low = str(text).lower()
+    found = {v for v in _PLACES if re.search(rf"(?<![\w-]){re.escape(v.lower())}(?![\w-])", low)}
+    found |= {r for r in ROOM_IDS if re.search(rf"\b{r.lower()}\b", low)}
+    found |= {f"building {b}" for b in re.findall(r"\bbuilding\s+([ab])\b", low)}
+    return frozenset(found)
+
+
+def _same_event(a: dict[str, Any], b: dict[str, Any]) -> bool:
+    pa, pb = set(a.get("_places") or ()), set(b.get("_places") or ())
+    return not (pa and pb) or bool(pa & pb)
+
+
 def resolve_conflicts(adjs: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """Same kind, overlapping windows: keep the later notice (Table 10).
+    """Same kind, overlapping windows, same place: keep the later notice (Table 10).
 
     Order is release time, then input order. Every replaced adjustment is reported; ``type`` is
     ``"contradiction"`` when the deltas differ and ``"duplicate"`` when they agree.
@@ -238,7 +267,7 @@ def resolve_conflicts(adjs: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
     for a in sorted(adjs, key=lambda x: x.get("_release", 0)):
         clashes = [
             k for k in kept
-            if k["kind"] == a["kind"] and not (
+            if k["kind"] == a["kind"] and _same_event(k, a) and not (
                 parse_clock(a["end"]) <= parse_clock(k["start"]) or parse_clock(k["end"]) <= parse_clock(a["start"])
             )
         ]
@@ -246,7 +275,7 @@ def resolve_conflicts(adjs: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
             conflicts.append({"earlier": k.get("source_id"), "later": a.get("source_id"), "kind": a["kind"],
                               "earlier_delta": k["delta"], "later_delta": a["delta"],
                               "type": "contradiction" if k["delta"] != a["delta"] else "duplicate",
-                              "resolution": "later notice kept"})
+                              "window": f"{a['start']}-{a['end']}", "resolution": "later notice kept"})
             kept.remove(k)
         kept.append(a)
     return kept, conflicts
@@ -305,6 +334,8 @@ class NoticeForecaster:
             self.log.append({"step": snap.step, "raw": adj, "applied": clean, "note": note})
             if clean is not None:
                 clean["_release"] = release.get(str(clean.get("source_id")), snap.clock_min)
+                src = released.get(str(clean.get("source_id")))
+                clean["_places"] = sorted(notice_places(src.text)) if src is not None else []
                 self._adjs.append(clean)
 
     def forecast(self, snap: Snapshot, length: int) -> Forecast:

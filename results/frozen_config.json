@@ -35,7 +35,7 @@
   "weather_delta_cap_c": 5.0
  },
  "config_hash": "de54345ef023",
- "frozen_at": "2026-11-04T11:42:40+00:00",
+ "frozen_at": "2026-11-05T02:20:35+00:00",
  "llm": {
   "model": "deepseek-flash",
   "prompt_hashes": {
@@ -49,5 +49,6 @@
   "provider": "deepseek"
  },
  "notices_hash": "33c23c12f015",
+ "scenario_hash": "0a1d2cc43ca0",
  "source": "PlannerConfig() defaults"
 }

@@ -33,7 +33,7 @@ printf 'listener 1883 127.0.0.1\nallow_anonymous true\n' > ~/mosquitto.conf
 
 | # | Item | Command | Needs LLM |
 |---|------|---------|-----------|
-| – | Freeze gate (once, before any held-out run) | `python -m campusflex freeze` → `results/frozen_config.json`: `config_hash`, per-role prompt hashes (L1–L5 and L4_explain for E4), model, held-out `notices_hash` | no |
+| – | Freeze gate (once, before any held-out run) | `python -m campusflex freeze` → `results/frozen_config.json`: `config_hash`, per-role prompt hashes (L1–L5 and L4_explain for E4), model, held-out `notices_hash`, `scenario_hash` (scenario generator inputs and code) | no |
 | – | LLM readiness check (after setting the key, before items 5–8) | `python -m campusflex llm-check` → `results/llm_check.json` | yes |
 | 0 | v1 core, 160 episodes, tests | `python -m campusflex v1` · `pytest -v -rs > results/test_results.txt` (item 2 is judged from the same file: run it with paho-mqtt and the broker up) | no |
 | 1 | Predicted-vs-realized V log, Ω ablation | `python -m campusflex vgap` | no |
@@ -136,7 +136,7 @@ The freeze record also locks the prompts (Figure 4: "prompts, weight levels, λ�
 notices locked"): one hash per role over its system prompt, schema, user-prompt builder and
 generation settings (`campusflex/llm/prompts.py`). Editing a prompt, switching the model or
 rewriting the held-out notices after the gate labels later LLM results `prompts_frozen=false` /
-`notices_frozen=false`. When a teammate rewrites the held-out notices (assumption 8 below), re-run
+`notices_frozen=false`. When a teammate rewrites the held-out notices (`data/notice_corpus.json`, `heldout`), re-run
 `python -m campusflex freeze --force` **before** any held-out run.
 
 ## Where each part of the PDF lives
@@ -164,109 +164,13 @@ rewriting the held-out notices after the gate labels later LLM results `prompts_
 | Table 14 fixtures | `tests/e5_fixtures/` (authored by `campusflex/experiments/e5_fixtures.py`) |
 | §5.4 team records | `docs/reviews.md`, `docs/disagreements.md`, `docs/integration_log.md`, `docs/contrib.md` (templates) |
 
-## Assumptions and deviations from the PDF (read before citing numbers)
-
-1. **The v1 code was not in this repository.** The numerical core was reconstructed from
-   Equations 1–5 and Tables 4, 6, 8. Unspecified details (demand profiles, outdoor
-   temperature, heat timing, seat-assignment order, thermostat) are declared choices in
-   `scenarios.py` / `model.py`, so **numbers do not reproduce Table 12**. The reconstructed v1
-   run shows the same pattern: the planner saves ≈27% kWh against fixed opening, has higher
-   deviation and relocations, and a worse full-evening score than the threshold rule.
-2. AC actuation is a device-local thermostat that drives each room to its setpoint in one
-   interval within `0 ≤ u ≤ h` (nominal parameters; the plant may be perturbed).
-3. Fixed opening opens inventory-order rooms covering 180 planned seats (4 rooms, matching
-   v1's 4.00 switches). Room dwell = 2 steps, student dwell = 3 steps, ≤ 2 moves per student,
-   pre-cool targets in [22, 27] °C — declared settings.
-4. The rule-staged generator is implemented literally ("idle room with enough seats"). With
-   70 students in B201 no single idle room fits, so in the E1 fault scenarios it rarely emits
-   plans; arm B ≈ arm A there. A split transfer is exactly what an LLM proposal can add.
-5. **LLM provider.** The PDF names no vendor; DeepSeek (`deepseek-flash`) is the default here.
-   It accepts the PDF's **temperature 0**, but temperature 0 is not guaranteed bit-identical
-   across calls, so replay reproducibility still comes from the prompt-hash cache and model
-   variance is measured by the uncached repeats. DeepSeek's JSON mode does not enforce a
-   schema server-side, hence the local schema check. With the Claude provider temperature
-   cannot be set (sampling parameters were removed on current models). The provider may
-   report a model under another name than requested (the legacy `deepseek-chat` came back as
-   `deepseek-flash`); the freeze gate compares the requested id, and E1 C/D records the
-   reported names of successful calls as `served_models`.
-6. Extra deterministic defences beyond the PDF:
-   * **L3:** notices that look like instructions ("SYSTEM:", "ignore previous", "report
-     delta", …) are withheld from the model; an adjustment must cite a released notice,
-     quote it verbatim, take |delta| from a count phrase in it ("about 60 students"; clock
-     times never count) and start at a clock time written in it; one adjustment per
-     (notice, kind); deltas are clipped to ±80. Table 10's "two notices contradict → use the
-     later notice" is applied to any overlapping adjustments of the same kind (so two
-     independent overlapping events of one kind collapse to the later one).
-   * **L1:** every number in a compiled request must be written in the request or equal a
-     declared default (listed in `defaults_filled`); otherwise the field counts as missing
-     and a clarifying question is asked. The default interval 18:00–22:00 needs a time
-     reference ("tonight", "this evening", "usual hours") or a written clock time; a student
-     count is grounded only by numbers that are not temperatures, kWh/kW, percentages or
-     durations (or a sum of two such numbers). An inverted band or interval, or a target/band
-     below the lowest AC setpoint (22 °C), is a conflict that triggers a question.
-     Band/target must lie in 18–30 °C, and `apply_request` refuses a band with low ≥ high or a
-     target outside [22 °C, band high] (no AC setpoint would be valid).
-   * **L3 (LLM):** besides start and delta, the end time must be written in the notice or be
-     the declared default (start + 2 h, at most 22:00), and the evidence quote may not be empty.
-   * **Faithfulness checker:** a logged fraction may appear as a percentage only before
-     "%"/"percent"; scientific notation and number words followed by a unit ("fifteen
-     percent", "two moves") are checked; "Option 1.5 kWh" is not an option label. A number
-     written with a unit must match a logged value of that unit: each value takes its unit
-     from its field name (`kwh`/`E`, `mean_dev_c`/`dev_mean`, `moves`/`M`, `K`, `U`,
-     `*_min`), so "6 kWh" is flagged when 6 is only a move count (listed in
-     `unit_mismatch`). Values of unnamed fields (`extra_allowed`, parameter values) match
-     any unit; a number without a unit is matched by value alone.
-   * **Prompt hashes** cover the helpers that render each role's data (`Snapshot.summary` for L2,
-     L4 option views, the E4 ranking view, the L5 digest), not only the prompt builders.
-   * **E5 live** reports two variants on the same 20 injected notices: *deployed* (screen
-     on) and *model_only* (screen off, so the model itself is tested). The screen patterns
-     were written by the same author as the fixtures, so the deployed figure is optimistic.
-7. The full-evening score always uses the v1 reference weights (λT=8, λM=0.06, λS=0.08) so
-   configurations with different weights (L1, L5) are compared on one yardstick.
-8. `data/e2_requests.json` holds 40 newly written labelled requests; the 30 v1 requests were
-   not available and should be merged in before the freeze gate. Held-out notice wording in
-   `data/notice_corpus.json` should be rewritten by a member who did not write the prompts.
-9. The team-process files in `docs/` are templates only; no review records are fabricated.
-10. **Runtime safety (declared choices where the PDF is silent):** the controller's belief
-    about each room is corrected from telemetry taken after its last command (a lost ack is
-    detected as `drift`, and an occupied room that is physically closed counts as a hard
-    violation); room switches are make-before-break (closes are sent only after every newly
-    opened room acknowledged, otherwise deferred); an `ac_offline` ack marks the unit offline
-    until a newer reading; a room without a fresh reading is not opened; devices refuse
-    commands older than the last one applied; runs sharing a broker ignore each other's
-    messages (run id in every payload); setpoints must lie in [22 °C, band high].
-11. **Planner details:** the rollout and Ω window stop at 22:00; explicit moves are applied
-    before forced relocation (a transfer out of a closing room reaches its named target, and
-    nobody is moved twice in one step); dwell rules are checked on every step of a staged
-    plan, not only the first; an L1 energy budget is checked pro rata and ranks compliant
-    plans before non-compliant ones at equal unserved demand (service stays first).
-    Moves at one offset run in the order written; `"count": "all"` means whoever is still in
-    the source room after the earlier moves out of it (as `model.assign` executes it), so a
-    split transfer is "40 to B202, then all to A103". The validator checks this per offset and
-    rejects a move that exceeds the destination's seats instead of trimming it; the L2 prompt
-    says so. (Before this was written into the validator and the prompt, the first live
-    `llm-check` showed 2 of 3 L2 replies with no valid plan: the model split the 70 students of
-    B201 correctly but every "all" was counted as 70.)
-    Later steps of a staged plan are checked against the state the rollout predicts for them
-    with the commit-time rules (free seats, moves into closed rooms, closing an occupied room in
-    a no-move window): a plan whose later step the validator would refuse when it comes due is
-    rejected (and the reason returned to L2) instead of being scored on trimmed moves. Seats freed
-    by an earlier move out of a room count for a later move into it at the same step.
-12. **Comparisons (E1, E6) in Eq. 4 order:** unserved person-minutes decide when their paired
-    interval excludes zero; when they are equal in every pair or their interval includes zero,
-    the score decides (`decided_by: score_unserved_tied`). The V-gap log skips steps whose
-    committed action was a fallback (the prediction belonged to another plan).
-13. **E6 budget:** L5 stops early after two rounds without an accepted diff (Section 3.4); the
-    random-search control always spends the full 18 proposals ("the same budget"), so it never
-    has less evaluation budget than L5. `e6.json` records both budgets.
-
 ## Tests
 
-`pytest` → 190 passed (`results/test_results.txt`, run with paho-mqtt, streamlit and a local
+`pytest` → 193 passed (`results/test_results.txt`, run with paho-mqtt, streamlit and a local
 Mosquitto 2.0.20 broker; the MQTT tests also pass on amqtt 0.12.1). Without paho-mqtt/a broker
 the three real-broker tests are skipped, and without streamlit the dashboard tests
 (`tests/test_dashboard.py`, Streamlit AppTest: every step of an episode renders, each metric is
-the logged value) are skipped: 185 passed, 4 skipped. `tests/test_core.py` holds the 13 core invariants; the others cover the plan
+the logged value) are skipped: 188 passed, 4 skipped. `tests/test_core.py` holds the 13 core invariants; the others cover the plan
 language/validator/graph, IoT layer (incl. drift, partial acks, out-of-order commands), L1/L3/L4
 roles and their grounding, L5, the DeepSeek client (`tests/test_llm_client.py`, fake transport,
 no network), the experiment protocol checks incl. the prompt/notice freeze (`tests/test_experiments.py`),

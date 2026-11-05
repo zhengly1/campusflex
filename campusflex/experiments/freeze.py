@@ -37,7 +37,7 @@ def freeze(out: str | Path | None = None, force: bool = False, cfg: PlannerConfi
 
     rec = {"config": cfg.to_dict(), "config_hash": common.config_hash(cfg), "source": source,
            "llm": {"provider": DEFAULT_PROVIDER, "model": DEFAULT_MODEL, "prompt_hashes": prompt_hashes()},
-           "notices_hash": notices_hash(),
+           "notices_hash": notices_hash(), "scenario_hash": common.scenario_hash(),
            "frozen_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(rec, indent=1, sort_keys=True))
@@ -54,7 +54,7 @@ def main(argv: list[str] | None = None) -> None:
     except FileExistsError as e:
         raise SystemExit(str(e)) from None
     print(f"wrote {rec['path']} (config_hash {rec['config_hash']}, model {rec['llm']['model']}, "
-          f"notices_hash {rec['notices_hash']})")
+          f"notices_hash {rec['notices_hash']}, scenario_hash {rec['scenario_hash']})")
 
 
 if __name__ == "__main__":

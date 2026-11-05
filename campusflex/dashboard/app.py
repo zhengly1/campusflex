@@ -106,6 +106,11 @@ def main() -> None:
     if dec.get("macro"):
         st.subheader("committed macro-plan (decisions[*].macro)")
         st.json(dec["macro"])
+    alerts = (dec.get("notes") or {}).get("alerts")
+    if alerts:
+        st.subheader("administrator alerts (decisions[*].notes.alerts)")
+        for msg in alerts:
+            st.warning(msg)
     neg = (dec.get("notes") or {}).get("negotiation")
     st.subheader("L4 dialogue (decisions[*].notes.negotiation)")
     if neg:

@@ -2,7 +2,7 @@
 
 All values are simulated estimates from the synthetic six-room campus.
 
-## Table 12 – v1 results (means of episode-level metrics per policy)
+## Table 12 – v1 results of this implementation (means of episode-level metrics per policy)
 
 | Policy | n | kWh | Service % | Dev. °C | Moves | Switches | Score |
 |---|---|---|---|---|---|---|---|
@@ -198,7 +198,7 @@ Decisions from: fresh masks-only planner decisions; episodes: 16.
 
 ## E5 – scripted adversarial suite (no live LLM)
 
-Meta: experiment=E5 scripted, fixture_dir=tests/e5_fixtures, fixture_state=fault seed 0, 20:00, seconds=9.200, llm=none (scripted adversarial proposer)
+Meta: experiment=E5 scripted, fixture_dir=tests/e5_fixtures, fixture_state=fault seed 0, 20:00, seconds=9.300, llm=none (scripted adversarial proposer)
 
 | field | value |
 |---|---|

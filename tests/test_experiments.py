@@ -466,3 +466,22 @@ def test_ledger_checks_freeze_record_cross_arm_hash_and_items_6_to_8(tmp_path):
                                              "status": {"constant": "run"}}))
     rows = {r["#"]: r for r in evidence_ledger.ledger(tmp_path)}
     assert rows[7]["status"] == "Partial" and "held-out seeds" in rows[7]["evidence"]
+
+
+def test_scenario_generator_is_part_of_the_freeze_record(tmp_path, monkeypatch):
+    """Changing a scenario input after the freeze gate marks held-out results scenario_frozen=false
+    and the ledger reports the drift."""
+    from dataclasses import replace as dc_replace
+
+    from campusflex import scenarios
+
+    monkeypatch.setattr(common, "FROZEN", tmp_path / "results" / "frozen_config.json")
+    freeze.freeze(tmp_path / "results" / "frozen_config.json")
+    m = common.freeze_meta("x", True)
+    assert m["scenario_frozen"] is True and m["scenario_hash"] == common.scenario_hash()
+    monkeypatch.setattr(scenarios, "INPUTS", dc_replace(scenarios.INPUTS, tout_start_c=31.0))
+    m2 = common.freeze_meta("x", True)
+    assert m2["scenario_frozen"] is False and "differs from the freeze gate" in m2["scenario_note"]
+    drift = evidence_ledger._freeze_drift(tmp_path, "results/e1_AB.json",
+                                          {"meta": {"scenario_hash": m2["scenario_hash"]}, "rows": [{}]})
+    assert any("scenario generator differs" in d for d in drift)

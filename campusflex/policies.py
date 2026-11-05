@@ -171,6 +171,7 @@ class SimulationPlanner:
         self.prev_health: np.ndarray | None = None
         self.prev_demand: int | None = None
         self.l2_feedback: list[dict[str, Any]] = []
+        self.alerted: set[tuple[Any, Any, Any]] = set()     # notice conflicts already flagged (Table 10)
         # l2_fallbacks: the call failed (error, timeout, unparseable); l2_empty: a valid reply with no
         # plans ("nothing staged would help" – the prompt allows it), which is an LLM answer, not a fallback
         self.stats = {"l2_calls": 0, "l2_plans": 0, "l2_valid": 0, "l2_selected": 0, "l2_fallbacks": 0,
@@ -333,6 +334,12 @@ class SimulationPlanner:
             for k, (p, r) in enumerate(ctx.scored[: self.keep_ranking])
         ]
         notes = dict(ctx.notes)
+        new = [c for c in ctx.fc.conflicts if (c.get("earlier"), c.get("later"), c.get("kind")) not in self.alerted]
+        if new:                 # Table 10: L4 flags a contradiction to the administrator, once
+            from .roles.l4_negotiator import conflict_alerts
+
+            notes["alerts"] = conflict_alerts(new)
+            self.alerted |= {(c.get("earlier"), c.get("later"), c.get("kind")) for c in new}
         recheck = getattr(self.forecaster, "recheck_requests", None)
         if recheck:
             notes["recheck"] = sorted({r.get("recheck_room") for r in recheck if r.get("recheck_room")})

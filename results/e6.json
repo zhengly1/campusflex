@@ -39,6 +39,8 @@
   ],
   "config_hash": "de54345ef023",
   "frozen": true,
+  "scenario_hash": "0a1d2cc43ca0",
+  "scenario_frozen": true,
   "order": "Eq. 4: unserved person-minutes first, then score",
   "note": "evaluation arm is the non-LLM pre-review arm (masks + rule-staged); L2 trigger parameters therefore have no effect in this evaluation"
  },

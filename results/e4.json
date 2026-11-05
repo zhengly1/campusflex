@@ -4,6 +4,8 @@
   "experiment": "E4",
   "config_hash": "de54345ef023",
   "frozen": true,
+  "scenario_hash": "0a1d2cc43ca0",
+  "scenario_frozen": true,
   "seeds": [
    10,
    11

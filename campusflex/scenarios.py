@@ -111,36 +111,63 @@ def _load_corpus() -> dict[str, Any]:
     return json.loads(p.read_text())
 
 
+@dataclass
+class ScenarioInputs:
+    """Scenario inputs the PDF leaves open (weather, demand shape, timing), in one place.
+
+    Anchored by the PDF: 120 students at 18:00 rising toward 180 (Section 2.1), heat in the
+    heat and fault scenarios, B201's AC failing at 20:00. The other values are this project's
+    own settings; their fingerprint is part of the freeze record (``scenario_hash``)."""
+
+    tout_start_c: float = 29.0          # outdoor temperature at 18:00 ...
+    tout_end_c: float = 27.0            # ... falling linearly to 22:00
+    tout_jitter_c: float = 0.5          # per-seed offset, uniform ±
+    heat_rise_c: float = 3.0            # heat scenarios: rise of the outdoor temperature
+    heat_start_min: int = 19 * 60       # earliest start of the rise (+0-30 min per seed)
+    heat_ramp_steps: int = 2
+    steady_demand: int = 120
+    surge_base: int = 120
+    surge_peak: int = 180
+    surge_late: int = 90                # demand after the surge ends
+    surge_start_min: int = 18 * 60 + 30  # surge starts here (+0-10 min per seed)
+    surge_ramp_steps: int = 3
+    surge_end_min: int = 21 * 60
+
+
+INPUTS = ScenarioInputs()
+
+
 def _base_tout(rng: np.random.Generator) -> np.ndarray:
-    off = rng.uniform(-0.5, 0.5)
-    return np.linspace(29.0, 27.0, N_STEPS + 1) + off
+    off = rng.uniform(-INPUTS.tout_jitter_c, INPUTS.tout_jitter_c)
+    return np.linspace(INPUTS.tout_start_c, INPUTS.tout_end_c, N_STEPS + 1) + off
 
 
 def _add_heat(t_out: np.ndarray, rng: np.random.Generator) -> tuple[np.ndarray, int]:
-    start = clock_to_step(19 * 60) + int(rng.integers(0, 4))     # 19:00-19:30
-    rise = 3.0 + rng.uniform(-0.3, 0.3)
+    start = clock_to_step(INPUTS.heat_start_min) + int(rng.integers(0, 4))
+    rise = INPUTS.heat_rise_c + rng.uniform(-0.3, 0.3)
     t = t_out.copy()
     for k in range(start, N_STEPS + 1):
-        t[k] += rise * min(1.0, (k - start + 1) / 2.0)
+        t[k] += rise * min(1.0, (k - start + 1) / float(INPUTS.heat_ramp_steps))
     return t, start
 
 
 def _steady_demand(rng: np.random.Generator) -> np.ndarray:
-    return np.full(N_STEPS, 120 + int(rng.integers(-5, 6)), dtype=int)
+    return np.full(N_STEPS, INPUTS.steady_demand + int(rng.integers(-5, 6)), dtype=int)
 
 
 def _surge_demand(rng: np.random.Generator) -> np.ndarray:
-    base = 120 + int(rng.integers(-4, 5))
-    peak = 180 + int(rng.integers(-6, 7))
-    late = 90 + int(rng.integers(-5, 6))
-    s0 = clock_to_step(18 * 60 + 30) + int(rng.integers(0, 2))   # surge starts 18:30-18:40
+    base = INPUTS.surge_base + int(rng.integers(-4, 5))
+    peak = INPUTS.surge_peak + int(rng.integers(-6, 7))
+    late = INPUTS.surge_late + int(rng.integers(-5, 6))
+    s0 = clock_to_step(INPUTS.surge_start_min) + int(rng.integers(0, 2))
+    ramp = INPUTS.surge_ramp_steps
     d = np.empty(N_STEPS, dtype=int)
     for k in range(N_STEPS):
         if k < s0:
             d[k] = base
-        elif k < s0 + 3:
-            d[k] = round(base + (peak - base) * (k - s0 + 1) / 3)
-        elif k < clock_to_step(21 * 60):
+        elif k < s0 + ramp:
+            d[k] = round(base + (peak - base) * (k - s0 + 1) / ramp)
+        elif k < clock_to_step(INPUTS.surge_end_min):
             d[k] = peak
         else:
             d[k] = late

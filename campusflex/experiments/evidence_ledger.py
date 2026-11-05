@@ -84,7 +84,8 @@ def _json_status(root: Path, item: Item) -> tuple[str, str]:
                 if m.get("frozen") is False:
                     status = "Partial"
                     notes.append(f"{a}: not run under a frozen configuration (freeze gate)")
-                for k, what in (("prompts_frozen", "prompts_note"), ("notices_frozen", "notices_note")):
+                for k, what in (("prompts_frozen", "prompts_note"), ("notices_frozen", "notices_note"),
+                                ("scenario_frozen", "scenario_note")):
                     if m.get(k) is False:
                         status = "Partial"
                         notes.append(f"{a}: {m.get(what) or k + ' is false'} (freeze gate)")
@@ -235,6 +236,8 @@ def _freeze_drift(root: Path, rel: str, obj: Any) -> list[str]:
         out.append(f"{rel}: model {mod} differs from the frozen model {llm['model']}")
     if m.get("notices_hash") and rec.get("notices_hash") and m["notices_hash"] != rec["notices_hash"]:
         out.append(f"{rel}: held-out notices differ from the freeze record")
+    if m.get("scenario_hash") and rec.get("scenario_hash") and m["scenario_hash"] != rec["scenario_hash"]:
+        out.append(f"{rel}: scenario generator differs from the freeze record")
     return out
 
 

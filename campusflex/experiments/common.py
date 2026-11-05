@@ -137,10 +137,32 @@ def notices_freeze_meta(path: str | Path | None = None) -> dict[str, Any]:
     return out
 
 
+def scenario_hash() -> str:
+    """Fingerprint of the scenario generator: the calibrated inputs (``scenarios.INPUTS``) and the
+    source of the functions that turn them into demand, weather and faults."""
+    import inspect
+    from dataclasses import asdict
+
+    from .. import scenarios as sc
+
+    parts = [json.dumps(asdict(sc.INPUTS), sort_keys=True)]
+    parts += [inspect.getsource(f) for f in (sc._base_tout, sc._add_heat, sc._steady_demand, sc._surge_demand,
+                                             sc._demand_notice, sc.make_scenario)]
+    return hashlib.sha256("\n".join(parts).encode()).hexdigest()[:12]
+
+
 def freeze_meta(h: str, frozen: bool) -> dict[str, Any]:
-    return {"config_hash": h, "frozen": frozen,
-            **({} if frozen else {"frozen_note": "no results/frozen_config.json: declared defaults used; "
-                                                 "run `python -m campusflex freeze` before held-out runs"})}
+    cur = scenario_hash()
+    stored = (frozen_record() or {}).get("scenario_hash")
+    out: dict[str, Any] = {"config_hash": h, "frozen": frozen, "scenario_hash": cur,
+                           "scenario_frozen": bool(stored) and stored == cur}
+    if not frozen:
+        out["frozen_note"] = ("no results/frozen_config.json: declared defaults used; "
+                              "run `python -m campusflex freeze` before held-out runs")
+    if not out["scenario_frozen"]:
+        out["scenario_note"] = ("scenario generator differs from the freeze gate" if stored else
+                                "the freeze record has no scenario hash: run `python -m campusflex freeze --force`")
+    return out
 
 
 # ------------------------------------------------------------------------- LLM arms

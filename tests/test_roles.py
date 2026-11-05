@@ -420,10 +420,45 @@ def test_later_notice_wins_for_overlapping_windows_of_same_kind():
     kept, conflicts = resolve_conflicts([b, a, c])
     assert [k["source_id"] for k in kept] == ["N2", "N3"]                         # N3 does not overlap
     assert conflicts == [{"earlier": "N1", "later": "N2", "kind": "demand", "earlier_delta": 60.0,
-                          "later_delta": 30.0, "type": "contradiction", "resolution": "later notice kept"}]
+                          "later_delta": 30.0, "type": "contradiction", "window": "19:40-21:00",
+                          "resolution": "later notice kept"}]
     kept2, _ = resolve_conflicts([a, {**a, "source_id": "N4", "delta": -50.0, "_release": 1170}])
     assert [k["source_id"] for k in kept2] == ["N4"]                              # opposite sign: unchanged rule
     assert [k["source_id"] for k in resolve_conflicts([a, {**a, "kind": "weather", "delta": 2.0}])[0]] == ["N1", "N1"]
+
+
+def test_notices_about_different_places_are_independent_events_and_contradictions_are_flagged_once():
+    """Table 10 applies to two notices about the same event; concurrent events elsewhere add up."""
+    from campusflex.config import PlannerConfig
+    from campusflex.forecast import NoticeForecaster, notice_places, resolve_conflicts
+    from campusflex.roles.l3_events import OracleInterpreter
+    from campusflex.roles.l4_negotiator import conflict_alerts
+    from campusflex.scenarios import Notice
+
+    assert notice_places("Review session in LT-A ends 19:00; expect about 60 students") == {"LT-A"}
+    assert notice_places("B201 feels stuffy") == {"B201"} and notice_places("about 40 arrive") == frozenset()
+    a = {"source_id": "N1", "kind": "demand", "start": "19:40", "end": "21:00", "delta": 60.0, "_release": 1160,
+         "_places": ["LT-A"]}
+    b = {**a, "source_id": "N2", "delta": 30.0, "_release": 1180, "_places": ["Hall C"]}
+    c = {**a, "source_id": "N3", "delta": 40.0, "_release": 1190, "_places": ["LT-A"]}
+    kept, conf = resolve_conflicts([a, b])
+    assert [k["source_id"] for k in kept] == ["N1", "N2"] and conf == []          # LT-A and Hall C: both apply
+    kept, conf = resolve_conflicts([a, b, c])
+    assert [k["source_id"] for k in kept] == ["N2", "N3"] and conf[0]["earlier"] == "N1"
+    assert [k["source_id"] for k in resolve_conflicts([a, {**c, "_places": []}])[0]] == ["N3"]   # no place: PDF rule
+    msg = conflict_alerts(conf)[0]
+    assert "N1 and N3 contradict" in msg and "+60 vs +40 students" in msg and "N3 is used" in msg
+
+    cfg = PlannerConfig()
+    n1 = Notice("N1", 19 * 60, "Review session in LT-A ends 19:40; expect about 40 students",
+                truth={"kind": "demand", "start": "19:40", "end": "21:00", "delta": 40})
+    n2 = Notice("N2", 19 * 60 + 10, "Hall C talk ends 19:40; expect about 30 students",
+                truth={"kind": "demand", "start": "19:40", "end": "21:00", "delta": 30})
+    fc = NoticeForecaster(OracleInterpreter(), cfg)
+    snap = type("S", (), {"notices": [n1, n2], "clock_min": 19 * 60 + 20, "step": 8, "demand": 120,
+                          "t_out": 28.0})()
+    out = fc.forecast(snap, 6)
+    assert out.conflicts == [] and out.demand[3] - out.demand[0] == 70      # both arrivals counted at 19:50
 
 
 # ------------------------------------------------------------------ review fixes (#5 L1)
@@ -668,3 +703,28 @@ def test_faithfulness_a_number_with_a_unit_must_match_a_value_of_that_unit():
           "horizon_min": 30}
     assert check("4.2 kWh over 30 minutes, 0.031 °C, 6 moves and 1 room switches", rk).flagged == []
     assert check("6 kWh and 7.5 moves", rk).flagged == ["6", "7.5"]
+
+
+def test_planner_flags_a_notice_contradiction_to_the_administrator_once():
+    """Table 10: the later of two contradicting notices about one event is used and L4 tells the
+    administrator, in the decision record (shown by the dashboard), exactly once."""
+    from campusflex.config import PlannerConfig
+    from campusflex.episode import run_episode
+    from campusflex.forecast import NoticeForecaster
+    from campusflex.policies import SimulationPlanner
+    from campusflex.roles.l3_events import OracleInterpreter
+    from campusflex.scenarios import Notice, make_scenario
+
+    cfg = PlannerConfig()
+    sc = make_scenario("notice_surge", 0)
+    sc.notices = [
+        Notice("N1", 19 * 60, "Review session in LT-A ends 19:40; expect about 60 students",
+               truth={"kind": "demand", "start": "19:40", "end": "21:00", "delta": 60}),
+        Notice("N2", 19 * 60 + 20, "Update: the LT-A review session ends 19:40 with about 30 students",
+               truth={"kind": "demand", "start": "19:40", "end": "21:00", "delta": 30}),
+    ]
+    pol = SimulationPlanner(cfg, forecaster=NoticeForecaster(OracleInterpreter(), cfg), name="t")
+    r = run_episode(sc, pol, cfg, keep_decisions=True)
+    alerts = [(d["step"], a) for d in r.decisions for a in (d.get("notes") or {}).get("alerts", [])]
+    assert len(alerts) == 1 and alerts[0][0] == 8                      # 19:20, when N2 arrives
+    assert "N1 and N2 contradict" in alerts[0][1] and "+60 vs +30 students" in alerts[0][1]

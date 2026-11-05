@@ -135,7 +135,7 @@ def protocol_note(obj: Any) -> list[str]:
 # --------------------------------------------------------------------- sections
 def section_v1(results: Path) -> list[str]:
     obj = load(results, "v1/summary.json")
-    out = ["## Table 12 – v1 results (means of episode-level metrics per policy)", ""]
+    out = ["## Table 12 – v1 results of this implementation (means of episode-level metrics per policy)", ""]
     rows = rows_of(obj)
     if not rows:
         return out + [MISSING, ""]

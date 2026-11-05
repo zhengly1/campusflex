@@ -1,6 +1,6 @@
 {
  "meta": {
-  "experiment": "v1 core (reconstructed)",
+  "experiment": "v1 core (this project's implementation)",
   "n_episodes": 160,
   "seeds": [
    0,
@@ -60,6 +60,21 @@
    "tradeoff_dE_kwh": 1.0,
    "tradeoff_dDev_c": 0.02,
    "departure_mode": "highest_id"
+  },
+  "scenario_inputs": {
+   "tout_start_c": 29.0,
+   "tout_end_c": 27.0,
+   "tout_jitter_c": 0.5,
+   "heat_rise_c": 3.0,
+   "heat_start_min": 1140,
+   "heat_ramp_steps": 2,
+   "steady_demand": 120,
+   "surge_base": 120,
+   "surge_peak": 180,
+   "surge_late": 90,
+   "surge_start_min": 1110,
+   "surge_ramp_steps": 3,
+   "surge_end_min": 1260
   },
   "seconds": 2.2
  },

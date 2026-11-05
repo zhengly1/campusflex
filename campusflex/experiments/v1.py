@@ -2,9 +2,9 @@
 (fixed opening, demand threshold, simulation planner, planner without relocation cost),
 v1 settings (single 30-minute mask hold, no terminal term, highest-id departures).
 
-NOTE: this is a reconstruction of the v1 core from the equations and parameters in the
-v2.1 document; the original v1 code and its scenario generator were not in this repository,
-so the numbers will not match Table 12 exactly. Compare shapes, not digits.
+This project's own v1 implementation, built from Equations 1-5 and Tables 4, 6 and 8 (no
+earlier v1 code was used). Its results are the v1 baseline of this repository; they are not
+compared with the figures printed in the v2.1 document.
 """
 from __future__ import annotations
 
@@ -34,9 +34,14 @@ def run(seeds=DEV_SEEDS, workers: int | None = None, out: str = "results/v1/summ
     save_thr = paired_bootstrap(a, b)
     mv = {r["policy"]: r["moves"] for r in by_policy}
     reduction = 100.0 * (1 - mv["planner"] / mv["planner_nomove"]) if mv.get("planner_nomove") else None
+    from dataclasses import asdict
+
+    from .. import scenarios
+
     res = {
-        "meta": {"experiment": "v1 core (reconstructed)", "n_episodes": len(rows), "seeds": list(seeds),
-                 "scenarios": list(V1_SCENARIOS), "policies": list(POLICIES), "config": cfg.to_dict(),
+        "meta": {"experiment": "v1 core (this project's implementation)", "n_episodes": len(rows),
+                 "seeds": list(seeds), "scenarios": list(V1_SCENARIOS), "policies": list(POLICIES),
+                 "config": cfg.to_dict(), "scenario_inputs": asdict(scenarios.INPUTS),
                  "seconds": round(time.time() - t0, 1)},
         "table12": by_policy,
         "by_scenario": group_means(rows, ("scenario", "policy"), ("kwh", "dev_c", "moves", "switches", "score")),

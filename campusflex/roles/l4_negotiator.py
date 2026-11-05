@@ -313,6 +313,24 @@ def what_if_text(res: dict[str, Any]) -> str:
     )
 
 
+def conflict_alerts(conflicts: list[dict[str, Any]]) -> list[str]:
+    """Table 10: "Two notices contradict each other → use the later notice; L4 flags it to the
+    administrator". One deterministic sentence per conflict; every number is a logged field
+    of ``Forecast.conflicts``."""
+    unit = {"demand": "students", "weather": "°C"}
+    out = []
+    for c in conflicts:
+        u = unit.get(str(c.get("kind")), "")
+        if c.get("type") == "duplicate":
+            out.append(f"Notice {c.get('later')} repeats notice {c.get('earlier')} ({c.get('kind')}, "
+                       f"{c.get('window')}); it is counted once.")
+        else:
+            out.append(f"Notices {c.get('earlier')} and {c.get('later')} contradict each other about "
+                       f"{c.get('kind')} in {c.get('window')} ({c.get('earlier_delta'):+g} vs "
+                       f"{c.get('later_delta'):+g} {u}); the later notice {c.get('later')} is used.")
+    return out
+
+
 def template_text(alts: list[dict[str, Any]], conflict: str = "energy_vs_comfort") -> str:
     """Non-LLM control: fixed sentence pattern filled with tool values."""
     head = ("The request cannot be fully served; these are the closest options."
