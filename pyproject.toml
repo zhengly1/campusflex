@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "campusflex"
+version = "2.1.0"
+description = "CampusFlex: LLM-in-the-loop agent for adaptive campus space and energy management (synthetic six-room campus)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pydantic>=2.5",
+]
+
+[project.optional-dependencies]
+llm = ["openai>=1.40"]          # DeepSeek (OpenAI-compatible API), the default provider
+claude = ["anthropic>=2.0"]      # optional alternative provider
+agent = ["langgraph>=0.2"]
+iot = ["paho-mqtt>=2.0"]
+dashboard = ["streamlit>=1.30", "pandas>=1.5"]
+test = ["pytest>=7"]
+all = ["openai>=1.40", "anthropic>=2.0", "langgraph>=0.2", "paho-mqtt>=2.0", "streamlit>=1.30", "pandas>=1.5", "pytest>=7"]
+
+[project.scripts]
+campusflex = "campusflex.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["campusflex*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+# prompt-hash cache of LLM replies (local; may be large)
+.cache/
+# local Claude Code state
+.claude/
+# never commit credentials
+*.env
+.env*

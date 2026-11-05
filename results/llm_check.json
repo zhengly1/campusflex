@@ -1,0 +1,204 @@
+{
+ "meta": {
+  "experiment": "LLM readiness check (not ledger evidence)",
+  "model": "deepseek-chat",
+  "repeats": 5,
+  "inputs": "E5 fixture state (fault, development seed 0, 20:00); no held-out seed",
+  "caching": "disabled",
+  "step_budget_s": 20.0,
+  "calls_per_step": 3,
+  "prompts_frozen": true
+ },
+ "roles": {
+  "L1": {
+   "n": 5,
+   "ok_calls": 5,
+   "usable_outputs": 5,
+   "errors": {},
+   "latency_s": {
+    "median": 0.97,
+    "max": 1.19
+   },
+   "input_tokens_mean": 1122.0,
+   "output_tokens_mean": 132.0,
+   "cache_hit_tokens_mean": 896.0,
+   "stop_reasons": {
+    "stop": 5
+   },
+   "models": [
+    "deepseek-flash"
+   ],
+   "system_fingerprints": [
+    "bc19ba97cbe016479903222bb1578db6"
+   ],
+   "details": [
+    {
+     "questions": 0,
+     "errors": []
+    },
+    {
+     "questions": 0,
+     "errors": []
+    },
+    {
+     "questions": 0,
+     "errors": []
+    }
+   ]
+  },
+  "L2": {
+   "n": 5,
+   "ok_calls": 5,
+   "usable_outputs": 5,
+   "errors": {},
+   "latency_s": {
+    "median": 3.18,
+    "max": 4.97
+   },
+   "input_tokens_mean": 1696.0,
+   "output_tokens_mean": 754.4,
+   "cache_hit_tokens_mean": 1254.4,
+   "stop_reasons": {
+    "stop": 5
+   },
+   "models": [
+    "deepseek-flash"
+   ],
+   "system_fingerprints": [
+    "bc19ba97cbe016479903222bb1578db6"
+   ],
+   "step_budget_s": 20.0,
+   "within_step_budget": 5,
+   "valid_plans_mean": 4.2,
+   "plans_mean": 4.2,
+   "details": [
+    {
+     "plans": 5,
+     "valid_plans": 5
+    },
+    {
+     "plans": 4,
+     "valid_plans": 4
+    },
+    {
+     "plans": 4,
+     "valid_plans": 4
+    }
+   ]
+  },
+  "L3": {
+   "n": 5,
+   "ok_calls": 5,
+   "usable_outputs": 5,
+   "errors": {},
+   "latency_s": {
+    "median": 0.96,
+    "max": 1.0
+   },
+   "input_tokens_mean": 694.0,
+   "output_tokens_mean": 58.0,
+   "cache_hit_tokens_mean": 512.0,
+   "stop_reasons": {
+    "stop": 5
+   },
+   "models": [
+    "deepseek-flash"
+   ],
+   "system_fingerprints": [
+    "bc19ba97cbe016479903222bb1578db6"
+   ],
+   "step_budget_s": 20.0,
+   "within_step_budget": 5,
+   "details": [
+    {
+     "adjustments": 1
+    },
+    {
+     "adjustments": 1
+    },
+    {
+     "adjustments": 1
+    }
+   ]
+  },
+  "L4_explain": {
+   "n": 5,
+   "ok_calls": 5,
+   "usable_outputs": 5,
+   "errors": {},
+   "latency_s": {
+    "median": 1.15,
+    "max": 1.23
+   },
+   "input_tokens_mean": 561.0,
+   "output_tokens_mean": 97.6,
+   "cache_hit_tokens_mean": 332.8,
+   "stop_reasons": {
+    "stop": 5
+   },
+   "models": [
+    "deepseek-flash"
+   ],
+   "system_fingerprints": [
+    "bc19ba97cbe016479903222bb1578db6"
+   ],
+   "details": [
+    {},
+    {},
+    {}
+   ]
+  },
+  "L5": {
+   "n": 5,
+   "ok_calls": 5,
+   "usable_outputs": 5,
+   "errors": {},
+   "latency_s": {
+    "median": 2.99,
+    "max": 3.32
+   },
+   "input_tokens_mean": 1755.0,
+   "output_tokens_mean": 360.4,
+   "cache_hit_tokens_mean": 1536.0,
+   "stop_reasons": {
+    "stop": 5
+   },
+   "models": [
+    "deepseek-flash"
+   ],
+   "system_fingerprints": [
+    "bc19ba97cbe016479903222bb1578db6"
+   ],
+   "details": [
+    {
+     "issues": []
+    },
+    {
+     "issues": []
+    },
+    {
+     "issues": []
+    }
+   ]
+  }
+ },
+ "projection_e1_cd": {
+  "l2_calls_per_episode_mean": 10.75,
+  "episodes": 480,
+  "l2_calls_est": 5160,
+  "measured_on": "development seed 0, scripted empty replies",
+  "threads": 8,
+  "wall_hours_est": 0.57,
+  "input_tokens_est": 8751360,
+  "output_tokens_est": 3892704,
+  "cache_hit_tokens_est": 6472704,
+  "cost_usd_est": 2.45,
+  "prices_usd_per_mtok": {
+   "input": 0.28,
+   "input_cache_hit": 0.028,
+   "output": 0.42
+  }
+ },
+ "warnings": [],
+ "status": "ready"
+}

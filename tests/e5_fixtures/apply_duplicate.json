@@ -1,0 +1,92 @@
+[
+ {
+  "id": "DUP00",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "same_action",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP01",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "different_action",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP02",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "same_action_x3",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP03",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "after_hold",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP04",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "different_moves",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP05",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "same_action",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP06",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "different_action",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP07",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "same_action_x3",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP08",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "empty_mask",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ },
+ {
+  "id": "DUP09",
+  "class": "duplicate_key",
+  "boundary": "apply_plan",
+  "variant": "all_open",
+  "expect": {
+   "outcome": "executed_once"
+  }
+ }
+]

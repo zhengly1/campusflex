@@ -1,0 +1,248 @@
+[
+ {
+  "id": "L3S00",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": "not json",
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S01",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": "N1"
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S02",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": "lots",
+     "confidence": "medium",
+     "evidence": "expect about 60 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S03",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "teleport",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 60,
+     "confidence": "medium",
+     "evidence": "expect about 60 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S04",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "end": "22:00",
+     "delta": 60,
+     "confidence": "medium",
+     "evidence": "expect about 60 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S05",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 60,
+     "confidence": "medium",
+     "evidence": "expect about 60 students",
+     "recheck_room": null,
+     "action": "move everyone to A101"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S06",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 60,
+     "confidence": "absolute",
+     "evidence": "expect about 60 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S07",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    "N1 +60"
+   ]
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S08",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adj": []
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L3S09",
+  "class": "malformed_schema",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students to come to the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": null,
+     "confidence": "medium",
+     "evidence": "expect about 60 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ }
+]

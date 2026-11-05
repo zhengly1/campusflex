@@ -1,0 +1,261 @@
+[
+ {
+  "id": "L1S00",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": "{oops",
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S01",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": {},
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S02",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": {
+   "interval": {
+    "start": "18:00",
+    "end": "22:00"
+   },
+   "demand_estimate": 120,
+   "band_low_c": 24.0,
+   "band_high_c": 27.0,
+   "target_c": 26.0,
+   "energy_budget_kwh": null,
+   "power_cap_kw": null,
+   "relocation": {
+    "max_moves_per_student": 2,
+    "no_move_windows": []
+   },
+   "weight_levels": {
+    "lambda_M": 0.5,
+    "lambda_T": "default",
+    "lambda_S": "default"
+   },
+   "defaults_filled": [],
+   "clarifying_questions": []
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S03",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": {
+   "interval": {
+    "start": "18:00",
+    "end": "22:00"
+   },
+   "demand_estimate": 120,
+   "band_low_c": 24.0,
+   "band_high_c": 27.0,
+   "target_c": 26.0,
+   "energy_budget_kwh": null,
+   "power_cap_kw": null,
+   "relocation": {
+    "max_moves_per_student": 2,
+    "no_move_windows": []
+   },
+   "weight_levels": {
+    "lambda_M": "extreme",
+    "lambda_T": "default",
+    "lambda_S": "default"
+   },
+   "defaults_filled": [],
+   "clarifying_questions": []
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S04",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": {
+   "interval": {
+    "start": "18:00",
+    "end": "22:00"
+   },
+   "demand_estimate": 120,
+   "band_low_c": 28.0,
+   "band_high_c": 24.0,
+   "target_c": 26.0,
+   "energy_budget_kwh": null,
+   "power_cap_kw": null,
+   "relocation": {
+    "max_moves_per_student": 2,
+    "no_move_windows": []
+   },
+   "weight_levels": {
+    "lambda_M": "default",
+    "lambda_T": "default",
+    "lambda_S": "default"
+   },
+   "defaults_filled": [],
+   "clarifying_questions": []
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S05",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": {
+   "interval": {
+    "start": "25:00",
+    "end": "22:00"
+   },
+   "demand_estimate": 120,
+   "band_low_c": 24.0,
+   "band_high_c": 27.0,
+   "target_c": 26.0,
+   "energy_budget_kwh": null,
+   "power_cap_kw": null,
+   "relocation": {
+    "max_moves_per_student": 2,
+    "no_move_windows": []
+   },
+   "weight_levels": {
+    "lambda_M": "default",
+    "lambda_T": "default",
+    "lambda_S": "default"
+   },
+   "defaults_filled": [],
+   "clarifying_questions": []
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S06",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": {
+   "interval": {
+    "start": "18:00",
+    "end": "22:00"
+   },
+   "demand_estimate": -5,
+   "band_low_c": 24.0,
+   "band_high_c": 27.0,
+   "target_c": 26.0,
+   "energy_budget_kwh": null,
+   "power_cap_kw": null,
+   "relocation": {
+    "max_moves_per_student": 2,
+    "no_move_windows": []
+   },
+   "weight_levels": {
+    "lambda_M": "default",
+    "lambda_T": "default",
+    "lambda_S": "default"
+   },
+   "defaults_filled": [],
+   "clarifying_questions": []
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S07",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": {
+   "interval": {
+    "start": "18:00",
+    "end": "22:00"
+   },
+   "demand_estimate": 120,
+   "band_low_c": 24.0,
+   "band_high_c": 27.0,
+   "target_c": 26.0,
+   "energy_budget_kwh": null,
+   "power_cap_kw": null,
+   "relocation": {
+    "max_moves_per_student": 2,
+    "no_move_windows": []
+   },
+   "weight_levels": {
+    "lambda_M": "default",
+    "lambda_T": "default",
+    "lambda_S": "default"
+   },
+   "defaults_filled": [],
+   "clarifying_questions": [],
+   "override_validator": true
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S08",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": {
+   "interval": {
+    "start": "18:00",
+    "end": "22:00"
+   },
+   "demand_estimate": 120,
+   "band_low_c": 24.0,
+   "band_high_c": 27.0,
+   "target_c": 26.0,
+   "energy_budget_kwh": null,
+   "power_cap_kw": null,
+   "relocation": {
+    "max_moves_per_student": 2,
+    "no_move_windows": []
+   },
+   "weight_levels": {
+    "lambda_M": "default",
+    "lambda_T": "default",
+    "lambda_S": "default"
+   },
+   "defaults_filled": [],
+   "clarifying_questions": [
+    "a?",
+    "b?",
+    "c?"
+   ]
+  },
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ },
+ {
+  "id": "L1S09",
+  "class": "malformed_schema",
+  "boundary": "L1",
+  "text": "Provide space for 120 students this evening, keep it comfortable, save electricity.",
+  "output": "null",
+  "expect": {
+   "outcome": "rejected_fallback"
+  }
+ }
+]

@@ -1,0 +1,8 @@
+{
+ "meta": {
+  "experiment": "E1 arms C,D",
+  "reduced": false
+ },
+ "status": "not_run",
+ "reason": "preflight failed: api_status_402: Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 4cfdeae1-fc8a-402d-89ab-7bc693c7310c)', 'type': 'insufficient_balance_error', 'param': None, 'code': 'invalid_request_error'}}"
+}

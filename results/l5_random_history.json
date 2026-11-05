@@ -1,0 +1,1908 @@
+{
+ "label": "random",
+ "initial_cfg": {
+  "lambda_T": 8.0,
+  "lambda_M": 0.06,
+  "lambda_S": 0.08,
+  "lambda_Omega": 4.0,
+  "rollout_horizon_min": 60,
+  "omega_window_min": 30,
+  "l2_temp_trigger_c": 26.8,
+  "l2_periodic_every": 3,
+  "l2_demand_trigger": 20,
+  "l2_max_plans": 5,
+  "precool_set_min": [
+   10,
+   20,
+   30
+  ],
+  "rule_staged_temp_c": 26.8,
+  "min_room_dwell_steps": 2,
+  "min_student_dwell_steps": 3,
+  "max_moves_per_student": 2,
+  "no_move_windows": [],
+  "energy_budget_kwh": null,
+  "power_cap_kw": null,
+  "band_low_c": 24.0,
+  "band_high_c": 27.0,
+  "target_c": 26.0,
+  "fixed_planned_seats": 180,
+  "forecast_delta_cap": 80,
+  "weather_delta_cap_c": 5.0,
+  "llm_calls_per_step": 3,
+  "llm_latency_s": 20.0,
+  "tradeoff_dE_kwh": 1.0,
+  "tradeoff_dDev_c": 0.02,
+  "departure_mode": "random"
+ },
+ "final_cfg": {
+  "lambda_T": 8.0,
+  "lambda_M": 0.06,
+  "lambda_S": 0.08,
+  "lambda_Omega": 4.0,
+  "rollout_horizon_min": 60,
+  "omega_window_min": 30,
+  "l2_temp_trigger_c": 26.8,
+  "l2_periodic_every": 3,
+  "l2_demand_trigger": 20,
+  "l2_max_plans": 5,
+  "precool_set_min": [
+   10,
+   20,
+   30
+  ],
+  "rule_staged_temp_c": 26.8,
+  "min_room_dwell_steps": 2,
+  "min_student_dwell_steps": 3,
+  "max_moves_per_student": 2,
+  "no_move_windows": [],
+  "energy_budget_kwh": null,
+  "power_cap_kw": null,
+  "band_low_c": 24.0,
+  "band_high_c": 27.0,
+  "target_c": 26.0,
+  "fixed_planned_seats": 180,
+  "forecast_delta_cap": 80,
+  "weather_delta_cap_c": 5.0,
+  "llm_calls_per_step": 3,
+  "llm_latency_s": 20.0,
+  "tradeoff_dE_kwh": 1.0,
+  "tradeoff_dDev_c": 0.02,
+  "departure_mode": "random"
+ },
+ "history": [
+  {
+   "review_id": "R1-p1",
+   "round": 1,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R1-p1",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "precool_set_min",
+     "from": [
+      10,
+      20,
+      30
+     ],
+     "to": [
+      20,
+      30,
+      40
+     ]
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "precool_set_min",
+   "from": [
+    10,
+    20,
+    30
+   ],
+   "to": [
+    20,
+    30,
+    40
+   ],
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R1-p2",
+   "round": 1,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R1-p2",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "l2_periodic_every",
+     "from": 3,
+     "to": 4
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "l2_periodic_every",
+   "from": 3,
+   "to": 4,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R1-p3",
+   "round": 1,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R1-p3",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "rollout_horizon_min",
+     "from": 60,
+     "to": 80
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "rollout_horizon_min",
+   "from": 60,
+   "to": 80,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": -0.74775,
+    "lo": -4.394732821428572,
+    "hi": 4.137692714285713,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R2-p1",
+   "round": 2,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R2-p1",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "lambda_S",
+     "from": 0.08,
+     "to": 0.16
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "lambda_S",
+   "from": 0.08,
+   "to": 0.16,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.005624285714286158,
+    "lo": -0.00040017857142815106,
+    "hi": 0.01625032142857286,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R2-p2",
+   "round": 2,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R2-p2",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "lambda_T",
+     "from": 8.0,
+     "to": 4.0
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "lambda_T",
+   "from": 8.0,
+   "to": 4.0,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": -0.8710100000000003,
+    "lo": -4.385273142857142,
+    "hi": 3.6889284642857127,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R2-p3",
+   "round": 2,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R2-p3",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "lambda_M",
+     "from": 0.06,
+     "to": 0.2
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "lambda_M",
+   "from": 0.06,
+   "to": 0.2,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 2.0438000000000005,
+    "lo": 0.40953267857142855,
+    "hi": 4.119659250000001,
+    "excludes_zero": true,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R3-p1",
+   "round": 3,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R3-p1",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "lambda_M",
+     "from": 0.06,
+     "to": 0.02
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "lambda_M",
+   "from": 0.06,
+   "to": 0.02,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.07857571428571468,
+    "lo": -0.6811733214285703,
+    "hi": 0.5388418214285715,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R3-p2",
+   "round": 3,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R3-p2",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "lambda_T",
+     "from": 8.0,
+     "to": 16.0
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "lambda_T",
+   "from": 8.0,
+   "to": 16.0,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 1.5711600000000008,
+    "lo": -2.737042678571426,
+    "hi": 5.51048375,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R3-p3",
+   "round": 3,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R3-p3",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "precool_set_min",
+     "from": [
+      10,
+      20,
+      30
+     ],
+     "to": [
+      10,
+      20
+     ]
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "precool_set_min",
+   "from": [
+    10,
+    20,
+    30
+   ],
+   "to": [
+    10,
+    20
+   ],
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R4-p1",
+   "round": 4,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R4-p1",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "lambda_Omega",
+     "from": 4.0,
+     "to": 2.0
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "lambda_Omega",
+   "from": 4.0,
+   "to": 2.0,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 2.9542528571428583,
+    "lo": 0.16634028571428855,
+    "hi": 6.005237785714286,
+    "excludes_zero": true,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R4-p2",
+   "round": 4,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R4-p2",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "l2_periodic_every",
+     "from": 3,
+     "to": 2
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "l2_periodic_every",
+   "from": 3,
+   "to": 2,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R4-p3",
+   "round": 4,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R4-p3",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "rollout_horizon_min",
+     "from": 60,
+     "to": 40
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "rollout_horizon_min",
+   "from": 60,
+   "to": 40,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 3.503280000000001,
+    "lo": -5.201839357142856,
+    "hi": 11.942227642857137,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R5-p1",
+   "round": 5,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R5-p1",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "lambda_Omega",
+     "from": 4.0,
+     "to": 8.0
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "lambda_Omega",
+   "from": 4.0,
+   "to": 8.0,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": -0.862324285714286,
+    "lo": -4.3739655,
+    "hi": 3.69480757142857,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R5-p2",
+   "round": 5,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R5-p2",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "lambda_S",
+     "from": 0.08,
+     "to": 0.04
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "lambda_S",
+   "from": 0.08,
+   "to": 0.04,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.0008857142857142516,
+    "lo": 0.0,
+    "hi": 0.0026571428571427547,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R5-p3",
+   "round": 5,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R5-p3",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "l2_temp_trigger_c",
+     "from": 26.8,
+     "to": 27.0
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "l2_temp_trigger_c",
+   "from": 26.8,
+   "to": 27.0,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R6-p1",
+   "round": 6,
+   "proposer": "random",
+   "proposal": {
+    "review_id": "R6-p1",
+    "evidence": [],
+    "diagnosis": "random-search control",
+    "diff": {
+     "param": "l2_temp_trigger_c",
+     "from": 26.8,
+     "to": 26.5
+    },
+    "expected_effect": {
+     "metric": "score",
+     "direction": "decrease",
+     "scenarios": []
+    },
+    "risk": "none stated (control)"
+   },
+   "transcript": null,
+   "param": "l2_temp_trigger_c",
+   "from": 26.8,
+   "to": 26.5,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R6-p2",
+   "round": 6,
+   "proposer": "random",
+   "proposal": null,
+   "transcript": null,
+   "valid": false,
+   "accepted": false,
+   "stage": "no_proposal",
+   "violations": [
+    {
+     "code": "no_proposal",
+     "detail": "no admissible diff left"
+    }
+   ]
+  },
+  {
+   "review_id": "R6-p3",
+   "round": 6,
+   "proposer": "random",
+   "proposal": null,
+   "transcript": null,
+   "valid": false,
+   "accepted": false,
+   "stage": "no_proposal",
+   "violations": [
+    {
+     "code": "no_proposal",
+     "detail": "no admissible diff left"
+    }
+   ]
+  }
+ ],
+ "rounds": 6,
+ "proposals": 18,
+ "sweeps": {
+  "baseline": 1,
+  "tuning": 16,
+  "confirmation": 0
+ },
+ "meta": {
+  "scenarios": [
+   "steady",
+   "surge",
+   "heat",
+   "fault",
+   "fault_surge",
+   "double_fault",
+   "notice_surge",
+   "notice_maintenance",
+   "notice_drop",
+   "notice_fault"
+  ],
+  "tuning_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "check_seeds": [
+   7,
+   8,
+   9
+  ],
+  "max_rounds": 6,
+  "per_round": 3,
+  "protocol": "full",
+  "base_config_hash": "de54345ef023",
+  "base_frozen": true
+ },
+ "accepted": [],
+ "review_acceptance_rate": 0.0,
+ "status": "run"
+}

@@ -1,0 +1,452 @@
+{
+ "meta": {
+  "AB": {
+   "experiment": "E1 arms A,B",
+   "reduced": false,
+   "protocol": "full",
+   "config_hash": "de54345ef023",
+   "frozen": true,
+   "seeds": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "heldout_seeds": true,
+   "scenarios": [
+    "heat",
+    "fault",
+    "fault_surge",
+    "double_fault"
+   ],
+   "mismatch": [
+    false,
+    true
+   ],
+   "expected_episodes": 160,
+   "n_episodes": 160,
+   "seconds": 5.4
+  },
+  "CD": null,
+  "reduced": false,
+  "frozen": {
+   "AB": true,
+   "CD": null
+  },
+  "config_hash": {
+   "arm_A": [
+    "de54345ef023"
+   ],
+   "arm_B": [
+    "de54345ef023"
+   ]
+  },
+  "order": "Eq. 4: unserved person-minutes first, then score"
+ },
+ "per_arm": [
+  {
+   "arm": "arm_A",
+   "n": 80,
+   "score": 146.97576750000002,
+   "dev_c": 0.02240225,
+   "moves": 86.9875,
+   "kwh": 36.67476,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null,
+   "status": "run"
+  },
+  {
+   "arm": "arm_B",
+   "n": 80,
+   "score": 147.04115625,
+   "dev_c": 0.02240225,
+   "moves": 87.2,
+   "kwh": 36.72539875,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0010425,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null,
+   "status": "run"
+  }
+ ],
+ "per_scenario": [
+  {
+   "scenario": "double_fault",
+   "mismatch": false,
+   "arm": "arm_A",
+   "n": 10,
+   "score": 224.49943000000002,
+   "dev_c": 0.03919,
+   "moves": 108.1,
+   "kwh": 35.46659000000001,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "double_fault",
+   "mismatch": false,
+   "arm": "arm_B",
+   "n": 10,
+   "score": 224.55943000000002,
+   "dev_c": 0.03919,
+   "moves": 108.1,
+   "kwh": 35.52659,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.00417,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "double_fault",
+   "mismatch": true,
+   "arm": "arm_A",
+   "n": 10,
+   "score": 243.57791000000003,
+   "dev_c": 0.043274,
+   "moves": 104.5,
+   "kwh": 35.87027,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "double_fault",
+   "mismatch": true,
+   "arm": "arm_B",
+   "n": 10,
+   "score": 243.57791000000003,
+   "dev_c": 0.043274,
+   "moves": 104.5,
+   "kwh": 35.87027,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "fault",
+   "mismatch": false,
+   "arm": "arm_A",
+   "n": 10,
+   "score": 187.14362999999997,
+   "dev_c": 0.030680999999999996,
+   "moves": 101.2,
+   "kwh": 37.04344999999999,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "fault",
+   "mismatch": false,
+   "arm": "arm_B",
+   "n": 10,
+   "score": 187.14362999999997,
+   "dev_c": 0.030680999999999996,
+   "moves": 101.2,
+   "kwh": 37.04344999999999,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "fault",
+   "mismatch": true,
+   "arm": "arm_A",
+   "n": 10,
+   "score": 165.90564,
+   "dev_c": 0.025887,
+   "moves": 111.6,
+   "kwh": 37.60743,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "fault",
+   "mismatch": true,
+   "arm": "arm_B",
+   "n": 10,
+   "score": 165.90564,
+   "dev_c": 0.025887,
+   "moves": 111.6,
+   "kwh": 37.60743,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "fault_surge",
+   "mismatch": false,
+   "arm": "arm_A",
+   "n": 10,
+   "score": 126.30317,
+   "dev_c": 0.017158999999999997,
+   "moves": 105.4,
+   "kwh": 38.871660000000006,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "fault_surge",
+   "mismatch": false,
+   "arm": "arm_B",
+   "n": 10,
+   "score": 126.30317,
+   "dev_c": 0.017158999999999997,
+   "moves": 105.4,
+   "kwh": 38.871660000000006,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "fault_surge",
+   "mismatch": true,
+   "arm": "arm_A",
+   "n": 10,
+   "score": 149.92574999999997,
+   "dev_c": 0.022098,
+   "moves": 109.4,
+   "kwh": 38.70854,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "fault_surge",
+   "mismatch": true,
+   "arm": "arm_B",
+   "n": 10,
+   "score": 150.38885999999997,
+   "dev_c": 0.022098,
+   "moves": 111.1,
+   "kwh": 39.05365,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.00417,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "heat",
+   "mismatch": false,
+   "arm": "arm_A",
+   "n": 10,
+   "score": 39.443110000000004,
+   "dev_c": 0.00046999999999999993,
+   "moves": 28.4,
+   "kwh": 35.07708,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "heat",
+   "mismatch": false,
+   "arm": "arm_B",
+   "n": 10,
+   "score": 39.443110000000004,
+   "dev_c": 0.00046999999999999993,
+   "moves": 28.4,
+   "kwh": 35.07708,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "heat",
+   "mismatch": true,
+   "arm": "arm_A",
+   "n": 10,
+   "score": 39.00750000000001,
+   "dev_c": 0.00045900000000000004,
+   "moves": 27.3,
+   "kwh": 34.75306,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  },
+  {
+   "scenario": "heat",
+   "mismatch": true,
+   "arm": "arm_B",
+   "n": 10,
+   "score": 39.00750000000001,
+   "dev_c": 0.00045900000000000004,
+   "moves": 27.3,
+   "kwh": 34.75306,
+   "unserved_person_min": 0.0,
+   "staged_selection_rate": 0.0,
+   "llm_selection_rate": 0.0,
+   "llm_fallback_rate": null,
+   "llm_valid_proposal_rate": null
+  }
+ ],
+ "llm_arm_stats": {},
+ "comparisons": {
+  "arm_B-arm_A": {
+   "status": "computed",
+   "overall": {
+    "n": 80,
+    "mean_diff": 0.06538874999999997,
+    "lo": 0.0,
+    "hi": 0.18866624999999998,
+    "excludes_zero": false,
+    "score": {
+     "n": 80,
+     "mean_diff": 0.06538874999999997,
+     "lo": 0.0,
+     "hi": 0.18866624999999998,
+     "excludes_zero": false
+    },
+    "unserved": {
+     "n": 80,
+     "mean_diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "excludes_zero": false
+    },
+    "decided_by": "score",
+    "a_better": false,
+    "a_worse": false
+   },
+   "per_scenario": {
+    "double_fault": {
+     "n": 20,
+     "mean_diff": 0.029999999999999714,
+     "lo": 0.0,
+     "hi": 0.08999999999999915,
+     "excludes_zero": false,
+     "score": {
+      "n": 20,
+      "mean_diff": 0.029999999999999714,
+      "lo": 0.0,
+      "hi": 0.08999999999999915,
+      "excludes_zero": false
+     },
+     "unserved": {
+      "n": 20,
+      "mean_diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "excludes_zero": false
+     },
+     "decided_by": "score",
+     "a_better": false,
+     "a_worse": false
+    },
+    "fault": {
+     "n": 20,
+     "mean_diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "excludes_zero": false,
+     "score": {
+      "n": 20,
+      "mean_diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "excludes_zero": false
+     },
+     "unserved": {
+      "n": 20,
+      "mean_diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "excludes_zero": false
+     },
+     "decided_by": "score",
+     "a_better": false,
+     "a_worse": false
+    },
+    "fault_surge": {
+     "n": 20,
+     "mean_diff": 0.23155500000000018,
+     "lo": 0.0,
+     "hi": 0.6946650000000005,
+     "excludes_zero": false,
+     "score": {
+      "n": 20,
+      "mean_diff": 0.23155500000000018,
+      "lo": 0.0,
+      "hi": 0.6946650000000005,
+      "excludes_zero": false
+     },
+     "unserved": {
+      "n": 20,
+      "mean_diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "excludes_zero": false
+     },
+     "decided_by": "score",
+     "a_better": false,
+     "a_worse": false
+    },
+    "heat": {
+     "n": 20,
+     "mean_diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "excludes_zero": false,
+     "score": {
+      "n": 20,
+      "mean_diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "excludes_zero": false
+     },
+     "unserved": {
+      "n": 20,
+      "mean_diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "excludes_zero": false
+     },
+     "decided_by": "score",
+     "a_better": false,
+     "a_worse": false
+    }
+   }
+  }
+ }
+}

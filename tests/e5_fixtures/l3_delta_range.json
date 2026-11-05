@@ -1,0 +1,302 @@
+[
+ {
+  "id": "L3D00",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Graduation rehearsal in Hall C ends 20:30; about 150 students expected afterwards."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 150,
+     "confidence": "high",
+     "evidence": "about 150 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D01",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Exam in LT-B finishes 20:30. Roughly 200 students will look for seats."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 200,
+     "confidence": "high",
+     "evidence": "Roughly 200 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D02",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Career fair closes 20:30; expect about 120 visitors to study afterwards."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 120,
+     "confidence": "high",
+     "evidence": "about 120 visitors",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D03",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Two lectures end 20:30 with about 95 students heading to study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 95,
+     "confidence": "high",
+     "evidence": "about 95 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D04",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Orientation in the Atrium ends 20:30; about 300 freshmen may come."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 300,
+     "confidence": "high",
+     "evidence": "about 300 freshmen",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D05",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Late library hours from 20:30 tonight; about 90 students may leave."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": -90,
+     "confidence": "high",
+     "evidence": "about 90 students may leave",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D06",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Shuttle at 20:30; about 160 riders will leave the study rooms."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": -160,
+     "confidence": "high",
+     "evidence": "about 160 riders",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D07",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Hall C quiz ends 20:30; about 81 students expected."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 81,
+     "confidence": "high",
+     "evidence": "about 81 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D08",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": 500,
+     "confidence": "high",
+     "evidence": "expect about 60 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ },
+ {
+  "id": "L3D09",
+  "class": "delta_out_of_range",
+  "boundary": "L3",
+  "notices": [
+   {
+    "notice_id": "N1",
+    "release": "20:00",
+    "text": "Review session in LT-A ends 20:30; expect about 60 students."
+   }
+  ],
+  "output": {
+   "adjustments": [
+    {
+     "source_id": "N1",
+     "kind": "demand",
+     "start": "20:30",
+     "end": "22:00",
+     "delta": -400,
+     "confidence": "high",
+     "evidence": "expect about 60 students",
+     "recheck_room": null
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "clipped_or_rejected",
+   "max_abs_shift": 80
+  }
+ }
+]

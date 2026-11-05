@@ -1,0 +1,667 @@
+[
+ {
+  "id": "L2C00",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "A103"
+       ],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "A103",
+        "count": "all"
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C01",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "B202",
+        "count": 80
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C02",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "A101",
+        "to": "B203",
+        "count": 50
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C03",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "A101",
+        "to": "B202",
+        "count": "all"
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C04",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "B202",
+        "count": 46
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C05",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "A103"
+       ],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "A103",
+        "count": 41
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C06",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "B203",
+        "count": "all"
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C07",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "A101",
+        "to": "B203",
+        "count": 36
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C08",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "A102",
+        "count": 51
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2C09",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "B203",
+        "count": 30
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "capacity"
+   ]
+  }
+ },
+ {
+  "id": "L2D00",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [
+        "B203"
+       ],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D01",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [
+        "B203"
+       ],
+       "precool": null,
+       "move": {
+        "from": "B203",
+        "to": "B202",
+        "count": "all"
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D02",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B203",
+        "to": "B202",
+        "count": 10
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D03",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B203",
+        "to": "A102",
+        "count": 5
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D04",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "A103"
+       ],
+       "close": [
+        "B203"
+       ],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D05",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "A103"
+       ],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B203",
+        "to": "A103",
+        "count": "all"
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D06",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [
+        "B203"
+       ],
+       "precool": null,
+       "move": null
+      },
+      {
+       "at": "+20",
+       "open": [
+        "B203"
+       ],
+       "close": [],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D07",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B203",
+        "to": "B202",
+        "count": 1
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D08",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [
+        "B203"
+       ],
+       "precool": null,
+       "move": {
+        "from": "B203",
+        "to": "B202",
+        "count": 10
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ },
+ {
+  "id": "L2D09",
+  "class": "capacity_dwell",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B203",
+        "to": "A102",
+        "count": 10
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "dwell_room",
+    "dwell_student"
+   ]
+  }
+ }
+]

@@ -1,0 +1,122 @@
+[
+ {
+  "id": "STL00",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": -1,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL01",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": -2,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL02",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": -5,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL03",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": 1,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL04",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": 3,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL05",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": -13,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL06",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": -12,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL07",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": 100,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL08",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": -3,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ },
+ {
+  "id": "STL09",
+  "class": "stale_snapshot",
+  "boundary": "apply_plan",
+  "version_offset": -7,
+  "expect": {
+   "outcome": "rejected_then_replanned",
+   "codes": [
+    "stale_snapshot"
+   ]
+  }
+ }
+]

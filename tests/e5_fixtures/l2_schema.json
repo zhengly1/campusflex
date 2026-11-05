@@ -1,0 +1,132 @@
+[
+ {
+  "id": "L2S00",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "{not json",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S01",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "{\"plans\": \"p1\"}",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S02",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "{\"plans\":[{\"plan_id\":\"x\",\"steps\":[],\"rationale\":\"\"}]}",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S03",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "{\"plans\":[{\"plan_id\":\"x\",\"steps\":[{\"at\":\"20min\",\"open\":[],\"close\":[],\"precool\":null,\"move\":null}],\"rationale\":\"\"}]}",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S04",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "{\"plans\":[{\"steps\":[{\"at\":\"+0\",\"open\":[],\"close\":[],\"precool\":null,\"move\":null}],\"rationale\":\"\"}]}",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S05",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "{\"plans\":[{\"plan_id\":\"x\",\"steps\":[{\"at\":\"+0\",\"teleport\":\"A101\"}],\"rationale\":\"\"}]}",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S06",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "{\"plans\":[{\"plan_id\":\"x\",\"steps\":[{\"at\":\"+0\",\"move\":{\"from\":\"B201\",\"to\":\"B202\",\"count\":\"most\"}}],\"rationale\":\"\"}]}",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S07",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "[]",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S08",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "{\"plans\":[{\"plan_id\":\"x\",\"steps\":[{\"at\":\"+0\",\"precool\":{\"room\":\"B202\"}}],\"rationale\":\"\"}]}",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ },
+ {
+  "id": "L2S09",
+  "class": "malformed_schema",
+  "boundary": "L2",
+  "output": "",
+  "expect": {
+   "outcome": "rejected_fallback",
+   "codes": [
+    "schema",
+    "batch"
+   ]
+  }
+ }
+]

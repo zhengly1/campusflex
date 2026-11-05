@@ -1,0 +1,53 @@
+{
+ "config": {
+  "band_high_c": 27.0,
+  "band_low_c": 24.0,
+  "departure_mode": "random",
+  "energy_budget_kwh": null,
+  "fixed_planned_seats": 180,
+  "forecast_delta_cap": 80,
+  "l2_demand_trigger": 20,
+  "l2_max_plans": 5,
+  "l2_periodic_every": 3,
+  "l2_temp_trigger_c": 26.8,
+  "lambda_M": 0.06,
+  "lambda_Omega": 4.0,
+  "lambda_S": 0.08,
+  "lambda_T": 8.0,
+  "llm_calls_per_step": 3,
+  "llm_latency_s": 20.0,
+  "max_moves_per_student": 2,
+  "min_room_dwell_steps": 2,
+  "min_student_dwell_steps": 3,
+  "no_move_windows": [],
+  "omega_window_min": 30,
+  "power_cap_kw": null,
+  "precool_set_min": [
+   10,
+   20,
+   30
+  ],
+  "rollout_horizon_min": 60,
+  "rule_staged_temp_c": 26.8,
+  "target_c": 26.0,
+  "tradeoff_dDev_c": 0.02,
+  "tradeoff_dE_kwh": 1.0,
+  "weather_delta_cap_c": 5.0
+ },
+ "config_hash": "de54345ef023",
+ "frozen_at": "2026-11-04T11:42:40+00:00",
+ "llm": {
+  "model": "deepseek-flash",
+  "prompt_hashes": {
+   "L1": "560a11fe5898",
+   "L2": "d7e918d666c5",
+   "L3": "a054b09a905c",
+   "L4": "fc3a4eaca2ae",
+   "L4_explain": "b2e11d7682e8",
+   "L5": "5acccdc3ada0"
+  },
+  "provider": "deepseek"
+ },
+ "notices_hash": "33c23c12f015",
+ "source": "PlannerConfig() defaults"
+}

@@ -1,0 +1,1956 @@
+{
+ "experiment": "E4",
+ "meta": {
+  "experiment": "E4",
+  "config_hash": "de54345ef023",
+  "frozen": true,
+  "seeds": [
+   10,
+   11
+  ],
+  "scenarios": [
+   "heat",
+   "fault",
+   "fault_surge",
+   "double_fault",
+   "notice_surge",
+   "notice_maintenance",
+   "notice_drop",
+   "notice_fault"
+  ],
+  "per_episode": 3
+ },
+ "source": "fresh masks-only planner decisions",
+ "n_episodes": 16,
+ "arms": {
+  "template": {
+   "status": "run",
+   "summary": {
+    "n_texts": 48,
+    "n_numbers": 480,
+    "n_matched": 480,
+    "n_flagged": 0,
+    "share_matched": 1.0,
+    "texts_fully_matched_share": 1.0,
+    "displayed_unverified_numbers": 0,
+    "success_100pct_matched_or_flagged": true
+   },
+   "examples": [
+    {
+     "episode": "heat/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.5381 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.977 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.217 against 6.6981.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.5381 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.977 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.217 against 6.6981.",
+     "faithfulness": {
+      "numbers": [
+       "6.5381",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.977",
+       "0.0",
+       "0",
+       "8.217",
+       "6.6981"
+      ],
+      "matched": [
+       "6.5381",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.977",
+       "0.0",
+       "0",
+       "8.217",
+       "6.6981"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101B201B202B203 (mask): predicted 10.5622 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 14.6622 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 14.7422 against 10.5622.",
+     "displayed": "The planner chose m:A101B201B202B203 (mask): predicted 10.5622 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 14.6622 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 14.7422 against 10.5622.",
+     "faithfulness": {
+      "numbers": [
+       "10.5622",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "14.6622",
+       "0.0",
+       "0",
+       "14.7422",
+       "10.5622"
+      ],
+      "matched": [
+       "10.5622",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "14.6622",
+       "0.0",
+       "0",
+       "14.7422",
+       "10.5622"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s10/A",
+     "step": 23,
+     "text": "The planner chose m:B201B203 (mask): predicted 0.7891 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:B201B202B203 would use 1.3891 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.4691 against 0.7891.",
+     "displayed": "The planner chose m:B201B203 (mask): predicted 0.7891 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:B201B202B203 would use 1.3891 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.4691 against 0.7891.",
+     "faithfulness": {
+      "numbers": [
+       "0.7891",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.3891",
+       "0.0",
+       "0",
+       "1.4691",
+       "0.7891"
+      ],
+      "matched": [
+       "0.7891",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.3891",
+       "0.0",
+       "0",
+       "1.4691",
+       "0.7891"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.5395 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.9986 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.2386 against 6.6995.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.5395 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.9986 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.2386 against 6.6995.",
+     "faithfulness": {
+      "numbers": [
+       "6.5395",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.9986",
+       "0.0",
+       "0",
+       "8.2386",
+       "6.6995"
+      ],
+      "matched": [
+       "6.5395",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.9986",
+       "0.0",
+       "0",
+       "8.2386",
+       "6.6995"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101B201B202B203 (mask): predicted 10.6459 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 14.7459 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 14.8259 against 10.6459.",
+     "displayed": "The planner chose m:A101B201B202B203 (mask): predicted 10.6459 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 14.7459 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 14.8259 against 10.6459.",
+     "faithfulness": {
+      "numbers": [
+       "10.6459",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "14.7459",
+       "0.0",
+       "0",
+       "14.8259",
+       "10.6459"
+      ],
+      "matched": [
+       "10.6459",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "14.7459",
+       "0.0",
+       "0",
+       "14.8259",
+       "10.6459"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    }
+   ],
+   "texts": [
+    {
+     "episode": "heat/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.5381 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.977 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.217 against 6.6981.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.5381 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.977 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.217 against 6.6981.",
+     "faithfulness": {
+      "numbers": [
+       "6.5381",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.977",
+       "0.0",
+       "0",
+       "8.217",
+       "6.6981"
+      ],
+      "matched": [
+       "6.5381",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.977",
+       "0.0",
+       "0",
+       "8.217",
+       "6.6981"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101B201B202B203 (mask): predicted 10.5622 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 14.6622 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 14.7422 against 10.5622.",
+     "displayed": "The planner chose m:A101B201B202B203 (mask): predicted 10.5622 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 14.6622 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 14.7422 against 10.5622.",
+     "faithfulness": {
+      "numbers": [
+       "10.5622",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "14.6622",
+       "0.0",
+       "0",
+       "14.7422",
+       "10.5622"
+      ],
+      "matched": [
+       "10.5622",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "14.6622",
+       "0.0",
+       "0",
+       "14.7422",
+       "10.5622"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s10/A",
+     "step": 23,
+     "text": "The planner chose m:B201B203 (mask): predicted 0.7891 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:B201B202B203 would use 1.3891 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.4691 against 0.7891.",
+     "displayed": "The planner chose m:B201B203 (mask): predicted 0.7891 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:B201B202B203 would use 1.3891 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.4691 against 0.7891.",
+     "faithfulness": {
+      "numbers": [
+       "0.7891",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.3891",
+       "0.0",
+       "0",
+       "1.4691",
+       "0.7891"
+      ],
+      "matched": [
+       "0.7891",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.3891",
+       "0.0",
+       "0",
+       "1.4691",
+       "0.7891"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.5395 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.9986 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.2386 against 6.6995.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.5395 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.9986 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.2386 against 6.6995.",
+     "faithfulness": {
+      "numbers": [
+       "6.5395",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.9986",
+       "0.0",
+       "0",
+       "8.2386",
+       "6.6995"
+      ],
+      "matched": [
+       "6.5395",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.9986",
+       "0.0",
+       "0",
+       "8.2386",
+       "6.6995"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101B201B202B203 (mask): predicted 10.6459 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 14.7459 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 14.8259 against 10.6459.",
+     "displayed": "The planner chose m:A101B201B202B203 (mask): predicted 10.6459 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 14.7459 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 14.8259 against 10.6459.",
+     "faithfulness": {
+      "numbers": [
+       "10.6459",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "14.7459",
+       "0.0",
+       "0",
+       "14.8259",
+       "10.6459"
+      ],
+      "matched": [
+       "10.6459",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "14.7459",
+       "0.0",
+       "0",
+       "14.8259",
+       "10.6459"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 23,
+     "text": "The planner chose m:A101B201B203 (mask): predicted 1.0827 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202B203 would use 1.6827 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.7627 against 1.0827.",
+     "displayed": "The planner chose m:A101B201B203 (mask): predicted 1.0827 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202B203 would use 1.6827 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.7627 against 1.0827.",
+     "faithfulness": {
+      "numbers": [
+       "1.0827",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.6827",
+       "0.0",
+       "0",
+       "1.7627",
+       "1.0827"
+      ],
+      "matched": [
+       "1.0827",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.6827",
+       "0.0",
+       "0",
+       "1.7627",
+       "1.0827"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.6029 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 8.079 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.319 against 6.7629.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.6029 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 8.079 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.319 against 6.7629.",
+     "faithfulness": {
+      "numbers": [
+       "6.6029",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "8.079",
+       "0.0",
+       "0",
+       "8.319",
+       "6.7629"
+      ],
+      "matched": [
+       "6.6029",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "8.079",
+       "0.0",
+       "0",
+       "8.319",
+       "6.7629"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101B201B202B203 (mask): predicted 8.5184 kWh over the next 60 minutes, mean occupied deviation 0.0373 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 12.6184 kWh with deviation 0.0373 \u00b0C and 0 moves; its score is 191.3056 against 187.1256.",
+     "displayed": "The planner chose m:A101B201B202B203 (mask): predicted 8.5184 kWh over the next 60 minutes, mean occupied deviation 0.0373 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 12.6184 kWh with deviation 0.0373 \u00b0C and 0 moves; its score is 191.3056 against 187.1256.",
+     "faithfulness": {
+      "numbers": [
+       "8.5184",
+       "60",
+       "0.0373",
+       "0",
+       "0",
+       "12.6184",
+       "0.0373",
+       "0",
+       "191.3056",
+       "187.1256"
+      ],
+      "matched": [
+       "8.5184",
+       "60",
+       "0.0373",
+       "0",
+       "0",
+       "12.6184",
+       "0.0373",
+       "0",
+       "191.3056",
+       "187.1256"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault/s10/A",
+     "step": 23,
+     "text": "The planner chose m:A101B202 (mask): predicted 0.9345 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202 would use 1.0345 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.1145 against 0.9345.",
+     "displayed": "The planner chose m:A101B202 (mask): predicted 0.9345 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202 would use 1.0345 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.1145 against 0.9345.",
+     "faithfulness": {
+      "numbers": [
+       "0.9345",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.0345",
+       "0.0",
+       "0",
+       "1.1145",
+       "0.9345"
+      ],
+      "matched": [
+       "0.9345",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.0345",
+       "0.0",
+       "0",
+       "1.1145",
+       "0.9345"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.1577 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.1559 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.3159 against 6.3177.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.1577 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.1559 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.3159 against 6.3177.",
+     "faithfulness": {
+      "numbers": [
+       "6.1577",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.1559",
+       "0.0",
+       "0",
+       "7.3159",
+       "6.3177"
+      ],
+      "matched": [
+       "6.1577",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.1559",
+       "0.0",
+       "0",
+       "7.3159",
+       "6.3177"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101A102B202B203 (mask): predicted 13.2105 kWh over the next 60 minutes, mean occupied deviation 0.0545 \u00b0C, 70 moves and 2 room switches. The runner-up m:A101A102A103B202B203 would use 17.2232 kWh with deviation 0.0545 \u00b0C and 70 moves; its score is 98.3352 against 94.2425.",
+     "displayed": "The planner chose m:A101A102B202B203 (mask): predicted 13.2105 kWh over the next 60 minutes, mean occupied deviation 0.0545 \u00b0C, 70 moves and 2 room switches. The runner-up m:A101A102A103B202B203 would use 17.2232 kWh with deviation 0.0545 \u00b0C and 70 moves; its score is 98.3352 against 94.2425.",
+     "faithfulness": {
+      "numbers": [
+       "13.2105",
+       "60",
+       "0.0545",
+       "70",
+       "2",
+       "17.2232",
+       "0.0545",
+       "70",
+       "98.3352",
+       "94.2425"
+      ],
+      "matched": [
+       "13.2105",
+       "60",
+       "0.0545",
+       "70",
+       "2",
+       "17.2232",
+       "0.0545",
+       "70",
+       "98.3352",
+       "94.2425"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault/s11/A",
+     "step": 23,
+     "text": "The planner chose m:A101B202B203 (mask): predicted 1.0271 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202B203 would use 1.1271 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.2071 against 1.0271.",
+     "displayed": "The planner chose m:A101B202B203 (mask): predicted 1.0271 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202B203 would use 1.1271 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.2071 against 1.0271.",
+     "faithfulness": {
+      "numbers": [
+       "1.0271",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.1271",
+       "0.0",
+       "0",
+       "1.2071",
+       "1.0271"
+      ],
+      "matched": [
+       "1.0271",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.1271",
+       "0.0",
+       "0",
+       "1.2071",
+       "1.0271"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault_surge/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.48 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.5475 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.7075 against 6.64.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.48 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.5475 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.7075 against 6.64.",
+     "faithfulness": {
+      "numbers": [
+       "6.48",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.5475",
+       "0.0",
+       "0",
+       "7.7075",
+       "6.64"
+      ],
+      "matched": [
+       "6.48",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.5475",
+       "0.0",
+       "0",
+       "7.7075",
+       "6.64"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault_surge/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101A102B202B203 (mask): predicted 13.4394 kWh over the next 60 minutes, mean occupied deviation 0.0072 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102B201B202B203 would use 14.0394 kWh with deviation 0.0072 \u00b0C and 0 moves; its score is 24.5993 against 23.9193.",
+     "displayed": "The planner chose m:A101A102B202B203 (mask): predicted 13.4394 kWh over the next 60 minutes, mean occupied deviation 0.0072 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102B201B202B203 would use 14.0394 kWh with deviation 0.0072 \u00b0C and 0 moves; its score is 24.5993 against 23.9193.",
+     "faithfulness": {
+      "numbers": [
+       "13.4394",
+       "60",
+       "0.0072",
+       "0",
+       "0",
+       "14.0394",
+       "0.0072",
+       "0",
+       "24.5993",
+       "23.9193"
+      ],
+      "matched": [
+       "13.4394",
+       "60",
+       "0.0072",
+       "0",
+       "0",
+       "14.0394",
+       "0.0072",
+       "0",
+       "24.5993",
+       "23.9193"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault_surge/s10/A",
+     "step": 23,
+     "text": "The planner chose m:A101B203 (mask): predicted 0.8244 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B203 would use 0.9244 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.0044 against 0.8244.",
+     "displayed": "The planner chose m:A101B203 (mask): predicted 0.8244 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B203 would use 0.9244 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.0044 against 0.8244.",
+     "faithfulness": {
+      "numbers": [
+       "0.8244",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "0.9244",
+       "0.0",
+       "0",
+       "1.0044",
+       "0.8244"
+      ],
+      "matched": [
+       "0.8244",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "0.9244",
+       "0.0",
+       "0",
+       "1.0044",
+       "0.8244"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault_surge/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.3012 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.6399 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.8799 against 6.4612.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.3012 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.6399 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.8799 against 6.4612.",
+     "faithfulness": {
+      "numbers": [
+       "6.3012",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.6399",
+       "0.0",
+       "0",
+       "7.8799",
+       "6.4612"
+      ],
+      "matched": [
+       "6.3012",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.6399",
+       "0.0",
+       "0",
+       "7.8799",
+       "6.4612"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault_surge/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101A103B202B203 (mask): predicted 11.7982 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 12.3982 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 12.4782 against 11.7982.",
+     "displayed": "The planner chose m:A101A103B202B203 (mask): predicted 11.7982 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 12.3982 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 12.4782 against 11.7982.",
+     "faithfulness": {
+      "numbers": [
+       "11.7982",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "12.3982",
+       "0.0",
+       "0",
+       "12.4782",
+       "11.7982"
+      ],
+      "matched": [
+       "11.7982",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "12.3982",
+       "0.0",
+       "0",
+       "12.4782",
+       "11.7982"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "fault_surge/s11/A",
+     "step": 23,
+     "text": "The planner chose m:A101B202 (mask): predicted 0.8477 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202 would use 0.9477 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.0277 against 0.8477.",
+     "displayed": "The planner chose m:A101B202 (mask): predicted 0.8477 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202 would use 0.9477 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.0277 against 0.8477.",
+     "faithfulness": {
+      "numbers": [
+       "0.8477",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "0.9477",
+       "0.0",
+       "0",
+       "1.0277",
+       "0.8477"
+      ],
+      "matched": [
+       "0.8477",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "0.9477",
+       "0.0",
+       "0",
+       "1.0277",
+       "0.8477"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "double_fault/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.2478 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.2551 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.4151 against 6.4078.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.2478 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.2551 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.4151 against 6.4078.",
+     "faithfulness": {
+      "numbers": [
+       "6.2478",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.2551",
+       "0.0",
+       "0",
+       "7.4151",
+       "6.4078"
+      ],
+      "matched": [
+       "6.2478",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.2551",
+       "0.0",
+       "0",
+       "7.4151",
+       "6.4078"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "double_fault/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101B201B202B203 (mask): predicted 8.2822 kWh over the next 60 minutes, mean occupied deviation 0.0306 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102B201B202B203 would use 8.9322 kWh with deviation 0.0306 \u00b0C and 0 moves; its score is 169.9104 against 169.1804.",
+     "displayed": "The planner chose m:A101B201B202B203 (mask): predicted 8.2822 kWh over the next 60 minutes, mean occupied deviation 0.0306 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102B201B202B203 would use 8.9322 kWh with deviation 0.0306 \u00b0C and 0 moves; its score is 169.9104 against 169.1804.",
+     "faithfulness": {
+      "numbers": [
+       "8.2822",
+       "60",
+       "0.0306",
+       "0",
+       "0",
+       "8.9322",
+       "0.0306",
+       "0",
+       "169.9104",
+       "169.1804"
+      ],
+      "matched": [
+       "8.2822",
+       "60",
+       "0.0306",
+       "0",
+       "0",
+       "8.9322",
+       "0.0306",
+       "0",
+       "169.9104",
+       "169.1804"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "double_fault/s10/A",
+     "step": 23,
+     "text": "The planner chose m:A101B202B203 (mask): predicted 1.0846 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202B203 would use 1.1846 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.2646 against 1.0846.",
+     "displayed": "The planner chose m:A101B202B203 (mask): predicted 1.0846 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B202B203 would use 1.1846 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.2646 against 1.0846.",
+     "faithfulness": {
+      "numbers": [
+       "1.0846",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.1846",
+       "0.0",
+       "0",
+       "1.2646",
+       "1.0846"
+      ],
+      "matched": [
+       "1.0846",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.1846",
+       "0.0",
+       "0",
+       "1.2646",
+       "1.0846"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "double_fault/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.1393 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.1186 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.2786 against 6.2993.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.1393 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.1186 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.2786 against 6.2993.",
+     "faithfulness": {
+      "numbers": [
+       "6.1393",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.1186",
+       "0.0",
+       "0",
+       "7.2786",
+       "6.2993"
+      ],
+      "matched": [
+       "6.1393",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.1186",
+       "0.0",
+       "0",
+       "7.2786",
+       "6.2993"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "double_fault/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101A103B202B203 (mask): predicted 12.1657 kWh over the next 60 minutes, mean occupied deviation 0.032 \u00b0C, 70 moves and 2 room switches. The runner-up m:A101A102A103B202B203 would use 12.8157 kWh with deviation 0.032 \u00b0C and 70 moves; its score is 62.6311 against 61.9011.",
+     "displayed": "The planner chose m:A101A103B202B203 (mask): predicted 12.1657 kWh over the next 60 minutes, mean occupied deviation 0.032 \u00b0C, 70 moves and 2 room switches. The runner-up m:A101A102A103B202B203 would use 12.8157 kWh with deviation 0.032 \u00b0C and 70 moves; its score is 62.6311 against 61.9011.",
+     "faithfulness": {
+      "numbers": [
+       "12.1657",
+       "60",
+       "0.032",
+       "70",
+       "2",
+       "12.8157",
+       "0.032",
+       "70",
+       "62.6311",
+       "61.9011"
+      ],
+      "matched": [
+       "12.1657",
+       "60",
+       "0.032",
+       "70",
+       "2",
+       "12.8157",
+       "0.032",
+       "70",
+       "62.6311",
+       "61.9011"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "double_fault/s11/A",
+     "step": 23,
+     "text": "The planner chose m:A101B203 (mask): predicted 0.8067 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B203 would use 0.9067 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 0.9867 against 0.8067.",
+     "displayed": "The planner chose m:A101B203 (mask): predicted 0.8067 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101B201B203 would use 0.9067 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 0.9867 against 0.8067.",
+     "faithfulness": {
+      "numbers": [
+       "0.8067",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "0.9067",
+       "0.0",
+       "0",
+       "0.9867",
+       "0.8067"
+      ],
+      "matched": [
+       "0.8067",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "0.9067",
+       "0.0",
+       "0",
+       "0.9867",
+       "0.8067"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_surge/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.2483 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:B201B202 would use 6.3227 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 6.4827 against 6.4083.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.2483 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:B201B202 would use 6.3227 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 6.4827 against 6.4083.",
+     "faithfulness": {
+      "numbers": [
+       "6.2483",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "6.3227",
+       "0.0",
+       "0",
+       "6.4827",
+       "6.4083"
+      ],
+      "matched": [
+       "6.2483",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "6.3227",
+       "0.0",
+       "0",
+       "6.4827",
+       "6.4083"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_surge/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101A103B201B203 (mask): predicted 8.5582 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201 would use 7.5416 kWh with deviation 0.0 \u00b0C and 35 moves; its score is 9.7216 against 8.5582.",
+     "displayed": "The planner chose m:A101A103B201B203 (mask): predicted 8.5582 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201 would use 7.5416 kWh with deviation 0.0 \u00b0C and 35 moves; its score is 9.7216 against 8.5582.",
+     "faithfulness": {
+      "numbers": [
+       "8.5582",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "7.5416",
+       "0.0",
+       "35",
+       "9.7216",
+       "8.5582"
+      ],
+      "matched": [
+       "8.5582",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "7.5416",
+       "0.0",
+       "35",
+       "9.7216",
+       "8.5582"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_surge/s10/A",
+     "step": 23,
+     "text": "The planner chose m:A101B201B203 (mask): predicted 0.8387 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B203 would use 1.1346 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.2146 against 0.8387.",
+     "displayed": "The planner chose m:A101B201B203 (mask): predicted 0.8387 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B203 would use 1.1346 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.2146 against 0.8387.",
+     "faithfulness": {
+      "numbers": [
+       "0.8387",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.1346",
+       "0.0",
+       "0",
+       "1.2146",
+       "0.8387"
+      ],
+      "matched": [
+       "0.8387",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.1346",
+       "0.0",
+       "0",
+       "1.2146",
+       "0.8387"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_surge/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.5629 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 8.022 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.262 against 6.7229.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.5629 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 8.022 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 8.262 against 6.7229.",
+     "faithfulness": {
+      "numbers": [
+       "6.5629",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "8.022",
+       "0.0",
+       "0",
+       "8.262",
+       "6.7229"
+      ],
+      "matched": [
+       "6.5629",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "8.022",
+       "0.0",
+       "0",
+       "8.262",
+       "6.7229"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_surge/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101A103B201B203 (mask): predicted 11.0829 kWh over the next 60 minutes, mean occupied deviation 0.0034 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 13.7437 kWh with deviation 0.0034 \u00b0C and 0 moves; its score is 18.9355 against 16.1946.",
+     "displayed": "The planner chose m:A101A103B201B203 (mask): predicted 11.0829 kWh over the next 60 minutes, mean occupied deviation 0.0034 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 13.7437 kWh with deviation 0.0034 \u00b0C and 0 moves; its score is 18.9355 against 16.1946.",
+     "faithfulness": {
+      "numbers": [
+       "11.0829",
+       "60",
+       "0.0034",
+       "0",
+       "0",
+       "13.7437",
+       "0.0034",
+       "0",
+       "18.9355",
+       "16.1946"
+      ],
+      "matched": [
+       "11.0829",
+       "60",
+       "0.0034",
+       "0",
+       "0",
+       "13.7437",
+       "0.0034",
+       "0",
+       "18.9355",
+       "16.1946"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_surge/s11/A",
+     "step": 23,
+     "text": "The planner chose m:A101A103B201B203 (mask): predicted 1.076 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 1.676 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.756 against 1.076.",
+     "displayed": "The planner chose m:A101A103B201B203 (mask): predicted 1.076 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 1.676 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.756 against 1.076.",
+     "faithfulness": {
+      "numbers": [
+       "1.076",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.676",
+       "0.0",
+       "0",
+       "1.756",
+       "1.076"
+      ],
+      "matched": [
+       "1.076",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.676",
+       "0.0",
+       "0",
+       "1.756",
+       "1.076"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_maintenance/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101A102B202 (mask): predicted 11.0659 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 3 room switches. The runner-up m:A101A103B202B203 would use 11.7934 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 12.1134 against 11.3059.",
+     "displayed": "The planner chose m:A101A102B202 (mask): predicted 11.0659 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 3 room switches. The runner-up m:A101A103B202B203 would use 11.7934 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 12.1134 against 11.3059.",
+     "faithfulness": {
+      "numbers": [
+       "11.0659",
+       "60",
+       "0.0",
+       "0",
+       "3",
+       "11.7934",
+       "0.0",
+       "0",
+       "12.1134",
+       "11.3059"
+      ],
+      "matched": [
+       "11.0659",
+       "60",
+       "0.0",
+       "0",
+       "3",
+       "11.7934",
+       "0.0",
+       "0",
+       "12.1134",
+       "11.3059"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_maintenance/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101A102B202 (mask): predicted 7.3322 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102B202B203 would use 9.2612 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 9.3412 against 7.3322.",
+     "displayed": "The planner chose m:A101A102B202 (mask): predicted 7.3322 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102B202B203 would use 9.2612 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 9.3412 against 7.3322.",
+     "faithfulness": {
+      "numbers": [
+       "7.3322",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "9.2612",
+       "0.0",
+       "0",
+       "9.3412",
+       "7.3322"
+      ],
+      "matched": [
+       "7.3322",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "9.2612",
+       "0.0",
+       "0",
+       "9.3412",
+       "7.3322"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_maintenance/s10/A",
+     "step": 23,
+     "text": "The planner chose m:A101A102A103B202B203 (mask): predicted 1.3543 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B202B203 would use 1.1499 kWh with deviation 0.0 \u00b0C and 27 moves; its score is 2.8499 against 1.3543.",
+     "displayed": "The planner chose m:A101A102A103B202B203 (mask): predicted 1.3543 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B202B203 would use 1.1499 kWh with deviation 0.0 \u00b0C and 27 moves; its score is 2.8499 against 1.3543.",
+     "faithfulness": {
+      "numbers": [
+       "1.3543",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.1499",
+       "0.0",
+       "27",
+       "2.8499",
+       "1.3543"
+      ],
+      "matched": [
+       "1.3543",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.1499",
+       "0.0",
+       "27",
+       "2.8499",
+       "1.3543"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_maintenance/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101A102B202 (mask): predicted 11.1283 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 3 room switches. The runner-up m:A101A103B202B203 would use 11.8566 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 12.1766 against 11.3683.",
+     "displayed": "The planner chose m:A101A102B202 (mask): predicted 11.1283 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 3 room switches. The runner-up m:A101A103B202B203 would use 11.8566 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 12.1766 against 11.3683.",
+     "faithfulness": {
+      "numbers": [
+       "11.1283",
+       "60",
+       "0.0",
+       "0",
+       "3",
+       "11.8566",
+       "0.0",
+       "0",
+       "12.1766",
+       "11.3683"
+      ],
+      "matched": [
+       "11.1283",
+       "60",
+       "0.0",
+       "0",
+       "3",
+       "11.8566",
+       "0.0",
+       "0",
+       "12.1766",
+       "11.3683"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_maintenance/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101A102A103B202B203 (mask): predicted 14.0076 kWh over the next 60 minutes, mean occupied deviation 0.0289 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101A102A103B202 would use 11.2994 kWh with deviation 0.0293 \u00b0C and 0 moves; its score is 57.0548 against 67.2813.",
+     "displayed": "The planner chose m:A101A102A103B202B203 (mask): predicted 14.0076 kWh over the next 60 minutes, mean occupied deviation 0.0289 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101A102A103B202 would use 11.2994 kWh with deviation 0.0293 \u00b0C and 0 moves; its score is 57.0548 against 67.2813.",
+     "faithfulness": {
+      "numbers": [
+       "14.0076",
+       "60",
+       "0.0289",
+       "0",
+       "2",
+       "11.2994",
+       "0.0293",
+       "0",
+       "57.0548",
+       "67.2813"
+      ],
+      "matched": [
+       "14.0076",
+       "60",
+       "0.0289",
+       "0",
+       "2",
+       "11.2994",
+       "0.0293",
+       "0",
+       "57.0548",
+       "67.2813"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_maintenance/s11/A",
+     "step": 23,
+     "text": "The planner chose m:A101A102A103B202B203 (mask): predicted 1.3648 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102A103B202 would use 1.2614 kWh with deviation 0.0 \u00b0C and 22 moves; its score is 2.6614 against 1.3648.",
+     "displayed": "The planner chose m:A101A102A103B202B203 (mask): predicted 1.3648 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102A103B202 would use 1.2614 kWh with deviation 0.0 \u00b0C and 22 moves; its score is 2.6614 against 1.3648.",
+     "faithfulness": {
+      "numbers": [
+       "1.3648",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.2614",
+       "0.0",
+       "22",
+       "2.6614",
+       "1.3648"
+      ],
+      "matched": [
+       "1.3648",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.2614",
+       "0.0",
+       "22",
+       "2.6614",
+       "1.3648"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_drop/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.427 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.4877 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.6477 against 6.587.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.427 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.4877 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.6477 against 6.587.",
+     "faithfulness": {
+      "numbers": [
+       "6.427",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.4877",
+       "0.0",
+       "0",
+       "7.6477",
+       "6.587"
+      ],
+      "matched": [
+       "6.427",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.4877",
+       "0.0",
+       "0",
+       "7.6477",
+       "6.587"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_drop/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101B201B202B203 (mask): predicted 8.3575 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 11.3778 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 11.4578 against 8.3575.",
+     "displayed": "The planner chose m:A101B201B202B203 (mask): predicted 8.3575 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 11.3778 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 11.4578 against 8.3575.",
+     "faithfulness": {
+      "numbers": [
+       "8.3575",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "11.3778",
+       "0.0",
+       "0",
+       "11.4578",
+       "8.3575"
+      ],
+      "matched": [
+       "8.3575",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "11.3778",
+       "0.0",
+       "0",
+       "11.4578",
+       "8.3575"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_drop/s10/A",
+     "step": 23,
+     "text": "The planner chose m:A101B201B202B203 (mask): predicted 1.0716 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 1.7549 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.8349 against 1.0716.",
+     "displayed": "The planner chose m:A101B201B202B203 (mask): predicted 1.0716 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 1.7549 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.8349 against 1.0716.",
+     "faithfulness": {
+      "numbers": [
+       "1.0716",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.7549",
+       "0.0",
+       "0",
+       "1.8349",
+       "1.0716"
+      ],
+      "matched": [
+       "1.0716",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.7549",
+       "0.0",
+       "0",
+       "1.8349",
+       "1.0716"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_drop/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.0555 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.0272 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.1872 against 6.2155.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.0555 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.0272 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.1872 against 6.2155.",
+     "faithfulness": {
+      "numbers": [
+       "6.0555",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.0272",
+       "0.0",
+       "0",
+       "7.1872",
+       "6.2155"
+      ],
+      "matched": [
+       "6.0555",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.0272",
+       "0.0",
+       "0",
+       "7.1872",
+       "6.2155"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_drop/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101A103B201B203 (mask): predicted 7.8098 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 10.0089 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 10.0889 against 7.8098.",
+     "displayed": "The planner chose m:A101A103B201B203 (mask): predicted 7.8098 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 10.0089 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 10.0889 against 7.8098.",
+     "faithfulness": {
+      "numbers": [
+       "7.8098",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "10.0089",
+       "0.0",
+       "0",
+       "10.0889",
+       "7.8098"
+      ],
+      "matched": [
+       "7.8098",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "10.0089",
+       "0.0",
+       "0",
+       "10.0889",
+       "7.8098"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_drop/s11/A",
+     "step": 23,
+     "text": "The planner chose m:A101B201B203 (mask): predicted 0.8129 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B203 would use 1.3523 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.4323 against 0.8129.",
+     "displayed": "The planner chose m:A101B201B203 (mask): predicted 0.8129 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B203 would use 1.3523 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.4323 against 0.8129.",
+     "faithfulness": {
+      "numbers": [
+       "0.8129",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.3523",
+       "0.0",
+       "0",
+       "1.4323",
+       "0.8129"
+      ],
+      "matched": [
+       "0.8129",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.3523",
+       "0.0",
+       "0",
+       "1.4323",
+       "0.8129"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_fault/s10/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.3528 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.7134 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.9534 against 6.5128.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.3528 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A101B201B203 would use 7.7134 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.9534 against 6.5128.",
+     "faithfulness": {
+      "numbers": [
+       "6.3528",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.7134",
+       "0.0",
+       "0",
+       "7.9534",
+       "6.5128"
+      ],
+      "matched": [
+       "6.3528",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.7134",
+       "0.0",
+       "0",
+       "7.9534",
+       "6.5128"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_fault/s10/A",
+     "step": 12,
+     "text": "The planner chose m:A101A103B202B203 (mask): predicted 10.6044 kWh over the next 60 minutes, mean occupied deviation 0.0116 \u00b0C, 70 moves and 2 room switches. The runner-up m:A101A102A103B202B203 would use 13.9967 kWh with deviation 0.0116 \u00b0C and 70 moves; its score is 34.8712 against 31.399.",
+     "displayed": "The planner chose m:A101A103B202B203 (mask): predicted 10.6044 kWh over the next 60 minutes, mean occupied deviation 0.0116 \u00b0C, 70 moves and 2 room switches. The runner-up m:A101A102A103B202B203 would use 13.9967 kWh with deviation 0.0116 \u00b0C and 70 moves; its score is 34.8712 against 31.399.",
+     "faithfulness": {
+      "numbers": [
+       "10.6044",
+       "60",
+       "0.0116",
+       "70",
+       "2",
+       "13.9967",
+       "0.0116",
+       "70",
+       "34.8712",
+       "31.399"
+      ],
+      "matched": [
+       "10.6044",
+       "60",
+       "0.0116",
+       "70",
+       "2",
+       "13.9967",
+       "0.0116",
+       "70",
+       "34.8712",
+       "31.399"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_fault/s10/A",
+     "step": 23,
+     "text": "The planner chose m:A101A103B202B203 (mask): predicted 0.9657 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 1.0657 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.1457 against 0.9657.",
+     "displayed": "The planner chose m:A101A103B202B203 (mask): predicted 0.9657 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A103B201B202B203 would use 1.0657 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.1457 against 0.9657.",
+     "faithfulness": {
+      "numbers": [
+       "0.9657",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.0657",
+       "0.0",
+       "0",
+       "1.1457",
+       "0.9657"
+      ],
+      "matched": [
+       "0.9657",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.0657",
+       "0.0",
+       "0",
+       "1.1457",
+       "0.9657"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_fault/s11/A",
+     "step": 0,
+     "text": "The planner chose m:A101B201 (mask): predicted 6.2662 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.2713 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.4313 against 6.4262.",
+     "displayed": "The planner chose m:A101B201 (mask): predicted 6.2662 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 2 room switches. The runner-up m:A102B201 would use 7.2713 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 7.4313 against 6.4262.",
+     "faithfulness": {
+      "numbers": [
+       "6.2662",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.2713",
+       "0.0",
+       "0",
+       "7.4313",
+       "6.4262"
+      ],
+      "matched": [
+       "6.2662",
+       "60",
+       "0.0",
+       "0",
+       "2",
+       "7.2713",
+       "0.0",
+       "0",
+       "7.4313",
+       "6.4262"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_fault/s11/A",
+     "step": 12,
+     "text": "The planner chose m:A101A102A103B202B203 (mask): predicted 14.0559 kWh over the next 60 minutes, mean occupied deviation 0.0127 \u00b0C, 70 moves and 3 room switches. The runner-up m:A101A102A103B203 would use 11.6762 kWh with deviation 0.0195 \u00b0C and 70 moves; its score is 44.6431 against 37.1043.",
+     "displayed": "The planner chose m:A101A102A103B202B203 (mask): predicted 14.0559 kWh over the next 60 minutes, mean occupied deviation 0.0127 \u00b0C, 70 moves and 3 room switches. The runner-up m:A101A102A103B203 would use 11.6762 kWh with deviation 0.0195 \u00b0C and 70 moves; its score is 44.6431 against 37.1043.",
+     "faithfulness": {
+      "numbers": [
+       "14.0559",
+       "60",
+       "0.0127",
+       "70",
+       "3",
+       "11.6762",
+       "0.0195",
+       "70",
+       "44.6431",
+       "37.1043"
+      ],
+      "matched": [
+       "14.0559",
+       "60",
+       "0.0127",
+       "70",
+       "3",
+       "11.6762",
+       "0.0195",
+       "70",
+       "44.6431",
+       "37.1043"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    },
+    {
+     "episode": "notice_fault/s11/A",
+     "step": 23,
+     "text": "The planner chose m:A101A103B202B203 (mask): predicted 0.9475 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102A103B202B203 would use 1.7404 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.8204 against 0.9475.",
+     "displayed": "The planner chose m:A101A103B202B203 (mask): predicted 0.9475 kWh over the next 60 minutes, mean occupied deviation 0.0 \u00b0C, 0 moves and 0 room switches. The runner-up m:A101A102A103B202B203 would use 1.7404 kWh with deviation 0.0 \u00b0C and 0 moves; its score is 1.8204 against 0.9475.",
+     "faithfulness": {
+      "numbers": [
+       "0.9475",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.7404",
+       "0.0",
+       "0",
+       "1.8204",
+       "0.9475"
+      ],
+      "matched": [
+       "0.9475",
+       "60",
+       "0.0",
+       "0",
+       "0",
+       "1.7404",
+       "0.0",
+       "0",
+       "1.8204",
+       "0.9475"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0
+    }
+   ]
+  },
+  "llm": {
+   "status": "not_run",
+   "reason": "LLM arm not requested (run with --llm)"
+  }
+ }
+}

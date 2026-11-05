@@ -1,0 +1,658 @@
+[
+ {
+  "id": "L2R00",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "C301"
+       ],
+       "close": [],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R01",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "B202"
+       ],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "LT-A",
+        "count": "all"
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R02",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": {
+        "room": "A104",
+        "target_c": 25.5
+       },
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R03",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "b202",
+        "count": 30
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R04",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "B204"
+       ],
+       "close": [],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R05",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "B201 ",
+        "count": 10
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R06",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": {
+        "room": "B201",
+        "target_c": 25.0
+       },
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R07",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "B201"
+       ],
+       "close": [],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R08",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "A101",
+        "to": "B201",
+        "count": 5
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R09",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [
+        "X"
+       ],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R10",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "Z999",
+        "to": "B202",
+        "count": 10
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R11",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": {
+        "room": "",
+        "target_c": 25.5
+       },
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R12",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "A101",
+        "Q100"
+       ],
+       "close": [],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R13",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B2O1",
+        "to": "B202",
+        "count": 20
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R14",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "A103"
+       ],
+       "close": [],
+       "precool": {
+        "room": "B201",
+        "target_c": 25.0
+       },
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R15",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "A101",
+        "to": "B201",
+        "count": "all"
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R16",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [
+        "Room B202"
+       ],
+       "close": [],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R17",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": {
+        "room": "A103",
+        "target_c": 25.5
+       },
+       "move": null
+      },
+      {
+       "at": "+20",
+       "open": [
+        "C105"
+       ],
+       "close": [],
+       "precool": null,
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R18",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+0",
+       "open": [],
+       "close": [],
+       "precool": null,
+       "move": {
+        "from": "B201",
+        "to": "a103",
+        "count": 20
+       }
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ },
+ {
+  "id": "L2R19",
+  "class": "unknown_offline_room",
+  "boundary": "L2",
+  "output": {
+   "plans": [
+    {
+     "plan_id": "e5p0",
+     "steps": [
+      {
+       "at": "+10",
+       "open": [],
+       "close": [],
+       "precool": {
+        "room": "B201",
+        "target_c": 25.5
+       },
+       "move": null
+      }
+     ],
+     "rationale": "fixture"
+    }
+   ]
+  },
+  "expect": {
+   "outcome": "plan_rejected",
+   "codes": [
+    "unknown_room",
+    "offline_room"
+   ]
+  }
+ }
+]
