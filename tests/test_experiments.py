@@ -485,3 +485,15 @@ def test_scenario_generator_is_part_of_the_freeze_record(tmp_path, monkeypatch):
     drift = evidence_ledger._freeze_drift(tmp_path, "results/e1_AB.json",
                                           {"meta": {"scenario_hash": m2["scenario_hash"]}, "rows": [{}]})
     assert any("scenario generator differs" in d for d in drift)
+
+
+def test_e3_llm_stats_separate_rightful_refusals_from_missed_notices():
+    rows = [{"arm": "llm", "llm_calls": 3, "llm_failed_calls": 0, "llm_cached_calls": 0, "adjustments_applied": 1,
+             "adjustments_dropped": 2, "dropped_by_source": {"distractor": 1, "report": 1}, "true_notices": 1,
+             "true_notices_applied": 1},
+            {"arm": "llm", "llm_calls": 3, "llm_failed_calls": 0, "llm_cached_calls": 0, "adjustments_applied": 0,
+             "adjustments_dropped": 1, "dropped_by_source": {"notice": 1}, "true_notices": 1, "true_notices_applied": 0}]
+    st = e3.llm_stats(rows)
+    assert st["valid_proposal_rate"] == 0.25                       # 1 applied of 4 proposals ...
+    assert st["true_notice_coverage"] == 0.5                        # ... but one of two real notices was missed
+    assert st["dropped_by_source"] == {"distractor": 1, "report": 1, "notice": 1}

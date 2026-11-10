@@ -7,7 +7,8 @@ weights and λΩ (``config_hash``); this module covers the rest:
   sent: the system prompt, the output schema(s), the source of the user-prompt builder and of the
   helpers that render its data (``Snapshot.summary``, L4 option views, E4 ranking view, L5 digest), the
   shared JSON-schema instruction and data-field delimiting, and the generation settings
-  (per-role ``max_tokens``, temperature). Any edit to an L1–L5 prompt changes that role's hash.
+  (per-role ``max_tokens``, temperature, whether DeepSeek V4 thinking is on). Any edit to an
+  L1–L5 prompt changes that role's hash.
 * :func:`notices_hash` – the held-out notice corpus that E3 and the notice scenarios read.
 
 Held-out LLM results whose hashes differ from the frozen record are labelled
@@ -64,7 +65,8 @@ def _common_parts() -> list[Any]:
     from . import client as c
 
     return [_src(c.json_instruction), _src(c.wrap_data), c.DEFAULT_MAX_TOKENS,
-            inspect.signature(c.DeepSeekJSONClient.__init__).parameters["temperature"].default]
+            inspect.signature(c.DeepSeekJSONClient.__init__).parameters["temperature"].default,
+            {"deepseek_thinking": c.DEEPSEEK_THINKING}]
 
 
 def prompt_hashes() -> dict[str, str]:

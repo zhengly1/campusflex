@@ -1,0 +1,34 @@
+MQTT unavailable (paho-mqtt is not installed (pip install paho-mqtt)); falling back to the in-process bus
+{
+ "meta": {
+  "experiment": "trace T1",
+  "config_hash": "de54345ef023",
+  "frozen": true,
+  "scenario_hash": "0a1d2cc43ca0",
+  "scenario_frozen": true,
+  "notices_hash": "33c23c12f015",
+  "notices_frozen": true,
+  "prompt_hashes": {
+   "L1": "fcc087320195",
+   "L2": "e1a7d2b3f1e8",
+   "L3": "40fa23fd2d33",
+   "L4": "d108e8c8ff09",
+   "L4_explain": "3e001d1635ae",
+   "L5": "5419e186dc3f"
+  },
+  "model": "deepseek-flash",
+  "prompts_frozen": true,
+  "scenario": "notice_fault",
+  "seed": 10,
+  "device_layer": "bus:inprocess",
+  "device_fallback": true,
+  "device_fallback_reason": "paho-mqtt is not installed (pip install paho-mqtt)",
+  "planner": "T1-D",
+  "forecaster": "notice:llm"
+ },
+ "complete": true,
+ "jointly_decisive_steps": [
+  "20:00"
+ ],
+ "statement": "committed action traced to notice, IoT message, staged plan and simulation; removing any one input changes it"
+}

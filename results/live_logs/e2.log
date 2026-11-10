@@ -1,0 +1,4 @@
+structured_form run {"zero_hard_omissions": true, "weight_direction_ge_90pct": true}
+llm_compiler run {"zero_hard_omissions": true, "weight_direction_ge_90pct": true}
+plan direction structured_form 0.7272727272727273
+plan direction llm_compiler 0.7272727272727273

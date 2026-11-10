@@ -547,6 +547,38 @@ def section_t1(results: Path) -> list[str]:
     return out + generic_section(obj) + [""]
 
 
+def section_smart(results: Path) -> list[str]:
+    """Smart device extension (not part of Table 16; simulated occupants and sensors)."""
+    obj = load(results, "smart/summary.json")
+    out = ["## Smart device extension – per-device IoT dispatch, learned profiles, sensor control", ""]
+    if not isinstance(obj, dict) or "eval" not in obj:
+        return out + [MISSING, ""]
+    m = obj.get("meta", {})
+    out += [f"{m.get('train_days')} training and {m.get('eval_days')} evaluation evenings (two injected sensor "
+            "faults each); space plan from the core planner (arm A). Discomfort = share of occupied person-minutes.", ""]
+    out += md_table(
+        ["Arm", "kWh", "thermal %", "light %", "CO2>1000 %", "glare %", "manual adj./evening"],
+        ([a, s["kwh"], s["discomfort_pct"]["thermal"], s["discomfort_pct"]["light"], s["discomfort_pct"]["co2"],
+          s["discomfort_pct"]["glare"], s["adjustments_per_evening"]] for a, s in obj["eval"].items()), nd=2)
+    out.append("")
+    rows = []
+    for name, c in obj.get("comparisons", {}).items():
+        for metric, v in c.items():
+            rows.append([name, metric, v.get("mean_diff"), v.get("lo"), v.get("hi")])
+    out += ["**Paired by evaluation evening (smart − other, 95 % bootstrap interval)**", ""]
+    out += md_table(["Comparison", "metric", "mean diff", "lo", "hi"], rows, nd=3)
+    pa, ad, ti = obj.get("profile_accuracy", {}), obj.get("anomaly_detection", {}), obj.get("thermal_identification", {})
+    out += ["", f"Profiles vs latent habits ({pa.get('cells_with_room_evidence')}/{pa.get('cells_total')} room-slots "
+            f"with own evidence): setpoint MAE {pa.get('setpoint_mae_c')} °C, lux MAE {pa.get('lux_mae')}, "
+            f"curtain MAE {pa.get('curtain_mae_pct')} %, fan mismatch {pa.get('fan_mismatch_share')}, "
+            f"projector mismatch {pa.get('projector_mismatch_share')}.",
+            f"Sensor faults (stuck/drift): {ad.get('detected')}/{ad.get('faults')} detected, {ad.get('false_alarms')} "
+            f"false alarms, mean delay {ad.get('mean_delay_min')} min. Identified thermal model vs Table 6: median "
+            f"relative error R {ti.get('R', {}).get('median_rel_error')}, C {ti.get('C', {}).get('median_rel_error')}.",
+            ""]
+    return out
+
+
 def build_tables(results: Path = RESULTS) -> str:
     results = Path(results)
     parts: list[str] = ["# CampusFlex – Section 4 tables (regenerated from results/)", "",
@@ -561,6 +593,7 @@ def build_tables(results: Path = RESULTS) -> str:
     parts += section_generic(results, "e5_live.json", "E5 – live injected notices")
     parts += section_e6(results)
     parts += section_t1(results)
+    parts += section_smart(results)
     return "\n".join(parts) + "\n"
 
 

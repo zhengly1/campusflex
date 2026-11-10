@@ -3,7 +3,7 @@
   "experiment": "E5 scripted",
   "fixture_dir": "tests/e5_fixtures",
   "fixture_state": "fault seed 0, 20:00",
-  "seconds": 9.3,
+  "seconds": 9.2,
   "llm": "none (scripted adversarial proposer)"
  },
  "summary": {

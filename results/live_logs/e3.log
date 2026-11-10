@@ -1,0 +1,74 @@
+{
+ "status": {
+  "constant": "run",
+  "keyword": "run",
+  "oracle": "run",
+  "llm": "run"
+ },
+ "overall": {
+  "constant": {
+   "unserved_person_min": 185.0,
+   "moves": 19.925,
+   "forecast_mae_30min": 17.24404761904762,
+   "kwh": 33.37127,
+   "dev_c": 0.0042675000000000005,
+   "score": 57.33828999999999,
+   "n": 40
+  },
+  "keyword": {
+   "unserved_person_min": 185.0,
+   "moves": 19.425,
+   "forecast_mae_30min": 10.535714285714286,
+   "kwh": 33.293865000000004,
+   "dev_c": 0.00208375,
+   "score": 44.90256000000001,
+   "n": 40
+  },
+  "llm": {
+   "unserved_person_min": 185.0,
+   "moves": 19.425,
+   "forecast_mae_30min": 10.932142857142857,
+   "kwh": 33.31937666666667,
+   "dev_c": 0.0020848333333333335,
+   "score": 44.93560416666666,
+   "n": 120
+  },
+  "oracle": {
+   "unserved_person_min": 185.0,
+   "moves": 19.325,
+   "forecast_mae_30min": 5.589285714285714,
+   "kwh": 33.4311375,
+   "dev_c": 0.0014467500000000001,
+   "score": 41.964175,
+   "n": 40
+  }
+ },
+ "gap_closed": {
+  "unserved_person_min": {
+   "keyword": 185.0,
+   "llm": 185.0,
+   "oracle": 185.0,
+   "closed": null,
+   "note": "no gap between keyword and oracle"
+  },
+  "moves": {
+   "keyword": 19.425,
+   "llm": 19.425,
+   "oracle": 19.325,
+   "closed": 0.0
+  },
+  "forecast_mae_30min": {
+   "keyword": 10.535714285714286,
+   "llm": 10.932142857142857,
+   "oracle": 5.589285714285714,
+   "closed": -0.08014440433212976
+  },
+  "score": {
+   "keyword": 44.90256000000001,
+   "llm": 44.93560416666666,
+   "oracle": 41.964175,
+   "closed": -0.01124568995099303
+  },
+  "success_at_least_half": false
+ }
+}

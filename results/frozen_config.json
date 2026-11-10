@@ -35,16 +35,16 @@
   "weather_delta_cap_c": 5.0
  },
  "config_hash": "de54345ef023",
- "frozen_at": "2026-11-05T02:20:35+00:00",
+ "frozen_at": "2026-11-10T13:38:15+00:00",
  "llm": {
   "model": "deepseek-flash",
   "prompt_hashes": {
-   "L1": "560a11fe5898",
-   "L2": "d7e918d666c5",
-   "L3": "a054b09a905c",
-   "L4": "fc3a4eaca2ae",
-   "L4_explain": "b2e11d7682e8",
-   "L5": "5acccdc3ada0"
+   "L1": "fcc087320195",
+   "L2": "e1a7d2b3f1e8",
+   "L3": "40fa23fd2d33",
+   "L4": "d108e8c8ff09",
+   "L4_explain": "3e001d1635ae",
+   "L5": "5419e186dc3f"
   },
   "provider": "deepseek"
  },

@@ -1,0 +1,166 @@
+{
+ "meta": {
+  "experiment": "E6",
+  "protocol": "full",
+  "budget": {
+   "llm": {
+    "proposals": 6,
+    "sweeps": {
+     "baseline": 1,
+     "tuning": 4,
+     "confirmation": 0
+    }
+   },
+   "random": {
+    "proposals": 18,
+    "sweeps": {
+     "baseline": 1,
+     "tuning": 16,
+     "confirmation": 0
+    }
+   }
+  },
+  "policy": "arm_B",
+  "scenarios": [
+   "steady",
+   "surge",
+   "heat",
+   "fault",
+   "fault_surge",
+   "double_fault",
+   "notice_surge",
+   "notice_maintenance",
+   "notice_drop",
+   "notice_fault"
+  ],
+  "seeds": [
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29
+  ],
+  "config_hash": "de54345ef023",
+  "frozen": true,
+  "scenario_hash": "0a1d2cc43ca0",
+  "scenario_frozen": true,
+  "order": "Eq. 4: unserved person-minutes first, then score",
+  "note": "evaluation arm is the non-LLM pre-review arm (masks + rule-staged); L2 trigger parameters therefore have no effect in this evaluation"
+ },
+ "per_arm_means": {
+  "pre_review": {
+   "unserved_person_min": 67.5,
+   "score": 91.54437799999998,
+   "kwh": 33.111255,
+   "dev_c": 0.011533999999999997,
+   "moves": 43.32,
+   "switches": 6.01
+  },
+  "L5": {
+   "unserved_person_min": 67.5,
+   "score": 91.54437799999998,
+   "kwh": 33.111255,
+   "dev_c": 0.011533999999999997,
+   "moves": 43.32,
+   "switches": 6.01
+  },
+  "random": {
+   "unserved_person_min": 67.5,
+   "score": 91.54437799999998,
+   "kwh": 33.111255,
+   "dev_c": 0.011533999999999997,
+   "moves": 43.32,
+   "switches": 6.01
+  }
+ },
+ "comparisons": {
+  "L5_minus_pre_review": {
+   "n": 100,
+   "mean_diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "excludes_zero": false,
+   "score": {
+    "n": 100,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+   },
+   "unserved": {
+    "n": 100,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+   },
+   "decided_by": "score",
+   "a_better": false,
+   "a_worse": false
+  },
+  "random_minus_pre_review": {
+   "n": 100,
+   "mean_diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "excludes_zero": false,
+   "score": {
+    "n": 100,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+   },
+   "unserved": {
+    "n": 100,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+   },
+   "decided_by": "score",
+   "a_better": false,
+   "a_worse": false
+  },
+  "L5_minus_random": {
+   "n": 100,
+   "mean_diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "excludes_zero": false,
+   "score": {
+    "n": 100,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+   },
+   "unserved": {
+    "n": 100,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+   },
+   "decided_by": "score",
+   "a_better": false,
+   "a_worse": false
+  }
+ },
+ "verdict": {
+  "success_criterion": "L5 beats pre-review with interval excluding zero and is not worse than random search (Eq. 4 order: unserved first, then score)",
+  "L5_beats_pre_review": false,
+  "L5_not_worse_than_random": true,
+  "decided_by": {
+   "L5_vs_pre_review": "score",
+   "L5_vs_random": "score"
+  },
+  "success": false,
+  "falsification": "L5 \u2248 random search: the gain comes from spending more evaluation budget on development seeds, not from reading logs."
+ }
+}

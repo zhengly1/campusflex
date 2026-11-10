@@ -1,0 +1,48 @@
+{
+ "status": "run",
+ "protocol": "full",
+ "accepted": 0,
+ "proposals": 6,
+ "sweeps": {
+  "baseline": 1,
+  "tuning": 4,
+  "confirmation": 0
+ },
+ "config": "/data/lianyuzheng/campusflex/results/l5_config.json",
+ "report": {
+  "path": "/data/lianyuzheng/campusflex/docs/l5_report.md",
+  "faithfulness": {
+   "numbers": [
+    "2",
+    "6",
+    "0",
+    "4",
+    "0",
+    "1"
+   ],
+   "matched": [
+    "2",
+    "6",
+    "0",
+    "4",
+    "0",
+    "1"
+   ],
+   "flagged": [],
+   "unit_mismatch": [],
+   "share_matched": 1.0
+  }
+ },
+ "llm": {
+  "n_calls": 6,
+  "n_failed_calls": 0,
+  "n_fallbacks": 0,
+  "failed_call_rate": 0.0,
+  "fallback_rate": 0.0,
+  "n_proposals": 6,
+  "n_valid": 4,
+  "valid_proposal_rate": 0.6666666666666666,
+  "max_fallback_rate": 0.5,
+  "status": "run"
+ }
+}

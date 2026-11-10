@@ -1,0 +1,760 @@
+{
+ "meta": {
+  "experiment": "smart device extension (IoT \u00b7 AI \u00b7 DSA)",
+  "train_days": 20,
+  "eval_days": 10,
+  "train_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "eval_seeds": [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109
+  ],
+  "scenarios": [
+   "steady",
+   "surge",
+   "heat",
+   "fault"
+  ],
+  "space_plan": "core planner arm A (masks only, no LLM)",
+  "tick_min": 2,
+  "start_profiles": null,
+  "seconds": 5.1,
+  "note": "simulated estimates on a synthetic campus; occupants' habits are synthetic"
+ },
+ "eval": {
+  "static": {
+   "kwh": 42.892,
+   "kwh_by_device": {
+    "ac": 32.433,
+    "light": 4.093,
+    "vent": 0.959,
+    "curtain": 0.0,
+    "projector": 1.78,
+    "sockets": 3.626
+   },
+   "discomfort_pct": {
+    "thermal": 29.884,
+    "light": 4.925,
+    "co2": 78.03,
+    "glare": 0.774
+   },
+   "adjustments_per_evening": 72.3,
+   "adjustments_per_room_hour": 6.3571,
+   "scheduler_commands_per_evening": 67.8,
+   "iot_missing_acks": 0
+  },
+  "rule": {
+   "kwh": 44.539,
+   "kwh_by_device": {
+    "ac": 33.436,
+    "light": 4.108,
+    "vent": 1.55,
+    "curtain": 0.0,
+    "projector": 1.818,
+    "sockets": 3.626
+   },
+   "discomfort_pct": {
+    "thermal": 24.154,
+    "light": 6.003,
+    "co2": 0.0,
+    "glare": 0.761
+   },
+   "adjustments_per_evening": 54.8,
+   "adjustments_per_room_hour": 4.7885,
+   "scheduler_commands_per_evening": 60.5,
+   "iot_missing_acks": 0
+  },
+  "smart_dsa_only": {
+   "kwh": 44.544,
+   "kwh_by_device": {
+    "ac": 33.962,
+    "light": 3.917,
+    "vent": 1.531,
+    "curtain": 0.0,
+    "projector": 1.48,
+    "sockets": 3.655
+   },
+   "discomfort_pct": {
+    "thermal": 21.838,
+    "light": 5.183,
+    "co2": 0.0,
+    "glare": 0.406
+   },
+   "adjustments_per_evening": 27.7,
+   "adjustments_per_room_hour": 2.4228,
+   "scheduler_commands_per_evening": 71.1,
+   "iot_missing_acks": 0
+  },
+  "smart_profiles_only": {
+   "kwh": 42.575,
+   "kwh_by_device": {
+    "ac": 31.97,
+    "light": 3.929,
+    "vent": 1.501,
+    "curtain": 0.0,
+    "projector": 1.537,
+    "sockets": 3.639
+   },
+   "discomfort_pct": {
+    "thermal": 38.896,
+    "light": 4.086,
+    "co2": 3.085,
+    "glare": 0.561
+   },
+   "adjustments_per_evening": 27.6,
+   "adjustments_per_room_hour": 2.4261,
+   "scheduler_commands_per_evening": 55.3,
+   "iot_missing_acks": 0
+  },
+  "smart": {
+   "kwh": 44.463,
+   "kwh_by_device": {
+    "ac": 33.774,
+    "light": 3.96,
+    "vent": 1.531,
+    "curtain": 0.0,
+    "projector": 1.544,
+    "sockets": 3.655
+   },
+   "discomfort_pct": {
+    "thermal": 23.125,
+    "light": 4.264,
+    "co2": 0.0,
+    "glare": 0.2
+   },
+   "adjustments_per_evening": 21.9,
+   "adjustments_per_room_hour": 1.9305,
+   "scheduler_commands_per_evening": 80.1,
+   "iot_missing_acks": 0
+  }
+ },
+ "learning_curve_adjustments": {
+  "static": [
+   50,
+   80,
+   78,
+   85,
+   52,
+   77,
+   92,
+   80,
+   54,
+   87,
+   76,
+   86,
+   50,
+   88,
+   75,
+   77,
+   49,
+   88,
+   73,
+   89
+  ],
+  "rule": [
+   37,
+   58,
+   60,
+   59,
+   39,
+   49,
+   59,
+   61,
+   38,
+   70,
+   55,
+   74,
+   35,
+   63,
+   48,
+   65,
+   38,
+   67,
+   60,
+   70
+  ],
+  "smart_dsa_only": [
+   21,
+   32,
+   31,
+   37,
+   24,
+   25,
+   31,
+   38,
+   21,
+   35,
+   28,
+   35,
+   21,
+   30,
+   28,
+   34,
+   20,
+   34,
+   34,
+   35
+  ],
+  "smart_profiles_only": [
+   21,
+   35,
+   35,
+   40,
+   17,
+   24,
+   34,
+   44,
+   18,
+   36,
+   28,
+   36,
+   20,
+   28,
+   34,
+   32,
+   17,
+   31,
+   39,
+   42
+  ],
+  "smart": [
+   22,
+   35,
+   28,
+   26,
+   12,
+   24,
+   31,
+   36,
+   18,
+   31,
+   22,
+   28,
+   17,
+   25,
+   19,
+   22,
+   16,
+   26,
+   29,
+   30
+  ]
+ },
+ "comparisons": {
+  "smart_vs_rule": {
+   "adjustments": {
+    "n": 10,
+    "mean_diff": -32.9,
+    "lo": -37.8,
+    "hi": -27.5975,
+    "excludes_zero": true
+   },
+   "kwh": {
+    "n": 10,
+    "mean_diff": -0.0751,
+    "lo": -1.1672,
+    "hi": 1.2179,
+    "excludes_zero": false
+   },
+   "thermal_discomfort_pct": {
+    "n": 10,
+    "mean_diff": -1.03,
+    "lo": -8.0176,
+    "hi": 7.3883,
+    "excludes_zero": false
+   },
+   "light_discomfort_pct": {
+    "n": 10,
+    "mean_diff": -1.7391,
+    "lo": -2.749,
+    "hi": -0.7088,
+    "excludes_zero": true
+   },
+   "co2_over_1000_pct": {
+    "n": 10,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+   }
+  },
+  "smart_vs_static": {
+   "adjustments": {
+    "n": 10,
+    "mean_diff": -50.4,
+    "lo": -56.3,
+    "hi": -43.8,
+    "excludes_zero": true
+   },
+   "kwh": {
+    "n": 10,
+    "mean_diff": 1.5718,
+    "lo": 0.3409,
+    "hi": 3.0107,
+    "excludes_zero": true
+   },
+   "thermal_discomfort_pct": {
+    "n": 10,
+    "mean_diff": -6.7597,
+    "lo": -14.1039,
+    "hi": 0.3797,
+    "excludes_zero": false
+   },
+   "light_discomfort_pct": {
+    "n": 10,
+    "mean_diff": -0.6606,
+    "lo": -1.9791,
+    "hi": 0.6245,
+    "excludes_zero": false
+   },
+   "co2_over_1000_pct": {
+    "n": 10,
+    "mean_diff": -78.0305,
+    "lo": -83.5598,
+    "hi": -73.1529,
+    "excludes_zero": true
+   }
+  },
+  "smart_vs_smart_dsa_only": {
+   "adjustments": {
+    "n": 10,
+    "mean_diff": -5.8,
+    "lo": -8.6,
+    "hi": -3.1,
+    "excludes_zero": true
+   },
+   "kwh": {
+    "n": 10,
+    "mean_diff": -0.081,
+    "lo": -0.5854,
+    "hi": 0.4209,
+    "excludes_zero": false
+   },
+   "thermal_discomfort_pct": {
+    "n": 10,
+    "mean_diff": 1.2866,
+    "lo": -4.6448,
+    "hi": 8.9346,
+    "excludes_zero": false
+   },
+   "light_discomfort_pct": {
+    "n": 10,
+    "mean_diff": -0.9194,
+    "lo": -1.8339,
+    "hi": -0.016,
+    "excludes_zero": true
+   },
+   "co2_over_1000_pct": {
+    "n": 10,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+   }
+  },
+  "smart_vs_smart_profiles_only": {
+   "adjustments": {
+    "n": 10,
+    "mean_diff": -5.7,
+    "lo": -9.0025,
+    "hi": -2.7,
+    "excludes_zero": true
+   },
+   "kwh": {
+    "n": 10,
+    "mean_diff": 1.8879,
+    "lo": 0.4147,
+    "hi": 3.5456,
+    "excludes_zero": true
+   },
+   "thermal_discomfort_pct": {
+    "n": 10,
+    "mean_diff": -15.7715,
+    "lo": -20.3602,
+    "hi": -11.4714,
+    "excludes_zero": true
+   },
+   "light_discomfort_pct": {
+    "n": 10,
+    "mean_diff": 0.1781,
+    "lo": -0.9446,
+    "hi": 1.2144,
+    "excludes_zero": false
+   },
+   "co2_over_1000_pct": {
+    "n": 10,
+    "mean_diff": -3.0848,
+    "lo": -3.7474,
+    "hi": -2.5144,
+    "excludes_zero": true
+   }
+  }
+ },
+ "profile_accuracy": {
+  "cells_with_room_evidence": 19,
+  "cells_total": 24,
+  "setpoint_mae_c": 0.168,
+  "fan_mismatch_share": 0.368,
+  "lux_mae": 29.663,
+  "curtain_mae_pct": 16.316,
+  "projector_mismatch_share": 0.211
+ },
+ "anomaly_detection": {
+  "faults": 16,
+  "detected": 13,
+  "false_alarms": 2,
+  "recall": 0.812,
+  "precision": 0.867,
+  "mean_delay_min": 15.5
+ },
+ "faults_injected": [
+  {
+   "room": "A101",
+   "sensor": "temp",
+   "kind": "stuck",
+   "start_min": 1140,
+   "end_min": 1320,
+   "magnitude": 0.0
+  },
+  {
+   "room": "A101",
+   "sensor": "co2",
+   "kind": "drift",
+   "start_min": 1190,
+   "end_min": 1320,
+   "magnitude": 6.0
+  },
+  {
+   "room": "B201",
+   "sensor": "lux",
+   "kind": "spike",
+   "start_min": 1170,
+   "end_min": 1320,
+   "magnitude": 400.0
+  },
+  {
+   "room": "B203",
+   "sensor": "co2",
+   "kind": "stuck",
+   "start_min": 1220,
+   "end_min": 1320,
+   "magnitude": 0.0
+  },
+  {
+   "room": "B202",
+   "sensor": "temp",
+   "kind": "drift",
+   "start_min": 1200,
+   "end_min": 1320,
+   "magnitude": 0.04
+  },
+  {
+   "room": "A101",
+   "sensor": "temp",
+   "kind": "stuck",
+   "start_min": 1160,
+   "end_min": 1320,
+   "magnitude": 0.0
+  },
+  {
+   "room": "B203",
+   "sensor": "co2",
+   "kind": "drift",
+   "start_min": 1140,
+   "end_min": 1320,
+   "magnitude": 6.0
+  },
+  {
+   "room": "B201",
+   "sensor": "lux",
+   "kind": "spike",
+   "start_min": 1190,
+   "end_min": 1320,
+   "magnitude": 400.0
+  },
+  {
+   "room": "A101",
+   "sensor": "co2",
+   "kind": "stuck",
+   "start_min": 1170,
+   "end_min": 1320,
+   "magnitude": 0.0
+  },
+  {
+   "room": "A101",
+   "sensor": "temp",
+   "kind": "drift",
+   "start_min": 1220,
+   "end_min": 1320,
+   "magnitude": 0.04
+  },
+  {
+   "room": "B201",
+   "sensor": "temp",
+   "kind": "stuck",
+   "start_min": 1200,
+   "end_min": 1320,
+   "magnitude": 0.0
+  },
+  {
+   "room": "B203",
+   "sensor": "co2",
+   "kind": "drift",
+   "start_min": 1160,
+   "end_min": 1320,
+   "magnitude": 6.0
+  },
+  {
+   "room": "B202",
+   "sensor": "lux",
+   "kind": "spike",
+   "start_min": 1140,
+   "end_min": 1320,
+   "magnitude": 400.0
+  },
+  {
+   "room": "A101",
+   "sensor": "co2",
+   "kind": "stuck",
+   "start_min": 1190,
+   "end_min": 1320,
+   "magnitude": 0.0
+  },
+  {
+   "room": "B203",
+   "sensor": "temp",
+   "kind": "drift",
+   "start_min": 1170,
+   "end_min": 1320,
+   "magnitude": 0.04
+  },
+  {
+   "room": "A102",
+   "sensor": "temp",
+   "kind": "stuck",
+   "start_min": 1220,
+   "end_min": 1320,
+   "magnitude": 0.0
+  },
+  {
+   "room": "A101",
+   "sensor": "co2",
+   "kind": "drift",
+   "start_min": 1200,
+   "end_min": 1320,
+   "magnitude": 6.0
+  },
+  {
+   "room": "A101",
+   "sensor": "lux",
+   "kind": "spike",
+   "start_min": 1160,
+   "end_min": 1320,
+   "magnitude": 400.0
+  },
+  {
+   "room": "B201",
+   "sensor": "co2",
+   "kind": "stuck",
+   "start_min": 1140,
+   "end_min": 1320,
+   "magnitude": 0.0
+  },
+  {
+   "room": "B203",
+   "sensor": "temp",
+   "kind": "drift",
+   "start_min": 1190,
+   "end_min": 1320,
+   "magnitude": 0.04
+  }
+ ],
+ "thermal_identification": {
+  "R": {
+   "n": 6,
+   "median_rel_error": 0.2294
+  },
+  "C": {
+   "n": 6,
+   "median_rel_error": 0.114
+  }
+ },
+ "personas": [
+  {
+   "slot": "18:00-19:00",
+   "evidence": 188.8,
+   "values": {
+    "setpoint": 25.2,
+    "fan": 1.3,
+    "lux": 335,
+    "curtain": 53,
+    "projector": 0.29
+   },
+   "tags": [
+    "no projector",
+    "medium light",
+    "moderate temperature",
+    "quiet fan",
+    "curtains open for daylight"
+   ],
+   "rooms_that_differ": [
+    {
+     "room": "A101",
+     "setpoint": 25.7
+    },
+    {
+     "room": "B202",
+     "lux": 385,
+     "fan": 2
+    },
+    {
+     "room": "B203",
+     "setpoint": 25.5,
+     "lux": 424,
+     "fan": 2
+    }
+   ]
+  },
+  {
+   "slot": "19:00-20:00",
+   "evidence": 235.2,
+   "values": {
+    "setpoint": 24.2,
+    "fan": 1.8,
+    "lux": 279,
+    "curtain": 9,
+    "projector": 0.79
+   },
+   "tags": [
+    "lecture (projector on)",
+    "dim for the screen",
+    "prefers cool",
+    "medium fan",
+    "curtains closed"
+   ],
+   "rooms_that_differ": [
+    {
+     "room": "A101",
+     "setpoint": 24.7,
+     "fan": 1
+    },
+    {
+     "room": "B202",
+     "fan": 3
+    },
+    {
+     "room": "B203",
+     "setpoint": 24.6,
+     "fan": 3
+    }
+   ]
+  },
+  {
+   "slot": "20:00-21:00",
+   "evidence": 160.5,
+   "values": {
+    "setpoint": 24.6,
+    "fan": 1.5,
+    "lux": 381,
+    "curtain": 29,
+    "projector": 0.48
+   },
+   "tags": [
+    "projector sometimes",
+    "medium light",
+    "prefers cool",
+    "medium fan",
+    "curtains half open"
+   ],
+   "rooms_that_differ": [
+    {
+     "room": "A101",
+     "setpoint": 25.1,
+     "fan": 1
+    },
+    {
+     "room": "A103",
+     "fan": 1
+    },
+    {
+     "room": "B202",
+     "setpoint": 24.3,
+     "fan": 1
+    },
+    {
+     "room": "B203",
+     "setpoint": 25.0
+    }
+   ]
+  },
+  {
+   "slot": "21:00-22:00",
+   "evidence": 69.7,
+   "values": {
+    "setpoint": 25.5,
+    "fan": 1.2,
+    "lux": 496,
+    "curtain": 30,
+    "projector": 0.15
+   },
+   "tags": [
+    "no projector",
+    "bright for reading",
+    "tolerates warm",
+    "quiet fan",
+    "curtains half open"
+   ],
+   "rooms_that_differ": [
+    {
+     "room": "A101",
+     "setpoint": 26.0
+    },
+    {
+     "room": "B202",
+     "setpoint": 24.9
+    },
+    {
+     "room": "B203",
+     "fan": 2
+    }
+   ]
+  }
+ ],
+ "persona_text": {
+  "source": "template",
+  "lines": [
+   "18:00-19:00 (no projector, medium light, moderate temperature, quiet fan, curtains open for daylight): usually 25.2 \u00b0C, fan 1.3, 335 lux, curtains 53 % open, projector share 0.29; rooms that differ: A101 setpoint 25.7, B202 lux 385 fan 2, B203 setpoint 25.5 lux 424 fan 2.",
+   "19:00-20:00 (lecture (projector on), dim for the screen, prefers cool, medium fan, curtains closed): usually 24.2 \u00b0C, fan 1.8, 279 lux, curtains 9 % open, projector share 0.79; rooms that differ: A101 setpoint 24.7 fan 1, B202 fan 3, B203 setpoint 24.6 fan 3.",
+   "20:00-21:00 (projector sometimes, medium light, prefers cool, medium fan, curtains half open): usually 24.6 \u00b0C, fan 1.5, 381 lux, curtains 29 % open, projector share 0.48; rooms that differ: A101 setpoint 25.1 fan 1, A103 fan 1, B202 setpoint 24.3 fan 1, B203 setpoint 25.0.",
+   "21:00-22:00 (no projector, bright for reading, tolerates warm, quiet fan, curtains half open): usually 25.5 \u00b0C, fan 1.2, 496 lux, curtains 30 % open, projector share 0.15; rooms that differ: A101 setpoint 26.0, B202 setpoint 24.9, B203 fan 2."
+  ]
+ }
+}

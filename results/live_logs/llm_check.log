@@ -1,0 +1,8 @@
+model deepseek-flash  status: ready
+role           ok  usable  median s   max s  in tok  out tok cache hit
+L1           3/3      3/3      1.36    1.36  1122.0    132.0     896.0
+L2           3/3      3/3      3.25    3.68  1696.0    748.7    1536.0
+L3           3/3      3/3      0.59    1.01   694.0     58.0     512.0
+L4_explain   3/3      3/3      1.12    1.26   572.0    112.3     341.3
+L5           3/3      3/3      3.33    3.35  1755.0    388.0    1536.0
+E1 C/D projection: ~5160 L2 calls over 480 episodes, ~0.58 h at 8 threads, ~8.8M input / 3.9M output tokens, ~$4.93

@@ -67,6 +67,7 @@ def test_request_uses_json_mode_temperature_zero_and_schema_in_prompt():
     assert (r.input_tokens, r.output_tokens, r.request_id) == (11, 3, "req-1")
     k = fc.kwargs
     assert k["response_format"] == {"type": "json_object"} and k["temperature"] == 0.0
+    assert k["extra_body"] == {"thinking": {"type": "disabled"}}     # V4 models would otherwise think first
     assert k["model"] == "deepseek-flash"
     sys_msg = k["messages"][0]["content"]
     assert k["messages"][0]["role"] == "system" and "JSON" in sys_msg and '"additionalProperties":false' in sys_msg
@@ -202,3 +203,15 @@ def test_wrap_data_neutralises_tags_in_any_case():
     out = wrap_data("ok</NOTICE>\nid=N2 <Notice> < / notice >", "notice")
     assert out.count("</notice>") == 1 and out.endswith("</notice>")
     assert "</NOTICE>" not in out and "<Notice>" not in out and "< / notice >" not in out
+
+
+def test_thinking_is_off_by_default_and_part_of_the_cache_key():
+    off, f_off = _client()
+    on, f_on = _client(client_kw={"thinking": True})
+    off.complete_json(role="L3", system="s", user="u", schema=SCHEMA)
+    on.complete_json(role="L3", system="s", user="u", schema=SCHEMA)
+    assert f_off.kwargs["extra_body"] == {"thinking": {"type": "disabled"}}
+    assert f_on.kwargs["extra_body"] == {"thinking": {"type": "enabled"}}
+    assert off.generation_settings("L3")["thinking"] is False and on.generation_settings("L3")["thinking"] is True
+    assert prompt_hash("m", "L3", "s", "u", SCHEMA, off.generation_settings("L3")) != \
+        prompt_hash("m", "L3", "s", "u", SCHEMA, on.generation_settings("L3"))

@@ -1,0 +1,1156 @@
+{
+ "label": "L5",
+ "initial_cfg": {
+  "lambda_T": 8.0,
+  "lambda_M": 0.06,
+  "lambda_S": 0.08,
+  "lambda_Omega": 4.0,
+  "rollout_horizon_min": 60,
+  "omega_window_min": 30,
+  "l2_temp_trigger_c": 26.8,
+  "l2_periodic_every": 3,
+  "l2_demand_trigger": 20,
+  "l2_max_plans": 5,
+  "precool_set_min": [
+   10,
+   20,
+   30
+  ],
+  "rule_staged_temp_c": 26.8,
+  "min_room_dwell_steps": 2,
+  "min_student_dwell_steps": 3,
+  "max_moves_per_student": 2,
+  "no_move_windows": [],
+  "energy_budget_kwh": null,
+  "power_cap_kw": null,
+  "band_low_c": 24.0,
+  "band_high_c": 27.0,
+  "target_c": 26.0,
+  "fixed_planned_seats": 180,
+  "forecast_delta_cap": 80,
+  "weather_delta_cap_c": 5.0,
+  "llm_calls_per_step": 3,
+  "llm_latency_s": 20.0,
+  "tradeoff_dE_kwh": 1.0,
+  "tradeoff_dDev_c": 0.02,
+  "departure_mode": "random"
+ },
+ "final_cfg": {
+  "lambda_T": 8.0,
+  "lambda_M": 0.06,
+  "lambda_S": 0.08,
+  "lambda_Omega": 4.0,
+  "rollout_horizon_min": 60,
+  "omega_window_min": 30,
+  "l2_temp_trigger_c": 26.8,
+  "l2_periodic_every": 3,
+  "l2_demand_trigger": 20,
+  "l2_max_plans": 5,
+  "precool_set_min": [
+   10,
+   20,
+   30
+  ],
+  "rule_staged_temp_c": 26.8,
+  "min_room_dwell_steps": 2,
+  "min_student_dwell_steps": 3,
+  "max_moves_per_student": 2,
+  "no_move_windows": [],
+  "energy_budget_kwh": null,
+  "power_cap_kw": null,
+  "band_low_c": 24.0,
+  "band_high_c": 27.0,
+  "target_c": 26.0,
+  "fixed_planned_seats": 180,
+  "forecast_delta_cap": 80,
+  "weather_delta_cap_c": 5.0,
+  "llm_calls_per_step": 3,
+  "llm_latency_s": 20.0,
+  "tradeoff_dE_kwh": 1.0,
+  "tradeoff_dDev_c": 0.02,
+  "departure_mode": "random"
+ },
+ "history": [
+  {
+   "review_id": "R1-p1",
+   "round": 1,
+   "proposer": "L5",
+   "proposal": {
+    "review_id": "R1-p1",
+    "evidence": [
+     {
+      "interval": "double_fault/s6/20:40-21:20",
+      "observation": "Largest contribution interval; high discomfort and energy with mask-sourced actions dominating, indicating the controller is reacting late in the evening peak."
+     },
+     {
+      "interval": "fault/s6/20:00-20:40",
+      "observation": "High contribution with mask-only sourcing and elevated discomfort, showing reactive masking rather than anticipatory pre-cooling."
+     },
+     {
+      "interval": "double_fault/s1/20:00-20:40",
+      "observation": "Similar late-evening discomfort spike under double fault, consistent with insufficient look-ahead before the peak."
+     },
+     {
+      "interval": "fault_surge/s6/19:20-20:00",
+      "observation": "Worst interval for fault_surge, again mask-sourced with high discomfort, reinforcing that the horizon is too short to pre-empt the surge."
+     },
+     {
+      "interval": "notice_maintenance/s5/20:00-20:40",
+      "observation": "Worst interval for notice_maintenance carries unserved person-minutes, so any change must not increase unserved load here."
+     }
+    ],
+    "diagnosis": "The dominant cost is late-evening discomfort and energy in fault and double-fault scenarios, all driven by mask-sourced reactive actions. The current rollout horizon is too short to schedule pre-cooling ahead of the evening peak, so the controller only reacts once discomfort has built. Extending the rollout horizon should let the planner anticipate the peak and reduce these top contributions without touching hard constraints or comfort band.",
+    "diff": {
+     "param": "rollout_horizon_min",
+     "from": 60,
+     "to": 80
+    },
+    "expected_effect": {
+     "metric": "mean full-evening score",
+     "direction": "decrease",
+     "scenarios": [
+      "double_fault",
+      "fault",
+      "fault_surge",
+      "notice_fault"
+     ]
+    },
+    "risk": "Longer horizon increases compute per decision and could marginally raise energy use in mild scenarios such as heat or steady; unserved person-minutes in notice_maintenance must be monitored to ensure no increase."
+   },
+   "transcript": {
+    "role": "L5",
+    "text": "{\"review_id\":\"R1-p1\",\"evidence\":[{\"interval\":\"double_fault/s6/20:40-21:20\",\"observation\":\"Largest contribution interval; high discomfort and energy with mask-sourced actions dominating, indicating the controller is reacting late in the evening peak.\"},{\"interval\":\"fault/s6/20:00-20:40\",\"observation\":\"High contribution with mask-only sourcing and elevated discomfort, showing reactive masking rather than anticipatory pre-cooling.\"},{\"interval\":\"double_fault/s1/20:00-20:40\",\"observation\":\"Similar late-evening discomfort spike under double fault, consistent with insufficient look-ahead before the peak.\"},{\"interval\":\"fault_surge/s6/19:20-20:00\",\"observation\":\"Worst interval for fault_surge, again mask-sourced with high discomfort, reinforcing that the horizon is too short to pre-empt the surge.\"},{\"interval\":\"notice_maintenance/s5/20:00-20:40\",\"observation\":\"Worst interval for notice_maintenance carries unserved person-minutes, so any change must not increase unserved load here.\"}],\"diagnosis\":\"The dominant cost is late-evening discomfort and energy in fault and double-fault scenarios, all driven by mask-sourced reactive actions. The current rollout horizon is too short to schedule pre-cooling ahead of the evening peak, so the controller only reacts once discomfort has built. Extending the rollout horizon should let the planner anticipate the peak and reduce these top contributions without touching hard constraints or comfort band.\",\"diff\":{\"param\":\"rollout_horizon_min\",\"from\":60,\"to\":80},\"expected_effect\":{\"metric\":\"mean full-evening score\",\"direction\":\"decrease\",\"scenarios\":[\"double_fault\",\"fault\",\"fault_surge\",\"notice_fault\"]},\"risk\":\"Longer horizon increases compute per decision and could marginally raise energy use in mild scenarios such as heat or steady; unserved person-minutes in notice_maintenance must be monitored to ensure no increase.\"}",
+    "model": "deepseek-flash",
+    "cached": false,
+    "latency_s": 3.800881927832961,
+    "input_tokens": 3748,
+    "output_tokens": 422,
+    "stop_reason": "stop",
+    "error": null,
+    "prompt_hash": "feba2030eab939cd7922493f7790da3443e1e896592be6496834ab92c2b1f116",
+    "request_id": "ef52c04b-b990-4b29-bb88-4e0387111f1c",
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+    "cache_hit_tokens": 384,
+    "data": {
+     "review_id": "R1-p1",
+     "evidence": [
+      {
+       "interval": "double_fault/s6/20:40-21:20",
+       "observation": "Largest contribution interval; high discomfort and energy with mask-sourced actions dominating, indicating the controller is reacting late in the evening peak."
+      },
+      {
+       "interval": "fault/s6/20:00-20:40",
+       "observation": "High contribution with mask-only sourcing and elevated discomfort, showing reactive masking rather than anticipatory pre-cooling."
+      },
+      {
+       "interval": "double_fault/s1/20:00-20:40",
+       "observation": "Similar late-evening discomfort spike under double fault, consistent with insufficient look-ahead before the peak."
+      },
+      {
+       "interval": "fault_surge/s6/19:20-20:00",
+       "observation": "Worst interval for fault_surge, again mask-sourced with high discomfort, reinforcing that the horizon is too short to pre-empt the surge."
+      },
+      {
+       "interval": "notice_maintenance/s5/20:00-20:40",
+       "observation": "Worst interval for notice_maintenance carries unserved person-minutes, so any change must not increase unserved load here."
+      }
+     ],
+     "diagnosis": "The dominant cost is late-evening discomfort and energy in fault and double-fault scenarios, all driven by mask-sourced reactive actions. The current rollout horizon is too short to schedule pre-cooling ahead of the evening peak, so the controller only reacts once discomfort has built. Extending the rollout horizon should let the planner anticipate the peak and reduce these top contributions without touching hard constraints or comfort band.",
+     "diff": {
+      "param": "rollout_horizon_min",
+      "from": 60,
+      "to": 80
+     },
+     "expected_effect": {
+      "metric": "mean full-evening score",
+      "direction": "decrease",
+      "scenarios": [
+       "double_fault",
+       "fault",
+       "fault_surge",
+       "notice_fault"
+      ]
+     },
+     "risk": "Longer horizon increases compute per decision and could marginally raise energy use in mild scenarios such as heat or steady; unserved person-minutes in notice_maintenance must be monitored to ensure no increase."
+    }
+   },
+   "param": "rollout_horizon_min",
+   "from": 60,
+   "to": 80,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": -0.74775,
+    "lo": -4.394732821428572,
+    "hi": 4.137692714285713,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R1-p2",
+   "round": 1,
+   "proposer": "L5",
+   "proposal": {
+    "review_id": "R1-p2",
+    "evidence": [
+     {
+      "interval": "double_fault/s6/20:40-21:20",
+      "observation": "Largest contribution in the sweep, driven by mask-sourced actions with high discomfort and elevated energy; the evening peak is where the controller is most active."
+     },
+     {
+      "interval": "fault/s6/20:00-20:40",
+      "observation": "High contribution interval sourced entirely from mask actions, indicating the learned policy is making costly trade-offs during fault evenings."
+     },
+     {
+      "interval": "fault_surge/s6/19:20-20:00",
+      "observation": "Worst interval for fault_surge, again mask-sourced, showing the same peak-evening discomfort pattern under surge."
+     },
+     {
+      "interval": "notice_maintenance/s5/20:00-20:40",
+      "observation": "Worst interval for notice_maintenance carries unserved person-minutes with no moves, so any change must not add unserved load here."
+     },
+     {
+      "interval": "steady/s5/18:00-18:40",
+      "observation": "Steady scenario shows zero discomfort and minimal activity, so the dominant cost is concentrated in fault and surge evenings rather than baseline."
+     }
+    ],
+    "diagnosis": "The sweep is dominated by mask-sourced actions in peak evening intervals of the fault and double-fault scenarios, where discomfort and energy contributions are large while unserved person-minutes are zero except in notice_maintenance. The previous horizon increase was rejected with a near-zero mean score change, so the binding lever is the discomfort weight rather than planning depth. Raising lambda_T one step should push the controller to trade some energy and switching for lower discomfort in exactly the high-contribution peak intervals, without touching hard constraints or the comfort band.",
+    "diff": {
+     "param": "lambda_T",
+     "from": 8.0,
+     "to": 16.0
+    },
+    "expected_effect": {
+     "metric": "mean full-evening score",
+     "direction": "decrease",
+     "scenarios": [
+      "double_fault",
+      "fault",
+      "fault_surge",
+      "notice_fault"
+     ]
+    },
+    "risk": "A stronger discomfort weight may increase energy use and switching in peak intervals and could raise unserved person-minutes in notice_maintenance if the controller prioritizes comfort over serving; the paired bootstrap must confirm the mean score gain and the per-scenario unserved and violation checks must stay non-increasing."
+   },
+   "transcript": {
+    "role": "L5",
+    "text": "{\"review_id\":\"R1-p2\",\"evidence\":[{\"interval\":\"double_fault/s6/20:40-21:20\",\"observation\":\"Largest contribution in the sweep, driven by mask-sourced actions with high discomfort and elevated energy; the evening peak is where the controller is most active.\"},{\"interval\":\"fault/s6/20:00-20:40\",\"observation\":\"High contribution interval sourced entirely from mask actions, indicating the learned policy is making costly trade-offs during fault evenings.\"},{\"interval\":\"fault_surge/s6/19:20-20:00\",\"observation\":\"Worst interval for fault_surge, again mask-sourced, showing the same peak-evening discomfort pattern under surge.\"},{\"interval\":\"notice_maintenance/s5/20:00-20:40\",\"observation\":\"Worst interval for notice_maintenance carries unserved person-minutes with no moves, so any change must not add unserved load here.\"},{\"interval\":\"steady/s5/18:00-18:40\",\"observation\":\"Steady scenario shows zero discomfort and minimal activity, so the dominant cost is concentrated in fault and surge evenings rather than baseline.\"}],\"diagnosis\":\"The sweep is dominated by mask-sourced actions in peak evening intervals of the fault and double-fault scenarios, where discomfort and energy contributions are large while unserved person-minutes are zero except in notice_maintenance. The previous horizon increase was rejected with a near-zero mean score change, so the binding lever is the discomfort weight rather than planning depth. Raising lambda_T one step should push the controller to trade some energy and switching for lower discomfort in exactly the high-contribution peak intervals, without touching hard constraints or the comfort band.\",\"diff\":{\"param\":\"lambda_T\",\"from\":8.0,\"to\":16.0},\"expected_effect\":{\"metric\":\"mean full-evening score\",\"direction\":\"decrease\",\"scenarios\":[\"double_fault\",\"fault\",\"fault_surge\",\"notice_fault\"]},\"risk\":\"A stronger discomfort weight may increase energy use and switching in peak intervals and could raise unserved person-minutes in notice_maintenance if the controller prioritizes comfort over serving; the paired bootstrap must confirm the mean score gain and the per-scenario unserved and violation checks must stay non-increasing.\"}",
+    "model": "deepseek-flash",
+    "cached": false,
+    "latency_s": 3.86924946680665,
+    "input_tokens": 3837,
+    "output_tokens": 474,
+    "stop_reason": "stop",
+    "error": null,
+    "prompt_hash": "2c7595dc2d8f0618a5d5cdf28a41a16af448cc38898136edae8997a9b43fce18",
+    "request_id": "0dd4c2ec-ae37-4cb3-85ef-28f0ff1cc2bf",
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+    "cache_hit_tokens": 384,
+    "data": {
+     "review_id": "R1-p2",
+     "evidence": [
+      {
+       "interval": "double_fault/s6/20:40-21:20",
+       "observation": "Largest contribution in the sweep, driven by mask-sourced actions with high discomfort and elevated energy; the evening peak is where the controller is most active."
+      },
+      {
+       "interval": "fault/s6/20:00-20:40",
+       "observation": "High contribution interval sourced entirely from mask actions, indicating the learned policy is making costly trade-offs during fault evenings."
+      },
+      {
+       "interval": "fault_surge/s6/19:20-20:00",
+       "observation": "Worst interval for fault_surge, again mask-sourced, showing the same peak-evening discomfort pattern under surge."
+      },
+      {
+       "interval": "notice_maintenance/s5/20:00-20:40",
+       "observation": "Worst interval for notice_maintenance carries unserved person-minutes with no moves, so any change must not add unserved load here."
+      },
+      {
+       "interval": "steady/s5/18:00-18:40",
+       "observation": "Steady scenario shows zero discomfort and minimal activity, so the dominant cost is concentrated in fault and surge evenings rather than baseline."
+      }
+     ],
+     "diagnosis": "The sweep is dominated by mask-sourced actions in peak evening intervals of the fault and double-fault scenarios, where discomfort and energy contributions are large while unserved person-minutes are zero except in notice_maintenance. The previous horizon increase was rejected with a near-zero mean score change, so the binding lever is the discomfort weight rather than planning depth. Raising lambda_T one step should push the controller to trade some energy and switching for lower discomfort in exactly the high-contribution peak intervals, without touching hard constraints or the comfort band.",
+     "diff": {
+      "param": "lambda_T",
+      "from": 8.0,
+      "to": 16.0
+     },
+     "expected_effect": {
+      "metric": "mean full-evening score",
+      "direction": "decrease",
+      "scenarios": [
+       "double_fault",
+       "fault",
+       "fault_surge",
+       "notice_fault"
+      ]
+     },
+     "risk": "A stronger discomfort weight may increase energy use and switching in peak intervals and could raise unserved person-minutes in notice_maintenance if the controller prioritizes comfort over serving; the paired bootstrap must confirm the mean score gain and the per-scenario unserved and violation checks must stay non-increasing."
+    }
+   },
+   "param": "lambda_T",
+   "from": 8.0,
+   "to": 16.0,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 1.5711600000000008,
+    "lo": -2.737042678571426,
+    "hi": 5.51048375,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R1-p3",
+   "round": 1,
+   "proposer": "L5",
+   "proposal": {
+    "review_id": "R1-p3",
+    "evidence": [
+     {
+      "interval": "double_fault/s6/20:40-21:20",
+      "observation": "Largest contribution interval; dominated by mask-sourced actions with high realized discomfort and elevated energy, indicating the controller is reacting late rather than pre-empting."
+     },
+     {
+      "interval": "fault/s6/20:00-20:40",
+      "observation": "High-contribution fault interval driven entirely by mask actions, showing reactive recovery cost under fault conditions."
+     },
+     {
+      "interval": "fault_surge/s6/19:20-20:40",
+      "observation": "Worst interval for fault_surge; mask-sourced with high energy and discomfort, consistent with insufficient look-ahead before the surge."
+     },
+     {
+      "interval": "notice_maintenance/s5/20:00-20:40",
+      "observation": "Worst interval for notice_maintenance carries unserved person-minutes with no moves, indicating the plan is not repositioning ahead of the maintenance window."
+     },
+     {
+      "interval": "notice_fault/s6/20:00-20:40",
+      "observation": "Worst interval for notice_fault is mask-sourced with notable discomfort, again pointing to late reaction rather than anticipatory scheduling."
+     }
+    ],
+    "diagnosis": "The dominant cost intervals across fault, double_fault, fault_surge and notice scenarios are all mask-sourced and concentrated in the evening peak, while the notice_maintenance scenario leaves person-minutes unserved with zero moves. This pattern indicates the controller is not exploiting the available notice to pre-position and pre-cool; the previous horizon extension (R1-p1) and temperature-weight increase (R1-p2) both failed to yield a significant gain, so the binding limitation is the periodic re-planning cadence rather than horizon length or thermal weight. Tightening the periodic re-plan interval should let the controller act on notice earlier and reduce reactive mask-driven moves.",
+    "diff": {
+     "param": "l2_periodic_every",
+     "from": 3,
+     "to": 2
+    },
+    "expected_effect": {
+     "metric": "mean full-evening score",
+     "direction": "decrease",
+     "scenarios": [
+      "double_fault",
+      "fault",
+      "fault_surge",
+      "notice_fault",
+      "notice_maintenance"
+     ]
+    },
+    "risk": "More frequent re-planning may raise switch counts and energy use in steady and heat scenarios; if the added reactivity does not reduce mask-driven discomfort, the paired bootstrap interval may include zero and the change will be rejected. Unserved person-minutes in notice_maintenance must not increase."
+   },
+   "transcript": {
+    "role": "L5",
+    "text": "{\"review_id\":\"R1-p3\",\"evidence\":[{\"interval\":\"double_fault/s6/20:40-21:20\",\"observation\":\"Largest contribution interval; dominated by mask-sourced actions with high realized discomfort and elevated energy, indicating the controller is reacting late rather than pre-empting.\"},{\"interval\":\"fault/s6/20:00-20:40\",\"observation\":\"High-contribution fault interval driven entirely by mask actions, showing reactive recovery cost under fault conditions.\"},{\"interval\":\"fault_surge/s6/19:20-20:40\",\"observation\":\"Worst interval for fault_surge; mask-sourced with high energy and discomfort, consistent with insufficient look-ahead before the surge.\"},{\"interval\":\"notice_maintenance/s5/20:00-20:40\",\"observation\":\"Worst interval for notice_maintenance carries unserved person-minutes with no moves, indicating the plan is not repositioning ahead of the maintenance window.\"},{\"interval\":\"notice_fault/s6/20:00-20:40\",\"observation\":\"Worst interval for notice_fault is mask-sourced with notable discomfort, again pointing to late reaction rather than anticipatory scheduling.\"}],\"diagnosis\":\"The dominant cost intervals across fault, double_fault, fault_surge and notice scenarios are all mask-sourced and concentrated in the evening peak, while the notice_maintenance scenario leaves person-minutes unserved with zero moves. This pattern indicates the controller is not exploiting the available notice to pre-position and pre-cool; the previous horizon extension (R1-p1) and temperature-weight increase (R1-p2) both failed to yield a significant gain, so the binding limitation is the periodic re-planning cadence rather than horizon length or thermal weight. Tightening the periodic re-plan interval should let the controller act on notice earlier and reduce reactive mask-driven moves.\",\"diff\":{\"param\":\"l2_periodic_every\",\"from\":3,\"to\":2},\"expected_effect\":{\"metric\":\"mean full-evening score\",\"direction\":\"decrease\",\"scenarios\":[\"double_fault\",\"fault\",\"fault_surge\",\"notice_fault\",\"notice_maintenance\"]},\"risk\":\"More frequent re-planning may raise switch counts and energy use in steady and heat scenarios; if the added reactivity does not reduce mask-driven discomfort, the paired bootstrap interval may include zero and the change will be rejected. Unserved person-minutes in notice_maintenance must not increase.\"}",
+    "model": "deepseek-flash",
+    "cached": false,
+    "latency_s": 4.092995844781399,
+    "input_tokens": 3924,
+    "output_tokens": 509,
+    "stop_reason": "stop",
+    "error": null,
+    "prompt_hash": "62b27d90453aa2ba44fe171ff8f1e78229d43864a1e2cf69cd9b9d24c74235d2",
+    "request_id": "7ca917e4-0d88-4b8a-8726-3f38d4e1bab7",
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+    "cache_hit_tokens": 384,
+    "data": {
+     "review_id": "R1-p3",
+     "evidence": [
+      {
+       "interval": "double_fault/s6/20:40-21:20",
+       "observation": "Largest contribution interval; dominated by mask-sourced actions with high realized discomfort and elevated energy, indicating the controller is reacting late rather than pre-empting."
+      },
+      {
+       "interval": "fault/s6/20:00-20:40",
+       "observation": "High-contribution fault interval driven entirely by mask actions, showing reactive recovery cost under fault conditions."
+      },
+      {
+       "interval": "fault_surge/s6/19:20-20:40",
+       "observation": "Worst interval for fault_surge; mask-sourced with high energy and discomfort, consistent with insufficient look-ahead before the surge."
+      },
+      {
+       "interval": "notice_maintenance/s5/20:00-20:40",
+       "observation": "Worst interval for notice_maintenance carries unserved person-minutes with no moves, indicating the plan is not repositioning ahead of the maintenance window."
+      },
+      {
+       "interval": "notice_fault/s6/20:00-20:40",
+       "observation": "Worst interval for notice_fault is mask-sourced with notable discomfort, again pointing to late reaction rather than anticipatory scheduling."
+      }
+     ],
+     "diagnosis": "The dominant cost intervals across fault, double_fault, fault_surge and notice scenarios are all mask-sourced and concentrated in the evening peak, while the notice_maintenance scenario leaves person-minutes unserved with zero moves. This pattern indicates the controller is not exploiting the available notice to pre-position and pre-cool; the previous horizon extension (R1-p1) and temperature-weight increase (R1-p2) both failed to yield a significant gain, so the binding limitation is the periodic re-planning cadence rather than horizon length or thermal weight. Tightening the periodic re-plan interval should let the controller act on notice earlier and reduce reactive mask-driven moves.",
+     "diff": {
+      "param": "l2_periodic_every",
+      "from": 3,
+      "to": 2
+     },
+     "expected_effect": {
+      "metric": "mean full-evening score",
+      "direction": "decrease",
+      "scenarios": [
+       "double_fault",
+       "fault",
+       "fault_surge",
+       "notice_fault",
+       "notice_maintenance"
+      ]
+     },
+     "risk": "More frequent re-planning may raise switch counts and energy use in steady and heat scenarios; if the added reactivity does not reduce mask-driven discomfort, the paired bootstrap interval may include zero and the change will be rejected. Unserved person-minutes in notice_maintenance must not increase."
+    }
+   },
+   "param": "l2_periodic_every",
+   "from": 3,
+   "to": 2,
+   "valid": false,
+   "accepted": false,
+   "stage": "evidence",
+   "violations": [
+    {
+     "code": "unknown_interval",
+     "detail": "interval 'fault_surge/s6/19:20-20:40' is not in the digest"
+    }
+   ]
+  },
+  {
+   "review_id": "R2-p1",
+   "round": 2,
+   "proposer": "L5",
+   "proposal": {
+    "review_id": "R2-p1",
+    "evidence": [
+     {
+      "interval": "double_fault/s6/20:40-21:20",
+      "observation": "Largest contribution interval; high realized discomfort with mask-sourced actions dominating, indicating the controller is not pre-cooling early enough before the evening peak."
+     },
+     {
+      "interval": "fault/s6/20:00-20:40",
+      "observation": "High discomfort contribution in a fault scenario, again mask-sourced, consistent with insufficient anticipatory cooling ahead of the peak window."
+     },
+     {
+      "interval": "notice_maintenance/s5/20:00-20:40",
+      "observation": "Worst interval for this scenario carries unserved person-minutes alongside discomfort, so any change must not reduce service here."
+     },
+     {
+      "interval": "heat/s5/18:40-19:20",
+      "observation": "Worst interval for the heat scenario has low discomfort contribution, so heat is not the binding constraint for this change."
+     }
+    ],
+    "diagnosis": "The dominant score contributions cluster in the evening peak intervals of the fault and double-fault scenarios, all driven by mask-sourced actions with high realized discomfort. The current precool set starts too late to build thermal buffer before the peak, so extending the precool window earlier should reduce peak discomfort. Prior rejected diffs on rollout_horizon_min and lambda_T showed no significant tuning gain, and the l2_periodic_every change failed at the evidence stage, so a precool-set step is the untried lever most directly tied to the observed peak-interval discomfort.",
+    "diff": {
+     "param": "precool_set_min",
+     "from": [
+      10,
+      20,
+      30
+     ],
+     "to": [
+      20,
+      30,
+      40
+     ]
+    },
+    "expected_effect": {
+     "metric": "mean full-evening score",
+     "direction": "decrease",
+     "scenarios": [
+      "double_fault",
+      "fault",
+      "fault_surge",
+      "notice_fault"
+     ]
+    },
+    "risk": "Shifting precool later may raise energy use and could interact with the notice_maintenance interval that already carries unserved person-minutes; if the paired bootstrap interval includes zero or unserved person-minutes rise in any scenario, the diff will be rejected."
+   },
+   "transcript": {
+    "role": "L5",
+    "text": "{\"review_id\":\"R2-p1\",\"evidence\":[{\"interval\":\"double_fault/s6/20:40-21:20\",\"observation\":\"Largest contribution interval; high realized discomfort with mask-sourced actions dominating, indicating the controller is not pre-cooling early enough before the evening peak.\"},{\"interval\":\"fault/s6/20:00-20:40\",\"observation\":\"High discomfort contribution in a fault scenario, again mask-sourced, consistent with insufficient anticipatory cooling ahead of the peak window.\"},{\"interval\":\"notice_maintenance/s5/20:00-20:40\",\"observation\":\"Worst interval for this scenario carries unserved person-minutes alongside discomfort, so any change must not reduce service here.\"},{\"interval\":\"heat/s5/18:40-19:20\",\"observation\":\"Worst interval for the heat scenario has low discomfort contribution, so heat is not the binding constraint for this change.\"}],\"diagnosis\":\"The dominant score contributions cluster in the evening peak intervals of the fault and double-fault scenarios, all driven by mask-sourced actions with high realized discomfort. The current precool set starts too late to build thermal buffer before the peak, so extending the precool window earlier should reduce peak discomfort. Prior rejected diffs on rollout_horizon_min and lambda_T showed no significant tuning gain, and the l2_periodic_every change failed at the evidence stage, so a precool-set step is the untried lever most directly tied to the observed peak-interval discomfort.\",\"diff\":{\"param\":\"precool_set_min\",\"from\":[10,20,30],\"to\":[20,30,40]},\"expected_effect\":{\"metric\":\"mean full-evening score\",\"direction\":\"decrease\",\"scenarios\":[\"double_fault\",\"fault\",\"fault_surge\",\"notice_fault\"]},\"risk\":\"Shifting precool later may raise energy use and could interact with the notice_maintenance interval that already carries unserved person-minutes; if the paired bootstrap interval includes zero or unserved person-minutes rise in any scenario, the diff will be rejected.\"}",
+    "model": "deepseek-flash",
+    "cached": false,
+    "latency_s": 3.6174557879567146,
+    "input_tokens": 3994,
+    "output_tokens": 431,
+    "stop_reason": "stop",
+    "error": null,
+    "prompt_hash": "51ad01cb00fbf48a4e32dc9c3f830e03a52720864b7b868ed990faeceff49b23",
+    "request_id": "aefbb682-fa1f-43fc-8732-9ebc4d3e1dfb",
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+    "cache_hit_tokens": 384,
+    "data": {
+     "review_id": "R2-p1",
+     "evidence": [
+      {
+       "interval": "double_fault/s6/20:40-21:20",
+       "observation": "Largest contribution interval; high realized discomfort with mask-sourced actions dominating, indicating the controller is not pre-cooling early enough before the evening peak."
+      },
+      {
+       "interval": "fault/s6/20:00-20:40",
+       "observation": "High discomfort contribution in a fault scenario, again mask-sourced, consistent with insufficient anticipatory cooling ahead of the peak window."
+      },
+      {
+       "interval": "notice_maintenance/s5/20:00-20:40",
+       "observation": "Worst interval for this scenario carries unserved person-minutes alongside discomfort, so any change must not reduce service here."
+      },
+      {
+       "interval": "heat/s5/18:40-19:20",
+       "observation": "Worst interval for the heat scenario has low discomfort contribution, so heat is not the binding constraint for this change."
+      }
+     ],
+     "diagnosis": "The dominant score contributions cluster in the evening peak intervals of the fault and double-fault scenarios, all driven by mask-sourced actions with high realized discomfort. The current precool set starts too late to build thermal buffer before the peak, so extending the precool window earlier should reduce peak discomfort. Prior rejected diffs on rollout_horizon_min and lambda_T showed no significant tuning gain, and the l2_periodic_every change failed at the evidence stage, so a precool-set step is the untried lever most directly tied to the observed peak-interval discomfort.",
+     "diff": {
+      "param": "precool_set_min",
+      "from": [
+       10,
+       20,
+       30
+      ],
+      "to": [
+       20,
+       30,
+       40
+      ]
+     },
+     "expected_effect": {
+      "metric": "mean full-evening score",
+      "direction": "decrease",
+      "scenarios": [
+       "double_fault",
+       "fault",
+       "fault_surge",
+       "notice_fault"
+      ]
+     },
+     "risk": "Shifting precool later may raise energy use and could interact with the notice_maintenance interval that already carries unserved person-minutes; if the paired bootstrap interval includes zero or unserved person-minutes rise in any scenario, the diff will be rejected."
+    }
+   },
+   "param": "precool_set_min",
+   "from": [
+    10,
+    20,
+    30
+   ],
+   "to": [
+    20,
+    30,
+    40
+   ],
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  },
+  {
+   "review_id": "R2-p2",
+   "round": 2,
+   "proposer": "L5",
+   "proposal": {
+    "review_id": "R2-p2",
+    "evidence": [
+     {
+      "interval": "double_fault/s6/20:40-21:20",
+      "observation": "Largest contribution interval; high realized discomfort with mask-sourced actions, indicating the controller tolerates large temperature excursions late in the evening."
+     },
+     {
+      "interval": "fault/s6/20:00-20:40",
+      "observation": "High contribution with mask-only sourcing; discomfort persists under fault conditions despite available mask actions."
+     },
+     {
+      "interval": "fault_surge/s6/19:20-20:00",
+      "observation": "Worst interval for fault_surge; elevated discomfort contribution with mask sourcing, showing the temperature penalty is under-weighted relative to comfort."
+     },
+     {
+      "interval": "notice_maintenance/s5/20:00-20:40",
+      "observation": "Worst interval for notice_maintenance carries unserved person-minutes alongside discomfort, so any change must not increase unserved demand here."
+     },
+     {
+      "interval": "heat/s5/18:40-19:20",
+      "observation": "Worst interval for heat has low discomfort contribution, so added temperature weight should not materially disturb this scenario."
+     }
+    ],
+    "diagnosis": "The sweep is dominated by discomfort contributions in fault and double-fault evenings where actions come almost entirely from the mask source. The previous attempt to raise lambda_T by one step (R1-p2) produced a positive mean score difference but a bootstrap interval spanning zero, so it was not accepted; the direction was favorable but the effect was underpowered. The current temperature weight sits at the reference value, and the top intervals show residual discomfort that a modest increase in temperature weighting could address without touching hard constraints, capacities, or the comfort band. A smaller, single-step move on lambda_T is the most defensible lever given the measured positive trend and the absence of unserved or violation increases in the fault-family scenarios.",
+    "diff": {
+     "param": "lambda_T",
+     "from": 8.0,
+     "to": 16.0
+    },
+    "expected_effect": {
+     "metric": "mean full-evening score (reference weights)",
+     "direction": "increase",
+     "scenarios": [
+      "double_fault",
+      "fault",
+      "fault_surge",
+      "notice_fault"
+     ]
+    },
+    "risk": "R1-p2 already tried this exact step and its interval included zero, so the paired bootstrap may again fail to exclude zero; the added temperature weight could also raise energy use in heat and steady scenarios, though their discomfort contributions are small and unserved person-minutes in notice_maintenance must be watched for any increase."
+   },
+   "transcript": {
+    "role": "L5",
+    "text": "{\"review_id\":\"R2-p2\",\"evidence\":[{\"interval\":\"double_fault/s6/20:40-21:20\",\"observation\":\"Largest contribution interval; high realized discomfort with mask-sourced actions, indicating the controller tolerates large temperature excursions late in the evening.\"},{\"interval\":\"fault/s6/20:00-20:40\",\"observation\":\"High contribution with mask-only sourcing; discomfort persists under fault conditions despite available mask actions.\"},{\"interval\":\"fault_surge/s6/19:20-20:00\",\"observation\":\"Worst interval for fault_surge; elevated discomfort contribution with mask sourcing, showing the temperature penalty is under-weighted relative to comfort.\"},{\"interval\":\"notice_maintenance/s5/20:00-20:40\",\"observation\":\"Worst interval for notice_maintenance carries unserved person-minutes alongside discomfort, so any change must not increase unserved demand here.\"},{\"interval\":\"heat/s5/18:40-19:20\",\"observation\":\"Worst interval for heat has low discomfort contribution, so added temperature weight should not materially disturb this scenario.\"}],\"diagnosis\":\"The sweep is dominated by discomfort contributions in fault and double-fault evenings where actions come almost entirely from the mask source. The previous attempt to raise lambda_T by one step (R1-p2) produced a positive mean score difference but a bootstrap interval spanning zero, so it was not accepted; the direction was favorable but the effect was underpowered. The current temperature weight sits at the reference value, and the top intervals show residual discomfort that a modest increase in temperature weighting could address without touching hard constraints, capacities, or the comfort band. A smaller, single-step move on lambda_T is the most defensible lever given the measured positive trend and the absence of unserved or violation increases in the fault-family scenarios.\",\"diff\":{\"param\":\"lambda_T\",\"from\":8.0,\"to\":16.0},\"expected_effect\":{\"metric\":\"mean full-evening score (reference weights)\",\"direction\":\"increase\",\"scenarios\":[\"double_fault\",\"fault\",\"fault_surge\",\"notice_fault\"]},\"risk\":\"R1-p2 already tried this exact step and its interval included zero, so the paired bootstrap may again fail to exclude zero; the added temperature weight could also raise energy use in heat and steady scenarios, though their discomfort contributions are small and unserved person-minutes in notice_maintenance must be watched for any increase.\"}",
+    "model": "deepseek-flash",
+    "cached": false,
+    "latency_s": 4.220429077744484,
+    "input_tokens": 4094,
+    "output_tokens": 508,
+    "stop_reason": "stop",
+    "error": null,
+    "prompt_hash": "40e4c9105ef9f0488f07a57fbe00e8a1970e0beee96f2b04d8c817b40d42e0df",
+    "request_id": "0ab50218-e2f9-4f31-be87-6c3e9fe0a630",
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+    "cache_hit_tokens": 384,
+    "data": {
+     "review_id": "R2-p2",
+     "evidence": [
+      {
+       "interval": "double_fault/s6/20:40-21:20",
+       "observation": "Largest contribution interval; high realized discomfort with mask-sourced actions, indicating the controller tolerates large temperature excursions late in the evening."
+      },
+      {
+       "interval": "fault/s6/20:00-20:40",
+       "observation": "High contribution with mask-only sourcing; discomfort persists under fault conditions despite available mask actions."
+      },
+      {
+       "interval": "fault_surge/s6/19:20-20:00",
+       "observation": "Worst interval for fault_surge; elevated discomfort contribution with mask sourcing, showing the temperature penalty is under-weighted relative to comfort."
+      },
+      {
+       "interval": "notice_maintenance/s5/20:00-20:40",
+       "observation": "Worst interval for notice_maintenance carries unserved person-minutes alongside discomfort, so any change must not increase unserved demand here."
+      },
+      {
+       "interval": "heat/s5/18:40-19:20",
+       "observation": "Worst interval for heat has low discomfort contribution, so added temperature weight should not materially disturb this scenario."
+      }
+     ],
+     "diagnosis": "The sweep is dominated by discomfort contributions in fault and double-fault evenings where actions come almost entirely from the mask source. The previous attempt to raise lambda_T by one step (R1-p2) produced a positive mean score difference but a bootstrap interval spanning zero, so it was not accepted; the direction was favorable but the effect was underpowered. The current temperature weight sits at the reference value, and the top intervals show residual discomfort that a modest increase in temperature weighting could address without touching hard constraints, capacities, or the comfort band. A smaller, single-step move on lambda_T is the most defensible lever given the measured positive trend and the absence of unserved or violation increases in the fault-family scenarios.",
+     "diff": {
+      "param": "lambda_T",
+      "from": 8.0,
+      "to": 16.0
+     },
+     "expected_effect": {
+      "metric": "mean full-evening score (reference weights)",
+      "direction": "increase",
+      "scenarios": [
+       "double_fault",
+       "fault",
+       "fault_surge",
+       "notice_fault"
+      ]
+     },
+     "risk": "R1-p2 already tried this exact step and its interval included zero, so the paired bootstrap may again fail to exclude zero; the added temperature weight could also raise energy use in heat and steady scenarios, though their discomfort contributions are small and unserved person-minutes in notice_maintenance must be watched for any increase."
+    }
+   },
+   "param": "lambda_T",
+   "from": 8.0,
+   "to": 16.0,
+   "valid": false,
+   "accepted": false,
+   "stage": "evidence",
+   "violations": [
+    {
+     "code": "repeat_rejected",
+     "detail": "lambda_T 8.0->16.0 was already rejected"
+    }
+   ]
+  },
+  {
+   "review_id": "R2-p3",
+   "round": 2,
+   "proposer": "L5",
+   "proposal": {
+    "review_id": "R2-p3",
+    "evidence": [
+     {
+      "interval": "double_fault/s6/20:40-21:20",
+      "observation": "Largest contribution of the sweep, driven almost entirely by mask-sourced actions with high discomfort and energy; the controller is committing mask moves in the evening peak of the double-fault scenario."
+     },
+     {
+      "interval": "fault/s6/20:00-20:40",
+      "observation": "Second-largest contribution, again mask-sourced with high discomfort and energy in the evening peak of a fault scenario."
+     },
+     {
+      "interval": "double_fault/s1/20:00-20:40",
+      "observation": "Mask-sourced evening-peak interval with high discomfort and energy, confirming the pattern across double-fault rooms."
+     },
+     {
+      "interval": "fault/s3/20:00-20:40",
+      "observation": "Mask-sourced evening-peak interval with high discomfort and energy in a fault scenario."
+     },
+     {
+      "interval": "fault/s5/20:00-20:40",
+      "observation": "Mask-sourced evening-peak interval with high discomfort and energy in a fault scenario."
+     },
+     {
+      "interval": "notice_maintenance/s5/20:00-20:40",
+      "observation": "Worst interval of the maintenance scenario carries unserved person-minutes, so any change must not increase unserved demand here."
+     }
+    ],
+    "diagnosis": "The dominant cost is concentrated in evening-peak intervals of the fault and double-fault scenarios, where nearly all committed actions come from the mask source and produce high discomfort and energy. The mask is over-committing relative to the rule source, and the temperature penalty weight is already at the reference value; the sweep history shows that raising lambda_T (R1-p2, R2-p2) does not yield a significant gain, and horizon and precool changes were flat or rejected. The remaining lever that directly dampens mask-driven moves without touching hard constraints is the mask penalty weight lambda_M, which is currently at its lowest-but-one step and can be raised one step to make mask actions pay more for their discomfort and energy in these peak intervals.",
+    "diff": {
+     "param": "lambda_M",
+     "from": 0.06,
+     "to": 0.2
+    },
+    "expected_effect": {
+     "metric": "mean full-evening score",
+     "direction": "increase",
+     "scenarios": [
+      "double_fault",
+      "fault",
+      "fault_surge"
+     ]
+    },
+    "risk": "Raising lambda_M may suppress mask actions that were serving demand in maintenance and surge scenarios, potentially increasing unserved person-minutes in notice_maintenance; the paired bootstrap must confirm the score gain and the no-worsening checks on unserved person-minutes and hard violations must hold, otherwise the diff is rejected."
+   },
+   "transcript": {
+    "role": "L5",
+    "text": "{\"review_id\":\"R2-p3\",\"evidence\":[{\"interval\":\"double_fault/s6/20:40-21:20\",\"observation\":\"Largest contribution of the sweep, driven almost entirely by mask-sourced actions with high discomfort and energy; the controller is committing mask moves in the evening peak of the double-fault scenario.\"},{\"interval\":\"fault/s6/20:00-20:40\",\"observation\":\"Second-largest contribution, again mask-sourced with high discomfort and energy in the evening peak of a fault scenario.\"},{\"interval\":\"double_fault/s1/20:00-20:40\",\"observation\":\"Mask-sourced evening-peak interval with high discomfort and energy, confirming the pattern across double-fault rooms.\"},{\"interval\":\"fault/s3/20:00-20:40\",\"observation\":\"Mask-sourced evening-peak interval with high discomfort and energy in a fault scenario.\"},{\"interval\":\"fault/s5/20:00-20:40\",\"observation\":\"Mask-sourced evening-peak interval with high discomfort and energy in a fault scenario.\"},{\"interval\":\"notice_maintenance/s5/20:00-20:40\",\"observation\":\"Worst interval of the maintenance scenario carries unserved person-minutes, so any change must not increase unserved demand here.\"}],\"diagnosis\":\"The dominant cost is concentrated in evening-peak intervals of the fault and double-fault scenarios, where nearly all committed actions come from the mask source and produce high discomfort and energy. The mask is over-committing relative to the rule source, and the temperature penalty weight is already at the reference value; the sweep history shows that raising lambda_T (R1-p2, R2-p2) does not yield a significant gain, and horizon and precool changes were flat or rejected. The remaining lever that directly dampens mask-driven moves without touching hard constraints is the mask penalty weight lambda_M, which is currently at its lowest-but-one step and can be raised one step to make mask actions pay more for their discomfort and energy in these peak intervals.\",\"diff\":{\"param\":\"lambda_M\",\"from\":0.06,\"to\":0.2},\"expected_effect\":{\"metric\":\"mean full-evening score\",\"direction\":\"increase\",\"scenarios\":[\"double_fault\",\"fault\",\"fault_surge\"]},\"risk\":\"Raising lambda_M may suppress mask actions that were serving demand in maintenance and surge scenarios, potentially increasing unserved person-minutes in notice_maintenance; the paired bootstrap must confirm the score gain and the no-worsening checks on unserved person-minutes and hard violations must hold, otherwise the diff is rejected.\"}",
+    "model": "deepseek-flash",
+    "cached": false,
+    "latency_s": 3.8279885817319155,
+    "input_tokens": 4163,
+    "output_tokens": 546,
+    "stop_reason": "stop",
+    "error": null,
+    "prompt_hash": "92eec6253d108eed558268de77d15dd69edbfb8ee09c007a944f1b039ca47797",
+    "request_id": "3facf7d7-83e4-4125-b2b7-09506677a4bf",
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+    "cache_hit_tokens": 384,
+    "data": {
+     "review_id": "R2-p3",
+     "evidence": [
+      {
+       "interval": "double_fault/s6/20:40-21:20",
+       "observation": "Largest contribution of the sweep, driven almost entirely by mask-sourced actions with high discomfort and energy; the controller is committing mask moves in the evening peak of the double-fault scenario."
+      },
+      {
+       "interval": "fault/s6/20:00-20:40",
+       "observation": "Second-largest contribution, again mask-sourced with high discomfort and energy in the evening peak of a fault scenario."
+      },
+      {
+       "interval": "double_fault/s1/20:00-20:40",
+       "observation": "Mask-sourced evening-peak interval with high discomfort and energy, confirming the pattern across double-fault rooms."
+      },
+      {
+       "interval": "fault/s3/20:00-20:40",
+       "observation": "Mask-sourced evening-peak interval with high discomfort and energy in a fault scenario."
+      },
+      {
+       "interval": "fault/s5/20:00-20:40",
+       "observation": "Mask-sourced evening-peak interval with high discomfort and energy in a fault scenario."
+      },
+      {
+       "interval": "notice_maintenance/s5/20:00-20:40",
+       "observation": "Worst interval of the maintenance scenario carries unserved person-minutes, so any change must not increase unserved demand here."
+      }
+     ],
+     "diagnosis": "The dominant cost is concentrated in evening-peak intervals of the fault and double-fault scenarios, where nearly all committed actions come from the mask source and produce high discomfort and energy. The mask is over-committing relative to the rule source, and the temperature penalty weight is already at the reference value; the sweep history shows that raising lambda_T (R1-p2, R2-p2) does not yield a significant gain, and horizon and precool changes were flat or rejected. The remaining lever that directly dampens mask-driven moves without touching hard constraints is the mask penalty weight lambda_M, which is currently at its lowest-but-one step and can be raised one step to make mask actions pay more for their discomfort and energy in these peak intervals.",
+     "diff": {
+      "param": "lambda_M",
+      "from": 0.06,
+      "to": 0.2
+     },
+     "expected_effect": {
+      "metric": "mean full-evening score",
+      "direction": "increase",
+      "scenarios": [
+       "double_fault",
+       "fault",
+       "fault_surge"
+      ]
+     },
+     "risk": "Raising lambda_M may suppress mask actions that were serving demand in maintenance and surge scenarios, potentially increasing unserved person-minutes in notice_maintenance; the paired bootstrap must confirm the score gain and the no-worsening checks on unserved person-minutes and hard violations must hold, otherwise the diff is rejected."
+    }
+   },
+   "param": "lambda_M",
+   "from": 0.06,
+   "to": 0.2,
+   "valid": true,
+   "tuning": {
+    "n": 70,
+    "mean_diff": 2.0438000000000005,
+    "lo": 0.40953267857142855,
+    "hi": 4.119659250000001,
+    "excludes_zero": true,
+    "reason": "no significant improvement"
+   },
+   "per_scenario": {
+    "double_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "fault_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "heat": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_drop": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_fault": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_maintenance": {
+     "unserved_base": 4600.0,
+     "unserved_cand": 4600.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "notice_surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "steady": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    },
+    "surge": {
+     "unserved_base": 0.0,
+     "unserved_cand": 0.0,
+     "violations_base": 0.0,
+     "violations_cand": 0.0,
+     "ok": true
+    }
+   },
+   "accepted": false,
+   "stage": "tuning"
+  }
+ ],
+ "rounds": 2,
+ "proposals": 6,
+ "sweeps": {
+  "baseline": 1,
+  "tuning": 4,
+  "confirmation": 0
+ },
+ "meta": {
+  "scenarios": [
+   "steady",
+   "surge",
+   "heat",
+   "fault",
+   "fault_surge",
+   "double_fault",
+   "notice_surge",
+   "notice_maintenance",
+   "notice_drop",
+   "notice_fault"
+  ],
+  "tuning_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "check_seeds": [
+   7,
+   8,
+   9
+  ],
+  "max_rounds": 6,
+  "per_round": 3,
+  "protocol": "full",
+  "base_config_hash": "de54345ef023",
+  "base_frozen": true,
+  "prompt_hashes": {
+   "L1": "fcc087320195",
+   "L2": "e1a7d2b3f1e8",
+   "L3": "40fa23fd2d33",
+   "L4": "d108e8c8ff09",
+   "L4_explain": "3e001d1635ae",
+   "L5": "5419e186dc3f"
+  },
+  "model": "deepseek-flash",
+  "prompts_frozen": true
+ },
+ "accepted": [],
+ "review_acceptance_rate": 0.0,
+ "llm_stats": {
+  "n_calls": 6,
+  "n_failed_calls": 0,
+  "n_fallbacks": 0,
+  "failed_call_rate": 0.0,
+  "fallback_rate": 0.0,
+  "n_proposals": 6,
+  "n_valid": 4,
+  "valid_proposal_rate": 0.6666666666666666,
+  "max_fallback_rate": 0.5,
+  "status": "run"
+ },
+ "status": "run"
+}

@@ -93,6 +93,20 @@ def run_one(arm: str, scenario: str, seed: int, cfg: PlannerConfig, client: LLMC
     log = getattr(fc, "log", [])
     row["adjustments_applied"] = sum(1 for e in log if e.get("applied") is not None)
     row["adjustments_dropped"] = sum(1 for e in log if e.get("applied") is None)
+    # where the dropped proposals came from: a proposal for a distractor or an occupant report is
+    # rightly refused; a dropped proposal for a real notice is a miss
+    source = {n.notice_id: ("distractor" if n.distractor else "injected" if n.injected else
+                            "report" if n.kind == "report" else "notice") for n in sc.notices}
+    by_source: dict[str, int] = {}
+    for e in log:
+        if e.get("applied") is None:
+            k = source.get(str((e.get("raw") or {}).get("source_id")), "unknown")
+            by_source[k] = by_source.get(k, 0) + 1
+    row["dropped_by_source"] = by_source
+    true_ids = {n.notice_id for n in sc.notices if n.truth is not None}
+    applied_ids = {str(e["applied"].get("source_id")) for e in log if e.get("applied") is not None}
+    row["true_notices"] = len(true_ids)
+    row["true_notices_applied"] = len(true_ids & applied_ids)
     row["recheck_requests"] = len(getattr(fc, "recheck_requests", []) or [])
     interp = getattr(fc, "interpreter", None)
     if isinstance(interp, LLMInterpreter):
@@ -165,6 +179,17 @@ def llm_stats(rows: list[dict[str, Any]]) -> dict[str, Any]:
                        account_error=next((r["llm_account_error"] for r in lr if r.get("llm_account_error")), None))
     st["episodes"] = len(lr)
     st["cached_calls"] = sum(int(r.get("llm_cached_calls") or 0) for r in lr)
+    if all("true_notices" in r for r in lr) and lr:
+        tn = sum(r["true_notices"] for r in lr)
+        st["true_notice_coverage"] = (sum(r["true_notices_applied"] for r in lr) / tn) if tn else None
+        drops: dict[str, int] = {}
+        for r in lr:
+            for k, v in (r.get("dropped_by_source") or {}).items():
+                drops[k] = drops.get(k, 0) + v
+        st["dropped_by_source"] = drops
+        st["note"] = ("valid_proposal_rate counts every refused proposal, including proposals for distractors "
+                      "and occupant reports that grounding rightly refuses; true_notice_coverage is the share "
+                      "of real notices that got an applied adjustment")
     return st
 
 

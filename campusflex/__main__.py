@@ -16,6 +16,7 @@ Commands (each forwards its arguments to the module's own ``main``):
   tables       regenerate every Section 4 table from results/
   ledger       evidence ledger (Table 16) from the files on disk
   demo         export results/demo_episode.json for the dashboard
+  smart        smart device extension: per-device IoT dispatch, learned usage profiles, sensor control
 """
 from __future__ import annotations
 
@@ -40,6 +41,7 @@ COMMANDS = {
     "tables": "campusflex.experiments.tables",
     "ledger": "campusflex.experiments.evidence_ledger",
     "demo": "campusflex.dashboard.export_demo",
+    "smart": "campusflex.experiments.smart",
 }
 
 

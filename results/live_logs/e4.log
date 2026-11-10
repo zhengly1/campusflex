@@ -1,0 +1,28 @@
+{
+ "template": {
+  "status": "run",
+  "summary": {
+   "n_texts": 48,
+   "n_numbers": 480,
+   "n_matched": 480,
+   "n_flagged": 0,
+   "share_matched": 1.0,
+   "texts_fully_matched_share": 1.0,
+   "displayed_unverified_numbers": 0,
+   "success_100pct_matched_or_flagged": true
+  }
+ },
+ "llm": {
+  "status": "run",
+  "summary": {
+   "n_texts": 48,
+   "n_numbers": 407,
+   "n_matched": 407,
+   "n_flagged": 0,
+   "share_matched": 1.0,
+   "texts_fully_matched_share": 1.0,
+   "displayed_unverified_numbers": 0,
+   "success_100pct_matched_or_flagged": true
+  }
+ }
+}

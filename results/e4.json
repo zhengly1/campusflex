@@ -20,7 +20,17 @@
    "notice_drop",
    "notice_fault"
   ],
-  "per_episode": 3
+  "per_episode": 3,
+  "prompt_hashes": {
+   "L1": "fcc087320195",
+   "L2": "e1a7d2b3f1e8",
+   "L3": "40fa23fd2d33",
+   "L4": "d108e8c8ff09",
+   "L4_explain": "3e001d1635ae",
+   "L5": "5419e186dc3f"
+  },
+  "model": "deepseek-flash",
+  "prompts_frozen": true
  },
  "source": "fresh masks-only planner decisions",
  "n_episodes": 16,
@@ -1951,8 +1961,1993 @@
    ]
   },
   "llm": {
-   "status": "not_run",
-   "reason": "LLM arm not requested (run with --llm)"
+   "status": "run",
+   "model": "deepseek-flash",
+   "llm": {
+    "n_calls": 48,
+    "n_failed_calls": 0,
+    "n_fallbacks": 0,
+    "failed_call_rate": 0.0,
+    "fallback_rate": 0.0,
+    "n_proposals": 48,
+    "n_valid": 48,
+    "valid_proposal_rate": 1.0,
+    "max_fallback_rate": 0.5,
+    "status": "run"
+   },
+   "n_failed_calls": 0,
+   "examples": [
+    {
+     "episode": "heat/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.6981 versus 8.217) and lower energy use (E of 6.5381 versus 7.977). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.6981 versus 8.217) and lower energy use (E of 6.5381 versus 7.977). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "6.6981",
+       "8.217",
+       "6.5381",
+       "7.977",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "6.6981",
+       "8.217",
+       "6.5381",
+       "7.977",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.3076256159693003,
+     "input_tokens": 558,
+     "output_tokens": 104
+    },
+    {
+     "episode": "heat/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 10.5622 versus 14.7422) and lower energy use (E of 10.5622 versus 14.6622). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 10.5622 versus 14.7422) and lower energy use (E of 10.5622 versus 14.6622). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "10.5622",
+       "14.7422",
+       "10.5622",
+       "14.6622",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "10.5622",
+       "14.7422",
+       "10.5622",
+       "14.6622",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5027481708675623,
+     "input_tokens": 572,
+     "output_tokens": 116
+    },
+    {
+     "episode": "heat/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan m:B201B203 was chosen over the runner-up m:B201B202B203 because it has a lower weighted score (score_J of 0.7891 versus 1.4691) and lower energy use (E of 0.7891 versus 1.3891). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:B201B203 was chosen over the runner-up m:B201B202B203 because it has a lower weighted score (score_J of 0.7891 versus 1.4691) and lower energy use (E of 0.7891 versus 1.3891). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.7891",
+       "1.4691",
+       "0.7891",
+       "1.3891",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.7891",
+       "1.4691",
+       "0.7891",
+       "1.3891",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.1941600572317839,
+     "input_tokens": 560,
+     "output_tokens": 105
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (6.6995 vs 8.2386), lower energy use (6.5395 vs 7.9986 kWh), and fewer room switches (K of 2 vs 3). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), and unserved person-minutes (U 0.0).",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (6.6995 vs 8.2386), lower energy use (6.5395 vs 7.9986 kWh), and fewer room switches (K of 2 vs 3). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), and unserved person-minutes (U 0.0).",
+     "faithfulness": {
+      "numbers": [
+       "6.6995",
+       "8.2386",
+       "6.5395",
+       "7.9986",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "6.6995",
+       "8.2386",
+       "6.5395",
+       "7.9986",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.3204192351549864,
+     "input_tokens": 560,
+     "output_tokens": 110
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (10.6459 versus 14.8259) and lower energy use (10.6459 versus 14.7459 kWh). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (10.6459 versus 14.8259) and lower energy use (10.6459 versus 14.7459 kWh). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "10.6459",
+       "14.8259",
+       "10.6459",
+       "14.7459",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "10.6459",
+       "14.8259",
+       "10.6459",
+       "14.7459",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5549057442694902,
+     "input_tokens": 572,
+     "output_tokens": 107
+    }
+   ],
+   "texts": [
+    {
+     "episode": "heat/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.6981 versus 8.217) and lower energy use (E of 6.5381 versus 7.977). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.6981 versus 8.217) and lower energy use (E of 6.5381 versus 7.977). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "6.6981",
+       "8.217",
+       "6.5381",
+       "7.977",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "6.6981",
+       "8.217",
+       "6.5381",
+       "7.977",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.3076256159693003,
+     "input_tokens": 558,
+     "output_tokens": 104
+    },
+    {
+     "episode": "heat/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 10.5622 versus 14.7422) and lower energy use (E of 10.5622 versus 14.6622). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 10.5622 versus 14.7422) and lower energy use (E of 10.5622 versus 14.6622). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "10.5622",
+       "14.7422",
+       "10.5622",
+       "14.6622",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "10.5622",
+       "14.7422",
+       "10.5622",
+       "14.6622",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5027481708675623,
+     "input_tokens": 572,
+     "output_tokens": 116
+    },
+    {
+     "episode": "heat/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan m:B201B203 was chosen over the runner-up m:B201B202B203 because it has a lower weighted score (score_J of 0.7891 versus 1.4691) and lower energy use (E of 0.7891 versus 1.3891). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:B201B203 was chosen over the runner-up m:B201B202B203 because it has a lower weighted score (score_J of 0.7891 versus 1.4691) and lower energy use (E of 0.7891 versus 1.3891). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.7891",
+       "1.4691",
+       "0.7891",
+       "1.3891",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.7891",
+       "1.4691",
+       "0.7891",
+       "1.3891",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.1941600572317839,
+     "input_tokens": 560,
+     "output_tokens": 105
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (6.6995 vs 8.2386), lower energy use (6.5395 vs 7.9986 kWh), and fewer room switches (K of 2 vs 3). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), and unserved person-minutes (U 0.0).",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (6.6995 vs 8.2386), lower energy use (6.5395 vs 7.9986 kWh), and fewer room switches (K of 2 vs 3). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), and unserved person-minutes (U 0.0).",
+     "faithfulness": {
+      "numbers": [
+       "6.6995",
+       "8.2386",
+       "6.5395",
+       "7.9986",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "6.6995",
+       "8.2386",
+       "6.5395",
+       "7.9986",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.3204192351549864,
+     "input_tokens": 560,
+     "output_tokens": 110
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (10.6459 versus 14.8259) and lower energy use (10.6459 versus 14.7459 kWh). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (10.6459 versus 14.8259) and lower energy use (10.6459 versus 14.7459 kWh). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "10.6459",
+       "14.8259",
+       "10.6459",
+       "14.7459",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "10.6459",
+       "14.8259",
+       "10.6459",
+       "14.7459",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5549057442694902,
+     "input_tokens": 572,
+     "output_tokens": 107
+    },
+    {
+     "episode": "heat/s11/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B201B203 was chosen over the runner-up m:A101B201B202B203 because it has a lower weighted score (score_J of 1.0827 versus 1.7627) and lower energy use (E of 1.0827 versus 1.6827). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B203 was chosen over the runner-up m:A101B201B202B203 because it has a lower weighted score (score_J of 1.0827 versus 1.7627) and lower energy use (E of 1.0827 versus 1.6827). It also avoids the room switch entirely, with K of 0 versus 1, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "1.0827",
+       "1.7627",
+       "1.0827",
+       "1.6827",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "1.0827",
+       "1.7627",
+       "1.0827",
+       "1.6827",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.430071134120226,
+     "input_tokens": 566,
+     "output_tokens": 109
+    },
+    {
+     "episode": "fault/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.7629 versus 8.319) and uses less energy (E of 6.6029 versus 8.079). It also requires fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.7629 versus 8.319) and uses less energy (E of 6.6029 versus 8.079). It also requires fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "6.7629",
+       "8.319",
+       "6.6029",
+       "8.079",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "6.7629",
+       "8.319",
+       "6.6029",
+       "8.079",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5982846096158028,
+     "input_tokens": 556,
+     "output_tokens": 104
+    },
+    {
+     "episode": "fault/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it achieves a lower weighted score of 187.1256 versus 191.3056. It also uses less energy, with E of 8.5184 compared to 12.6184, and requires K of 0 room switches versus K of 1. Both plans have identical dev_mean of 0.0373, M of 0, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it achieves a lower weighted score of 187.1256 versus 191.3056. It also uses less energy, with E of 8.5184 compared to 12.6184, and requires K of 0 room switches versus K of 1. Both plans have identical dev_mean of 0.0373, M of 0, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "187.1256",
+       "191.3056",
+       "8.5184",
+       "12.6184",
+       "0",
+       "1",
+       "0.0373",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "187.1256",
+       "191.3056",
+       "8.5184",
+       "12.6184",
+       "0",
+       "1",
+       "0.0373",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.6895463857799768,
+     "input_tokens": 581,
+     "output_tokens": 117
+    },
+    {
+     "episode": "fault/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B202 was chosen over the runner-up m:A101B201B202 because it has a lower weighted score (score_J of 0.9345 versus 1.1145) and lower energy use (E of 0.9345 versus 1.0345). It also avoids room switches entirely, with K of 0 compared to K of 1 for the runner-up, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B202 was chosen over the runner-up m:A101B201B202 because it has a lower weighted score (score_J of 0.9345 versus 1.1145) and lower energy use (E of 0.9345 versus 1.0345). It also avoids room switches entirely, with K of 0 compared to K of 1 for the runner-up, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.9345",
+       "1.1145",
+       "0.9345",
+       "1.0345",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.9345",
+       "1.1145",
+       "0.9345",
+       "1.0345",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5420662946999073,
+     "input_tokens": 560,
+     "output_tokens": 111
+    },
+    {
+     "episode": "fault/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.3177 versus 7.3159) and lower energy use (E of 6.1577 versus 7.1559). Both plans have identical dev_mean of 0.0, M of 0, K of 2, and U of 0.0, so the decision rests on the better score and energy figures.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.3177 versus 7.3159) and lower energy use (E of 6.1577 versus 7.1559). Both plans have identical dev_mean of 0.0, M of 0, K of 2, and U of 0.0, so the decision rests on the better score and energy figures.",
+     "faithfulness": {
+      "numbers": [
+       "6.3177",
+       "7.3159",
+       "6.1577",
+       "7.1559",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "matched": [
+       "6.3177",
+       "7.3159",
+       "6.1577",
+       "7.1559",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.4270232934504747,
+     "input_tokens": 558,
+     "output_tokens": 109
+    },
+    {
+     "episode": "fault/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A102B202B203 was chosen over the runner-up m:A101A102A103B202B203 because it has a lower weighted score of 94.2425 versus 98.3352. It also uses less energy, with E of 13.2105 compared to 17.2232, and requires fewer room switches, with K of 2 versus 3. Both plans have identical dev_mean of 0.0545, M of 70, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A102B202B203 was chosen over the runner-up m:A101A102A103B202B203 because it has a lower weighted score of 94.2425 versus 98.3352. It also uses less energy, with E of 13.2105 compared to 17.2232, and requires fewer room switches, with K of 2 versus 3. Both plans have identical dev_mean of 0.0545, M of 70, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "94.2425",
+       "98.3352",
+       "13.2105",
+       "17.2232",
+       "2",
+       "3",
+       "0.0545",
+       "70",
+       "0.0"
+      ],
+      "matched": [
+       "94.2425",
+       "98.3352",
+       "13.2105",
+       "17.2232",
+       "2",
+       "3",
+       "0.0545",
+       "70",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.3408514242619276,
+     "input_tokens": 574,
+     "output_tokens": 118
+    },
+    {
+     "episode": "fault/s11/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B202B203 was chosen over the runner-up m:A101B201B202B203 because it has a lower weighted score of 1.0271 versus 1.2071. It also uses less energy, with E of 1.0271 compared to 1.1271, and requires 0 room switches versus 1 for the runner-up. Both plans have dev_mean 0.0 and U 0.0, so the deciding factors are the score, energy, and switches.",
+     "displayed": "The top-ranked plan m:A101B202B203 was chosen over the runner-up m:A101B201B202B203 because it has a lower weighted score of 1.0271 versus 1.2071. It also uses less energy, with E of 1.0271 compared to 1.1271, and requires 0 room switches versus 1 for the runner-up. Both plans have dev_mean 0.0 and U 0.0, so the deciding factors are the score, energy, and switches.",
+     "faithfulness": {
+      "numbers": [
+       "1.0271",
+       "1.2071",
+       "1.0271",
+       "1.1271",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "1.0271",
+       "1.2071",
+       "1.0271",
+       "1.1271",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.2996748872101307,
+     "input_tokens": 566,
+     "output_tokens": 116
+    },
+    {
+     "episode": "fault_surge/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.64 versus 7.7075) and lower energy use (E of 6.48 versus 7.5475). Both plans achieve dev_mean 0.0, M 0, K 2, and U 0.0, so the deciding factors are the score and energy.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.64 versus 7.7075) and lower energy use (E of 6.48 versus 7.5475). Both plans achieve dev_mean 0.0, M 0, K 2, and U 0.0, so the deciding factors are the score and energy.",
+     "faithfulness": {
+      "numbers": [
+       "6.64",
+       "7.7075",
+       "6.48",
+       "7.5475",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "matched": [
+       "6.64",
+       "7.7075",
+       "6.48",
+       "7.5475",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.2281035520136356,
+     "input_tokens": 556,
+     "output_tokens": 100
+    },
+    {
+     "episode": "fault_surge/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A102B202B203 was chosen over the runner-up m:A101A102B201B202B203 because it has a lower weighted score (23.9193 versus 24.5993), uses less energy (E of 13.4394 versus 14.0394), and requires 0 room switches (K) compared with 1 for the runner-up. Both plans have identical dev_mean of 0.0072, M of 0, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A102B202B203 was chosen over the runner-up m:A101A102B201B202B203 because it has a lower weighted score (23.9193 versus 24.5993), uses less energy (E of 13.4394 versus 14.0394), and requires 0 room switches (K) compared with 1 for the runner-up. Both plans have identical dev_mean of 0.0072, M of 0, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "23.9193",
+       "24.5993",
+       "13.4394",
+       "14.0394",
+       "0",
+       "1",
+       "0.0072",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "23.9193",
+       "24.5993",
+       "13.4394",
+       "14.0394",
+       "0",
+       "1",
+       "0.0072",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.838763216510415,
+     "input_tokens": 575,
+     "output_tokens": 116
+    },
+    {
+     "episode": "fault_surge/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B203 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 0.8244 versus 1.0044) and lower energy use (E of 0.8244 versus 0.9244). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B203 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 0.8244 versus 1.0044) and lower energy use (E of 0.8244 versus 0.9244). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.8244",
+       "1.0044",
+       "0.8244",
+       "0.9244",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.8244",
+       "1.0044",
+       "0.8244",
+       "0.9244",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.3724088966846466,
+     "input_tokens": 560,
+     "output_tokens": 108
+    },
+    {
+     "episode": "fault_surge/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.4612 versus 7.8799) and lower energy use (E of 6.3012 versus 7.6399). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.4612 versus 7.8799) and lower energy use (E of 6.3012 versus 7.6399). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "6.4612",
+       "7.8799",
+       "6.3012",
+       "7.6399",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "6.4612",
+       "7.8799",
+       "6.3012",
+       "7.6399",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.1616454496979713,
+     "input_tokens": 558,
+     "output_tokens": 106
+    },
+    {
+     "episode": "fault_surge/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 11.7982 versus 12.4782) and lower energy use (E of 11.7982 versus 12.3982). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 11.7982 versus 12.4782) and lower energy use (E of 11.7982 versus 12.3982). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "11.7982",
+       "12.4782",
+       "11.7982",
+       "12.3982",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "11.7982",
+       "12.4782",
+       "11.7982",
+       "12.3982",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.1779964249581099,
+     "input_tokens": 572,
+     "output_tokens": 116
+    },
+    {
+     "episode": "fault_surge/s11/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B202 was chosen over the runner-up m:A101B201B202 because it has a lower weighted score (score_J of 0.8477 versus 1.0277), lower energy use (E of 0.8477 versus 0.9477), and fewer room switches (K of 0 versus 1). Both plans have dev_mean of 0.0, M of 0, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B202 was chosen over the runner-up m:A101B201B202 because it has a lower weighted score (score_J of 0.8477 versus 1.0277), lower energy use (E of 0.8477 versus 0.9477), and fewer room switches (K of 0 versus 1). Both plans have dev_mean of 0.0, M of 0, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.8477",
+       "1.0277",
+       "0.8477",
+       "0.9477",
+       "0",
+       "1",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "0.8477",
+       "1.0277",
+       "0.8477",
+       "0.9477",
+       "0",
+       "1",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.776840627193451,
+     "input_tokens": 560,
+     "output_tokens": 105
+    },
+    {
+     "episode": "double_fault/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (6.4078 vs 7.4151) and lower energy use (6.2478 vs 7.2551 kWh). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), room switches (K 2), and unserved person-minutes (U 0.0), so the energy and score advantages decide the choice.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (6.4078 vs 7.4151) and lower energy use (6.2478 vs 7.2551 kWh). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), room switches (K 2), and unserved person-minutes (U 0.0), so the energy and score advantages decide the choice.",
+     "faithfulness": {
+      "numbers": [
+       "6.4078",
+       "7.4151",
+       "6.2478",
+       "7.2551",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "matched": [
+       "6.4078",
+       "7.4151",
+       "6.2478",
+       "7.2551",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.2316514551639557,
+     "input_tokens": 558,
+     "output_tokens": 113
+    },
+    {
+     "episode": "double_fault/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A102B201B202B203 because it has a lower weighted score (score_J of 169.1804 versus 169.9104), lower energy use (E of 8.2822 versus 8.9322), and fewer room switches (K of 0 versus 1), while both plans have identical dev_mean of 0.0306, M of 0, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A102B201B202B203 because it has a lower weighted score (score_J of 169.1804 versus 169.9104), lower energy use (E of 8.2822 versus 8.9322), and fewer room switches (K of 0 versus 1), while both plans have identical dev_mean of 0.0306, M of 0, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "169.1804",
+       "169.9104",
+       "8.2822",
+       "8.9322",
+       "0",
+       "1",
+       "0.0306",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "169.1804",
+       "169.9104",
+       "8.2822",
+       "8.9322",
+       "0",
+       "1",
+       "0.0306",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 0.9297374226152897,
+     "input_tokens": 581,
+     "output_tokens": 116
+    },
+    {
+     "episode": "double_fault/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B202B203 was chosen over the runner-up m:A101B201B202B203 because it has a lower weighted score (score_J of 1.0846 versus 1.2646) and lower energy use (E of 1.0846 versus 1.1846). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B202B203 was chosen over the runner-up m:A101B201B202B203 because it has a lower weighted score (score_J of 1.0846 versus 1.2646) and lower energy use (E of 1.0846 versus 1.1846). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "1.0846",
+       "1.2646",
+       "1.0846",
+       "1.1846",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "1.0846",
+       "1.2646",
+       "1.0846",
+       "1.1846",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.2461827881634235,
+     "input_tokens": 566,
+     "output_tokens": 112
+    },
+    {
+     "episode": "double_fault/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.2993 versus 7.2786) and lower energy use (E of 6.1393 versus 7.1186). Both plans achieve dev_mean 0.0, M 0, K 2, and U 0.0, so the deciding factors are the score and energy figures.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.2993 versus 7.2786) and lower energy use (E of 6.1393 versus 7.1186). Both plans achieve dev_mean 0.0, M 0, K 2, and U 0.0, so the deciding factors are the score and energy figures.",
+     "faithfulness": {
+      "numbers": [
+       "6.2993",
+       "7.2786",
+       "6.1393",
+       "7.1186",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "matched": [
+       "6.2993",
+       "7.2786",
+       "6.1393",
+       "7.1186",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.073478028178215,
+     "input_tokens": 558,
+     "output_tokens": 103
+    },
+    {
+     "episode": "double_fault/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A102A103B202B203 because it has a lower weighted score (score_J of 61.9011 versus 62.6311), lower energy use (E of 12.1657 versus 12.8157), and fewer room switches (K of 2 versus 3), while both plans have identical dev_mean of 0.032, M of 70, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A102A103B202B203 because it has a lower weighted score (score_J of 61.9011 versus 62.6311), lower energy use (E of 12.1657 versus 12.8157), and fewer room switches (K of 2 versus 3), while both plans have identical dev_mean of 0.032, M of 70, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "61.9011",
+       "62.6311",
+       "12.1657",
+       "12.8157",
+       "2",
+       "3",
+       "0.032",
+       "70",
+       "0.0"
+      ],
+      "matched": [
+       "61.9011",
+       "62.6311",
+       "12.1657",
+       "12.8157",
+       "2",
+       "3",
+       "0.032",
+       "70",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5458414554595947,
+     "input_tokens": 574,
+     "output_tokens": 115
+    },
+    {
+     "episode": "double_fault/s11/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B203 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 0.8067 versus 0.9867) and lower energy use (E of 0.8067 versus 0.9067). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B203 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 0.8067 versus 0.9867) and lower energy use (E of 0.8067 versus 0.9067). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.8067",
+       "0.9867",
+       "0.8067",
+       "0.9067",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.8067",
+       "0.9867",
+       "0.8067",
+       "0.9067",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.345993435010314,
+     "input_tokens": 558,
+     "output_tokens": 108
+    },
+    {
+     "episode": "notice_surge/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:B201B202 because it has a lower weighted score (6.4083 versus 6.4827) and lower energy use (6.2483 versus 6.3227 kWh). Both plans are identical on comfort and service, with dev_mean 0.0, M 0, K 2, and U 0.0.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:B201B202 because it has a lower weighted score (6.4083 versus 6.4827) and lower energy use (6.2483 versus 6.3227 kWh). Both plans are identical on comfort and service, with dev_mean 0.0, M 0, K 2, and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "6.4083",
+       "6.4827",
+       "6.2483",
+       "6.3227",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "matched": [
+       "6.4083",
+       "6.4827",
+       "6.2483",
+       "6.3227",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.0798850040882826,
+     "input_tokens": 556,
+     "output_tokens": 93
+    },
+    {
+     "episode": "notice_surge/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A103B201B203 was chosen over the runner-up m:A101A103B201 because it achieves a lower weighted score of 8.5582 versus 9.7216. Although the runner-up uses less energy (E of 7.5416 versus 8.5582), it requires 35 student moves and 1 room switch, while the top plan has M of 0 and K of 0. Both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B201B203 was chosen over the runner-up m:A101A103B201 because it achieves a lower weighted score of 8.5582 versus 9.7216. Although the runner-up uses less energy (E of 7.5416 versus 8.5582), it requires 35 student moves and 1 room switch, while the top plan has M of 0 and K of 0. Both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "8.5582",
+       "9.7216",
+       "7.5416",
+       "8.5582",
+       "35",
+       "1",
+       "0",
+       "0",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "8.5582",
+       "9.7216",
+       "7.5416",
+       "8.5582",
+       "35",
+       "1",
+       "0",
+       "0",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5998373962938786,
+     "input_tokens": 568,
+     "output_tokens": 118
+    },
+    {
+     "episode": "notice_surge/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B201B203 was chosen over the runner-up m:A101A103B201B203 because it has a lower weighted score (0.8387 versus 1.2146) and lower energy use (0.8387 versus 1.1346 kWh). It also avoids the room switch recorded for the runner-up, with K of 0 versus 1, while both plans have dev_mean 0.0 and U 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B203 was chosen over the runner-up m:A101A103B201B203 because it has a lower weighted score (0.8387 versus 1.2146) and lower energy use (0.8387 versus 1.1346 kWh). It also avoids the room switch recorded for the runner-up, with K of 0 versus 1, while both plans have dev_mean 0.0 and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.8387",
+       "1.2146",
+       "0.8387",
+       "1.1346",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.8387",
+       "1.2146",
+       "0.8387",
+       "1.1346",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.2432050686329603,
+     "input_tokens": 566,
+     "output_tokens": 105
+    },
+    {
+     "episode": "notice_surge/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.7229 versus 8.262) and lower energy use (E of 6.5629 versus 8.022). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean of 0.0, M of 0, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.7229 versus 8.262) and lower energy use (E of 6.5629 versus 8.022). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean of 0.0, M of 0, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "6.7229",
+       "8.262",
+       "6.5629",
+       "8.022",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "6.7229",
+       "8.262",
+       "6.5629",
+       "8.022",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.3751852363348007,
+     "input_tokens": 558,
+     "output_tokens": 107
+    },
+    {
+     "episode": "notice_surge/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A103B201B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 16.1946 versus 18.9355), lower energy use (E of 11.0829 versus 13.7437), and fewer room switches (K of 0 versus 1), while both plans have identical dev_mean of 0.0034, M of 0, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B201B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 16.1946 versus 18.9355), lower energy use (E of 11.0829 versus 13.7437), and fewer room switches (K of 0 versus 1), while both plans have identical dev_mean of 0.0034, M of 0, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "16.1946",
+       "18.9355",
+       "11.0829",
+       "13.7437",
+       "0",
+       "1",
+       "0.0034",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "16.1946",
+       "18.9355",
+       "11.0829",
+       "13.7437",
+       "0",
+       "1",
+       "0.0034",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.1512341368943453,
+     "input_tokens": 574,
+     "output_tokens": 116
+    },
+    {
+     "episode": "notice_surge/s11/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101A103B201B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower score_J of 1.076 versus 1.756. It also uses less energy, with E of 1.076 compared to 1.676, and requires K of 0 room switches versus 1 for the runner-up. Both plans have dev_mean 0.0 and U 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B201B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower score_J of 1.076 versus 1.756. It also uses less energy, with E of 1.076 compared to 1.676, and requires K of 0 room switches versus 1 for the runner-up. Both plans have dev_mean 0.0 and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "1.076",
+       "1.756",
+       "1.076",
+       "1.676",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "1.076",
+       "1.756",
+       "1.076",
+       "1.676",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.4284201096743345,
+     "input_tokens": 564,
+     "output_tokens": 105
+    },
+    {
+     "episode": "notice_maintenance/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101A102B202 was chosen over the runner-up m:A101A103B202B203 because it has a lower weighted score (11.3059 versus 12.1134), lower energy use (11.0659 versus 11.7934 kWh), and fewer room switches (3 versus 4). Both plans have identical comfort deviation (0.0), student moves (0), and unserved person-minutes (0.0).",
+     "displayed": "The top-ranked plan m:A101A102B202 was chosen over the runner-up m:A101A103B202B203 because it has a lower weighted score (11.3059 versus 12.1134), lower energy use (11.0659 versus 11.7934 kWh), and fewer room switches (3 versus 4). Both plans have identical comfort deviation (0.0), student moves (0), and unserved person-minutes (0.0).",
+     "faithfulness": {
+      "numbers": [
+       "11.3059",
+       "12.1134",
+       "11.0659",
+       "11.7934",
+       "3",
+       "4",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "11.3059",
+       "12.1134",
+       "11.0659",
+       "11.7934",
+       "3",
+       "4",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.4088296294212341,
+     "input_tokens": 566,
+     "output_tokens": 104
+    },
+    {
+     "episode": "notice_maintenance/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A102B202 was chosen over the runner-up m:A101A102B202B203 because it has a lower weighted score (7.3322 versus 9.3412) and lower energy use (7.3322 versus 9.2612 kWh). It also avoids the room switch recorded for the runner-up, with K of 0 versus 1, while both plans have dev_mean 0.0 and U 0.0.",
+     "displayed": "The top-ranked plan m:A101A102B202 was chosen over the runner-up m:A101A102B202B203 because it has a lower weighted score (7.3322 versus 9.3412) and lower energy use (7.3322 versus 9.2612 kWh). It also avoids the room switch recorded for the runner-up, with K of 0 versus 1, while both plans have dev_mean 0.0 and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "7.3322",
+       "9.3412",
+       "7.3322",
+       "9.2612",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "7.3322",
+       "9.3412",
+       "7.3322",
+       "9.2612",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.0938741825520992,
+     "input_tokens": 566,
+     "output_tokens": 105
+    },
+    {
+     "episode": "notice_maintenance/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan was chosen over the runner-up because it achieves a lower weighted score of 1.3543 versus 2.8499. Although the runner-up uses less energy (1.1499 versus 1.3543), the top plan requires 0 student moves and 0 room switches, while the runner-up involves 27 moves and 1 switch. Both plans have a dev_mean of 0.0 and U of 0.0, so the top plan's advantage comes from avoiding the disruption captured by M and K.",
+     "displayed": "The top-ranked plan was chosen over the runner-up because it achieves a lower weighted score of 1.3543 versus 2.8499. Although the runner-up uses less energy (1.1499 versus 1.3543), the top plan requires 0 student moves and 0 room switches, while the runner-up involves 27 moves and 1 switch. Both plans have a dev_mean of 0.0 and U of 0.0, so the top plan's advantage comes from avoiding the disruption captured by M and K.",
+     "faithfulness": {
+      "numbers": [
+       "1.3543",
+       "2.8499",
+       "1.1499",
+       "1.3543",
+       "0",
+       "0",
+       "27",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "1.3543",
+       "2.8499",
+       "1.1499",
+       "1.3543",
+       "0",
+       "0",
+       "27",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.365552544593811,
+     "input_tokens": 570,
+     "output_tokens": 117
+    },
+    {
+     "episode": "notice_maintenance/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101A102B202 was chosen over the runner-up m:A101A103B202B203 because it has a lower weighted score (11.3683 versus 12.1766), lower energy use (E of 11.1283 versus 11.8566), and fewer room switches (K of 3 versus 4). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), and unserved person-minutes (U 0.0).",
+     "displayed": "The top-ranked plan m:A101A102B202 was chosen over the runner-up m:A101A103B202B203 because it has a lower weighted score (11.3683 versus 12.1766), lower energy use (E of 11.1283 versus 11.8566), and fewer room switches (K of 3 versus 4). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), and unserved person-minutes (U 0.0).",
+     "faithfulness": {
+      "numbers": [
+       "11.3683",
+       "12.1766",
+       "11.1283",
+       "11.8566",
+       "3",
+       "4",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "11.3683",
+       "12.1766",
+       "11.1283",
+       "11.8566",
+       "3",
+       "4",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.4599041771143675,
+     "input_tokens": 566,
+     "output_tokens": 116
+    },
+    {
+     "episode": "notice_maintenance/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan was chosen over the runner-up because it has a lower weighted score (67.2813 vs 57.0548) and much lower unserved person-minutes (600.0 vs 2700.0), while keeping the same student moves (0) and a comparable mean occupied deviation (0.0289 vs 0.0293). It does use more energy (14.0076 vs 11.2994) and one more room switch (2 vs 1), but the planner's ranking places it first overall.",
+     "displayed": "The top-ranked plan was chosen over the runner-up because it has a lower weighted score (67.2813 vs 57.0548) and much lower unserved person-minutes (600.0 vs 2700.0), while keeping the same student moves (0) and a comparable mean occupied deviation (0.0289 vs 0.0293). It does use more energy (14.0076 vs 11.2994) and one more room switch (2 vs 1), but the planner's ranking places it first overall.",
+     "faithfulness": {
+      "numbers": [
+       "67.2813",
+       "57.0548",
+       "600.0",
+       "2700.0",
+       "0",
+       "0.0289",
+       "0.0293",
+       "14.0076",
+       "11.2994",
+       "2",
+       "1"
+      ],
+      "matched": [
+       "67.2813",
+       "57.0548",
+       "600.0",
+       "2700.0",
+       "0",
+       "0.0289",
+       "0.0293",
+       "14.0076",
+       "11.2994",
+       "2",
+       "1"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.0234107412397861,
+     "input_tokens": 578,
+     "output_tokens": 119
+    },
+    {
+     "episode": "notice_maintenance/s11/A",
+     "step": 23,
+     "text": "The top-ranked plan was chosen over the runner-up because it achieves a lower weighted score of 1.3648 versus 2.6614. Although the runner-up uses less energy at 1.2614 compared to 1.3648, it requires 22 student moves and 1 room switch, while the top plan has 0 moves and 0 switches. Both plans have identical dev_mean of 0.0 and U of 0.0, so the top plan wins on the overall score.",
+     "displayed": "The top-ranked plan was chosen over the runner-up because it achieves a lower weighted score of 1.3648 versus 2.6614. Although the runner-up uses less energy at 1.2614 compared to 1.3648, it requires 22 student moves and 1 room switch, while the top plan has 0 moves and 0 switches. Both plans have identical dev_mean of 0.0 and U of 0.0, so the top plan wins on the overall score.",
+     "faithfulness": {
+      "numbers": [
+       "1.3648",
+       "2.6614",
+       "1.2614",
+       "1.3648",
+       "22",
+       "1",
+       "0",
+       "0",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "1.3648",
+       "2.6614",
+       "1.2614",
+       "1.3648",
+       "22",
+       "1",
+       "0",
+       "0",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.3219083789736032,
+     "input_tokens": 570,
+     "output_tokens": 110
+    },
+    {
+     "episode": "notice_drop/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.587 versus 7.6477) and lower energy use (E of 6.427 versus 7.4877). Both plans achieve dev_mean 0.0, M 0, K 2, and U 0.0, so the deciding factors are the score and energy.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.587 versus 7.6477) and lower energy use (E of 6.427 versus 7.4877). Both plans achieve dev_mean 0.0, M 0, K 2, and U 0.0, so the deciding factors are the score and energy.",
+     "faithfulness": {
+      "numbers": [
+       "6.587",
+       "7.6477",
+       "6.427",
+       "7.4877",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "matched": [
+       "6.587",
+       "7.6477",
+       "6.427",
+       "7.4877",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.6130087785422802,
+     "input_tokens": 556,
+     "output_tokens": 100
+    },
+    {
+     "episode": "notice_drop/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 8.3575 versus 11.4578) and lower energy use (E of 8.3575 versus 11.3778). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 8.3575 versus 11.4578) and lower energy use (E of 8.3575 versus 11.3778). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "8.3575",
+       "11.4578",
+       "8.3575",
+       "11.3778",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "8.3575",
+       "11.4578",
+       "8.3575",
+       "11.3778",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.446260493248701,
+     "input_tokens": 570,
+     "output_tokens": 116
+    },
+    {
+     "episode": "notice_drop/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 1.0716 versus 1.8349) and lower energy use (E of 1.0716 versus 1.7549). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 1.0716 versus 1.8349) and lower energy use (E of 1.0716 versus 1.7549). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "1.0716",
+       "1.8349",
+       "1.0716",
+       "1.7549",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "1.0716",
+       "1.8349",
+       "1.0716",
+       "1.7549",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.1576770450919867,
+     "input_tokens": 572,
+     "output_tokens": 116
+    },
+    {
+     "episode": "notice_drop/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.2155 versus 7.1872) and lower energy use (E of 6.0555 versus 7.0272). Both plans achieve dev_mean 0.0, M 0, K 2, and U 0.0, so the deciding factors are the score and energy figures.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.2155 versus 7.1872) and lower energy use (E of 6.0555 versus 7.0272). Both plans achieve dev_mean 0.0, M 0, K 2, and U 0.0, so the deciding factors are the score and energy figures.",
+     "faithfulness": {
+      "numbers": [
+       "6.2155",
+       "7.1872",
+       "6.0555",
+       "7.0272",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "matched": [
+       "6.2155",
+       "7.1872",
+       "6.0555",
+       "7.0272",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 0.9639776963740587,
+     "input_tokens": 558,
+     "output_tokens": 103
+    },
+    {
+     "episode": "notice_drop/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A103B201B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score of 7.8098 versus 10.0889. It also uses less energy, with E of 7.8098 compared to 10.0089, and requires 0 room switches versus 1 for the runner-up. Both plans have dev_mean 0.0 and U 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B201B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score of 7.8098 versus 10.0889. It also uses less energy, with E of 7.8098 compared to 10.0089, and requires 0 room switches versus 1 for the runner-up. Both plans have dev_mean 0.0 and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "7.8098",
+       "10.0889",
+       "7.8098",
+       "10.0089",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "7.8098",
+       "10.0889",
+       "7.8098",
+       "10.0089",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.550662586465478,
+     "input_tokens": 572,
+     "output_tokens": 107
+    },
+    {
+     "episode": "notice_drop/s11/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101B201B203 was chosen over the runner-up m:A101A103B201B203 because it has a lower weighted score (score_J of 0.8129 versus 1.4323) and lower energy use (E of 0.8129 versus 1.3523). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101B201B203 was chosen over the runner-up m:A101A103B201B203 because it has a lower weighted score (score_J of 0.8129 versus 1.4323) and lower energy use (E of 0.8129 versus 1.3523). It also avoids room switches entirely, with K of 0 versus 1 for the runner-up, while both plans achieve dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.8129",
+       "1.4323",
+       "0.8129",
+       "1.3523",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.8129",
+       "1.4323",
+       "0.8129",
+       "1.3523",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.6644187197089195,
+     "input_tokens": 566,
+     "output_tokens": 112
+    },
+    {
+     "episode": "notice_fault/s10/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.5128 versus 7.9534) and lower energy use (E of 6.3528 versus 7.7134). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A101B201B203 because it has a lower weighted score (score_J of 6.5128 versus 7.9534) and lower energy use (E of 6.3528 versus 7.7134). It also uses fewer room switches (K of 2 versus 3), while both plans have dev_mean 0.0, M 0, and U 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "6.5128",
+       "7.9534",
+       "6.3528",
+       "7.7134",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "matched": [
+       "6.5128",
+       "7.9534",
+       "6.3528",
+       "7.7134",
+       "2",
+       "3",
+       "0.0",
+       "0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.4225516393780708,
+     "input_tokens": 560,
+     "output_tokens": 106
+    },
+    {
+     "episode": "notice_fault/s10/A",
+     "step": 12,
+     "text": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A102A103B202B203 because it has a lower weighted score (31.399 versus 34.8712), uses less energy (E of 10.6044 versus 13.9967), and requires fewer room switches (K of 2 versus 3). Both plans have identical dev_mean of 0.0116, M of 70, and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A102A103B202B203 because it has a lower weighted score (31.399 versus 34.8712), uses less energy (E of 10.6044 versus 13.9967), and requires fewer room switches (K of 2 versus 3). Both plans have identical dev_mean of 0.0116, M of 70, and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "31.399",
+       "34.8712",
+       "10.6044",
+       "13.9967",
+       "2",
+       "3",
+       "0.0116",
+       "70",
+       "0.0"
+      ],
+      "matched": [
+       "31.399",
+       "34.8712",
+       "10.6044",
+       "13.9967",
+       "2",
+       "3",
+       "0.0116",
+       "70",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.2496135905385017,
+     "input_tokens": 575,
+     "output_tokens": 111
+    },
+    {
+     "episode": "notice_fault/s10/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 0.9657 versus 1.1457) and lower energy use (E of 0.9657 versus 1.0657). It also avoids room switches entirely, with K of 0 compared to K of 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A103B201B202B203 because it has a lower weighted score (score_J of 0.9657 versus 1.1457) and lower energy use (E of 0.9657 versus 1.0657). It also avoids room switches entirely, with K of 0 compared to K of 1 for the runner-up, while both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.9657",
+       "1.1457",
+       "0.9657",
+       "1.0657",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.9657",
+       "1.1457",
+       "0.9657",
+       "1.0657",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.8030288182199001,
+     "input_tokens": 572,
+     "output_tokens": 119
+    },
+    {
+     "episode": "notice_fault/s11/A",
+     "step": 0,
+     "text": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.4262 versus 7.4313) and lower energy use (E of 6.2662 versus 7.2713). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), room switches (K 2), and unserved person-minutes (U 0.0), so the decision rests on the better score and energy figures.",
+     "displayed": "The top-ranked plan m:A101B201 was chosen over the runner-up m:A102B201 because it has a lower weighted score (score_J of 6.4262 versus 7.4313) and lower energy use (E of 6.2662 versus 7.2713). Both plans have identical comfort deviation (dev_mean 0.0), student moves (M 0), room switches (K 2), and unserved person-minutes (U 0.0), so the decision rests on the better score and energy figures.",
+     "faithfulness": {
+      "numbers": [
+       "6.4262",
+       "7.4313",
+       "6.2662",
+       "7.2713",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "matched": [
+       "6.4262",
+       "7.4313",
+       "6.2662",
+       "7.2713",
+       "0.0",
+       "0",
+       "2",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.5312733463943005,
+     "input_tokens": 558,
+     "output_tokens": 121
+    },
+    {
+     "episode": "notice_fault/s11/A",
+     "step": 12,
+     "text": "The top-ranked plan was chosen over the runner-up because it has a lower weighted score (37.1043 vs 44.6431) and a smaller mean occupied deviation from the comfort band (0.0127 vs 0.0195). Although the runner-up uses less energy (11.6762 vs 14.0559), the top plan's better comfort and overall score made it the preferred choice.",
+     "displayed": "The top-ranked plan was chosen over the runner-up because it has a lower weighted score (37.1043 vs 44.6431) and a smaller mean occupied deviation from the comfort band (0.0127 vs 0.0195). Although the runner-up uses less energy (11.6762 vs 14.0559), the top plan's better comfort and overall score made it the preferred choice.",
+     "faithfulness": {
+      "numbers": [
+       "37.1043",
+       "44.6431",
+       "0.0127",
+       "0.0195",
+       "11.6762",
+       "14.0559"
+      ],
+      "matched": [
+       "37.1043",
+       "44.6431",
+       "0.0127",
+       "0.0195",
+       "11.6762",
+       "14.0559"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.2771792076528072,
+     "input_tokens": 575,
+     "output_tokens": 90
+    },
+    {
+     "episode": "notice_fault/s11/A",
+     "step": 23,
+     "text": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A102A103B202B203 because it has a lower weighted score of 0.9475 versus 1.8204. It also uses less energy, with E of 0.9475 compared to 1.7404, and requires 0 room switches versus K of 1 for the runner-up. Both plans have dev_mean of 0.0 and U of 0.0.",
+     "displayed": "The top-ranked plan m:A101A103B202B203 was chosen over the runner-up m:A101A102A103B202B203 because it has a lower weighted score of 0.9475 versus 1.8204. It also uses less energy, with E of 0.9475 compared to 1.7404, and requires 0 room switches versus K of 1 for the runner-up. Both plans have dev_mean of 0.0 and U of 0.0.",
+     "faithfulness": {
+      "numbers": [
+       "0.9475",
+       "1.8204",
+       "0.9475",
+       "1.7404",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "matched": [
+       "0.9475",
+       "1.8204",
+       "0.9475",
+       "1.7404",
+       "0",
+       "1",
+       "0.0",
+       "0.0"
+      ],
+      "flagged": [],
+      "unit_mismatch": [],
+      "share_matched": 1.0
+     },
+     "displayed_unverified": 0,
+     "model": "deepseek-flash",
+     "latency_s": 1.191468695178628,
+     "input_tokens": 568,
+     "output_tokens": 111
+    }
+   ],
+   "summary": {
+    "n_texts": 48,
+    "n_numbers": 407,
+    "n_matched": 407,
+    "n_flagged": 0,
+    "share_matched": 1.0,
+    "texts_fully_matched_share": 1.0,
+    "displayed_unverified_numbers": 0,
+    "success_100pct_matched_or_flagged": true
+   }
   }
  }
 }

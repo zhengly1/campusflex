@@ -1,7 +1,1275 @@
 {
  "meta": {
-  "experiment": "trace T1"
+  "experiment": "trace T1",
+  "config_hash": "de54345ef023",
+  "frozen": true,
+  "scenario_hash": "0a1d2cc43ca0",
+  "scenario_frozen": true,
+  "notices_hash": "33c23c12f015",
+  "notices_frozen": true,
+  "prompt_hashes": {
+   "L1": "fcc087320195",
+   "L2": "e1a7d2b3f1e8",
+   "L3": "40fa23fd2d33",
+   "L4": "d108e8c8ff09",
+   "L4_explain": "3e001d1635ae",
+   "L5": "5419e186dc3f"
+  },
+  "model": "deepseek-flash",
+  "prompts_frozen": true,
+  "scenario": "notice_fault",
+  "seed": 10,
+  "device_layer": "bus:inprocess",
+  "device_fallback": true,
+  "device_fallback_reason": "paho-mqtt is not installed (pip install paho-mqtt)",
+  "planner": "T1-D",
+  "forecaster": "notice:llm"
  },
- "status": "not_run",
- "reason": "preflight failed: api_status_402: Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: ebc43386-5359-452a-b3a5-3a963f2c984b)', 'type': 'insufficient_balance_error', 'param': None, 'code': 'invalid_request_error'}}"
+ "complete": true,
+ "jointly_decisive_steps": [
+  "20:00"
+ ],
+ "statement": "committed action traced to notice, IoT message, staged plan and simulation; removing any one input changes it",
+ "records": [
+  {
+   "step": "18:00",
+   "state_version": 1,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": null,
+     "confidence": null
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/1",
+     "health": 1,
+     "ts": "18:00",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 6.3528,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "score_J": 6.5128
+    },
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 7.9534
+    },
+    {
+     "plan_id": "m:B201B202B203",
+     "source": "mask",
+     "score_J": 8.0392
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {}
+  },
+  {
+   "step": "18:10",
+   "state_version": 2,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": null,
+     "confidence": null
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/2",
+     "health": 1,
+     "ts": "18:10",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 5.6597,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "score_J": 5.6597
+    },
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 7.1564
+    },
+    {
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "score_J": 7.9233
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {}
+  },
+  {
+   "step": "18:20",
+   "state_version": 3,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": null,
+     "confidence": null
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/3",
+     "health": 1,
+     "ts": "18:20",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 5.3749,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "score_J": 5.3749
+    },
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 6.9226
+    },
+    {
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "score_J": 7.6785
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {}
+  },
+  {
+   "step": "18:30",
+   "state_version": 4,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": null,
+     "confidence": null
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/4",
+     "health": 1,
+     "ts": "18:30",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 5.3363,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "score_J": 5.3363
+    },
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 6.9301
+    },
+    {
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "score_J": 7.6753
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {}
+  },
+  {
+   "step": "18:40",
+   "state_version": 5,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": null,
+     "confidence": null
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/5",
+     "health": 1,
+     "ts": "18:40",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 5.2977,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "score_J": 5.2977
+    },
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 6.9328
+    },
+    {
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "score_J": 7.6674
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {}
+  },
+  {
+   "step": "18:50",
+   "state_version": 6,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": null,
+     "confidence": null
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/6",
+     "health": 1,
+     "ts": "18:50",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 5.2591,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "score_J": 5.2591
+    },
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 6.9294
+    },
+    {
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "score_J": 7.6543
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {}
+  },
+  {
+   "step": "19:00",
+   "state_version": 7,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": null,
+     "confidence": null
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/7",
+     "health": 1,
+     "ts": "19:00",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 5.2205,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "score_J": 5.2205
+    },
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 6.9217
+    },
+    {
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "score_J": 7.637
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {}
+  },
+  {
+   "step": "19:10",
+   "state_version": 8,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": null,
+     "confidence": null
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/8",
+     "health": 1,
+     "ts": "19:10",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 5.182,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "score_J": 5.182
+    },
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 6.91
+    },
+    {
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "score_J": 7.6158
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {}
+  },
+  {
+   "step": "19:20",
+   "state_version": 9,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/9",
+     "health": 1,
+     "ts": "19:20",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 7.4677,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 7.5477
+    },
+    {
+     "plan_id": "r:openB203@20",
+     "source": "rule",
+     "score_J": 7.926
+    },
+    {
+     "plan_id": "r:openB203@10",
+     "source": "rule",
+     "score_J": 7.9843
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101B201",
+    "fault_msg_delayed_one_step": "m:A101B201B203",
+    "no_L2": "m:A101B201B203"
+   }
+  },
+  {
+   "step": "19:30",
+   "state_version": 10,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/10",
+     "health": 1,
+     "ts": "19:30",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 7.2151,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "score_J": 7.2151
+    },
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 9.6518
+    },
+    {
+     "plan_id": "m:A101A103B201B203",
+     "source": "mask",
+     "score_J": 10.0088
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101B201B203",
+    "fault_msg_delayed_one_step": "m:A101B201B203",
+    "no_L2": "m:A101B201B203"
+   }
+  },
+  {
+   "step": "19:40",
+   "state_version": 11,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/11",
+     "health": 1,
+     "ts": "19:40",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.4193,
+     "pred_E": 9.6144,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 13.0485
+    },
+    {
+     "plan_id": "m:A101A103B201B203",
+     "source": "mask",
+     "score_J": 14.8364
+    },
+    {
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "score_J": 15.843
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101B201B202B203",
+    "fault_msg_delayed_one_step": "m:A101B201B202B203",
+    "no_L2": "m:A101B201B202B203"
+   }
+  },
+  {
+   "step": "19:50",
+   "state_version": 12,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/12",
+     "health": 1,
+     "ts": "19:50",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 8.9676,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 8.9676
+    },
+    {
+     "plan_id": "r:B202>A103@10",
+     "source": "rule",
+     "score_J": 11.6553
+    },
+    {
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "score_J": 11.7572
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101B201B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101B201B202B203",
+    "fault_msg_delayed_one_step": "m:A101B201B202B203",
+    "no_L2": "m:A101B201B202B203"
+   }
+  },
+  {
+   "step": "20:00",
+   "state_version": 13,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/13",
+     "health": 0,
+     "ts": "20:00",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": "L2:P1",
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 11.5604,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "L2:P1",
+     "source": "L2",
+     "score_J": 15.9204
+    },
+    {
+     "plan_id": "L2:P2",
+     "source": "L2",
+     "score_J": 18.6951
+    },
+    {
+     "plan_id": "m:A101A103B202B203",
+     "source": "mask",
+     "score_J": 33.8447
+    }
+   ],
+   "committed": {
+    "plan_id": "L2:P1",
+    "source": "L2",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "L2:P2",
+    "fault_msg_delayed_one_step": "m:A101B201B202B203",
+    "no_L2": "m:A101A103B202B203"
+   }
+  },
+  {
+   "step": "20:10",
+   "state_version": 14,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/14",
+     "health": 0,
+     "ts": "20:10",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": "L2:P3",
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 9.7742,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 14.0542
+    },
+    {
+     "plan_id": "L2:P3",
+     "source": "L2",
+     "score_J": 15.0384
+    },
+    {
+     "plan_id": "L2:P1>1",
+     "source": "carry:L2",
+     "score_J": 15.343
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "20:20",
+   "state_version": 15,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/15",
+     "health": 0,
+     "ts": "20:20",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": "L2:p1",
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 8.9214,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 8.9214
+    },
+    {
+     "plan_id": "m:A101A102A103B202B203",
+     "source": "mask",
+     "score_J": 11.6647
+    },
+    {
+     "plan_id": "L2:p1",
+     "source": "L2",
+     "score_J": 14.28
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "20:30",
+   "state_version": 16,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/16",
+     "health": 0,
+     "ts": "20:30",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 8.3414,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 8.3414
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 9.0214
+    },
+    {
+     "plan_id": "m:A101A102B201B202",
+     "source": "mask",
+     "score_J": 10.019
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "20:40",
+   "state_version": 17,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/17",
+     "health": 0,
+     "ts": "20:40",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 7.8979,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 7.8979
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 8.5779
+    },
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 9.1705
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "20:50",
+   "state_version": 18,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/18",
+     "health": 0,
+     "ts": "20:50",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 7.6418,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 7.6418
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 8.3218
+    },
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 8.535
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "21:00",
+   "state_version": 19,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/19",
+     "health": 0,
+     "ts": "21:00",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 7.3858,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 7.3858
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 8.0658
+    },
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 8.3486
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "21:10",
+   "state_version": 20,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/20",
+     "health": 0,
+     "ts": "21:10",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 6.0231,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 6.0231
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 6.6031
+    },
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 7.2627
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "21:20",
+   "state_version": 21,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/21",
+     "health": 0,
+     "ts": "21:20",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 4.6913,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 4.6913
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 5.1713
+    },
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 6.1962
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "21:30",
+   "state_version": 22,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/22",
+     "health": 0,
+     "ts": "21:30",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 3.3905,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 3.3905
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 3.7705
+    },
+    {
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "score_J": 5.149
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "21:40",
+   "state_version": 23,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/23",
+     "health": 0,
+     "ts": "21:40",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 2.0272,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 2.0272
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 2.3072
+    },
+    {
+     "plan_id": "m:A101A102B202",
+     "source": "mask",
+     "score_J": 3.1823
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  },
+  {
+   "step": "21:50",
+   "state_version": 24,
+   "inputs": {
+    "notice": {
+     "id": "N1",
+     "l3_delta": 60.0,
+     "confidence": "medium"
+    },
+    "iot": {
+     "msg_id": "campus/B201/telemetry/24",
+     "health": 0,
+     "ts": "21:50",
+     "ack": true
+    },
+    "llm_plan": {
+     "plan_id": null,
+     "source": "L2"
+    },
+    "sim": {
+     "pred_V": 0.0,
+     "pred_E": 0.9981,
+     "omega": 0.0
+    }
+   },
+   "ranking": [
+    {
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "score_J": 0.9981
+    },
+    {
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "score_J": 1.1781
+    },
+    {
+     "plan_id": "m:A101A102A103B202B203",
+     "source": "mask",
+     "score_J": 1.7615
+    }
+   ],
+   "committed": {
+    "plan_id": "m:A101A102B202B203",
+    "source": "mask",
+    "ack": true
+   },
+   "counterfactuals": {
+    "no_notice": "m:A101A102B202B203",
+    "fault_msg_delayed_one_step": "m:A101A102B202B203",
+    "no_L2": "m:A101A102B202B203"
+   }
+  }
+ ]
 }

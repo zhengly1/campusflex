@@ -1354,12 +1354,5354 @@
    ]
   },
   "llm_compiler": {
-   "status": "not_run",
-   "reason": "LLM arm not requested (run with --llm)"
+   "status": "run",
+   "model": "deepseek-flash",
+   "llm": {
+    "n_calls": 40,
+    "n_failed_calls": 0,
+    "n_fallbacks": 0,
+    "failed_call_rate": 0.0,
+    "fallback_rate": 0.0,
+    "n_proposals": 40,
+    "n_valid": 40,
+    "valid_proposal_rate": 1.0,
+    "max_fallback_rate": 0.5,
+    "status": "run"
+   },
+   "rows": [
+    {
+     "id": "S1",
+     "category": "straightforward",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "S2",
+     "category": "straightforward",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "S3",
+     "category": "straightforward",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "S4",
+     "category": "straightforward",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "S5",
+     "category": "straightforward",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "S6",
+     "category": "straightforward",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": true,
+     "n_questions": 2,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": [
+      "missing hard field: interval"
+     ]
+    },
+    {
+     "id": "S7",
+     "category": "straightforward",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "S8",
+     "category": "straightforward",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "A1",
+     "category": "ambiguous_preferences",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "A2",
+     "category": "ambiguous_preferences",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "A3",
+     "category": "ambiguous_preferences",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "low",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "A4",
+     "category": "ambiguous_preferences",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "high"
+     },
+     "errors": []
+    },
+    {
+     "id": "A5",
+     "category": "ambiguous_preferences",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "low",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "A6",
+     "category": "ambiguous_preferences",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "interval.end",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "A7",
+     "category": "ambiguous_preferences",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "A8",
+     "category": "ambiguous_preferences",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "high"
+     },
+     "errors": []
+    },
+    {
+     "id": "C1",
+     "category": "changing_demand",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "C2",
+     "category": "changing_demand",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "C3",
+     "category": "changing_demand",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "C4",
+     "category": "changing_demand",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "C5",
+     "category": "changing_demand",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "C6",
+     "category": "changing_demand",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": true,
+     "n_questions": 2,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": [
+      "missing hard field: demand_estimate"
+     ]
+    },
+    {
+     "id": "C7",
+     "category": "changing_demand",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": false,
+      "lambda_S": true
+     },
+     "field_accuracy": 0.9166666666666666,
+     "hard_omitted": [],
+     "weights_correct": false,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "C8",
+     "category": "changing_demand",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "F1",
+     "category": "equipment_faults",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "low",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "F2",
+     "category": "equipment_faults",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "F3",
+     "category": "equipment_faults",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "F4",
+     "category": "equipment_faults",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": false,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 0.9166666666666666,
+     "hard_omitted": [],
+     "weights_correct": false,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "F5",
+     "category": "equipment_faults",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "F6",
+     "category": "equipment_faults",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "low",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "F7",
+     "category": "equipment_faults",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "F8",
+     "category": "equipment_faults",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "low",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "I1",
+     "category": "infeasible_constraints",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": true,
+     "n_questions": 1,
+     "clarification_ok": null,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "I2",
+     "category": "infeasible_constraints",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": true,
+     "n_questions": 1,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band_high_c",
+      "band_low_c",
+      "interval"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "I3",
+     "category": "infeasible_constraints",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": false,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 0.9166666666666666,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": true,
+     "n_questions": 1,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "I4",
+     "category": "infeasible_constraints",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": false,
+      "lambda_S": true
+     },
+     "field_accuracy": 0.9166666666666666,
+     "hard_omitted": [],
+     "weights_correct": false,
+     "weights_nondefault": false,
+     "asked": true,
+     "n_questions": 1,
+     "clarification_ok": null,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "I5",
+     "category": "infeasible_constraints",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": null,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "I6",
+     "category": "infeasible_constraints",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": null,
+     "defaults_filled": [
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "I7",
+     "category": "infeasible_constraints",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": true,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 1.0,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": false,
+     "asked": false,
+     "n_questions": 0,
+     "clarification_ok": null,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    },
+    {
+     "id": "I8",
+     "category": "infeasible_constraints",
+     "valid": true,
+     "field_correct": {
+      "interval": true,
+      "demand_estimate": true,
+      "band_low_c": true,
+      "band_high_c": true,
+      "target_c": true,
+      "energy_budget_kwh": true,
+      "power_cap_kw": true,
+      "max_moves_per_student": false,
+      "no_move_windows": true,
+      "lambda_M": true,
+      "lambda_T": true,
+      "lambda_S": true
+     },
+     "field_accuracy": 0.9166666666666666,
+     "hard_omitted": [],
+     "weights_correct": true,
+     "weights_nondefault": true,
+     "asked": true,
+     "n_questions": 1,
+     "clarification_ok": true,
+     "defaults_filled": [
+      "band",
+      "band_high_c",
+      "band_low_c",
+      "interval",
+      "target_c"
+     ],
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "errors": []
+    }
+   ],
+   "transcripts": [
+    {
+     "id": "S1",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":120,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.225542414933443,
+      "input_tokens": 1122,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "3dd9c7fe49c09b962a48c17bdf2184f6a3af60e4079b485f5b485caf0ffd504d",
+      "request_id": "6c6c823a-e912-4a8a-8aaa-d3bbf1b80ff6",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "S2",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":100,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.0319600570946932,
+      "input_tokens": 1112,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "7b5c84c394fd7159f755a8f1151efcc2e49e02d68199ae93a556b23fd95451af",
+      "request_id": "f5c5ed6e-db5a-47a5-b97c-53c34b7ca6ca",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "S3",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:30",
+        "end": "21:30"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:30\",\"end\":\"21:30\"},\"demand_estimate\":150,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.1558235809206963,
+      "input_tokens": 1112,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "d85916ae69b2d23ecb66a2ce9ccdd8c024d2c692359d891daa5ce98e583acf14",
+      "request_id": "f1bdc386-9e99-44bc-9f6d-9a69ba14d185",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:30",
+        "end": "21:30"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "S4",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 80,
+       "band_low_c": 24.0,
+       "band_high_c": 26.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":80,\"band_low_c\":24,\"band_high_c\":26,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.0511505920439959,
+      "input_tokens": 1115,
+      "output_tokens": 122,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "c62868e505b90270d2ce2c8314a5d5c11e1731d2009c230e13006dcc636023aa",
+      "request_id": "a6f86133-664a-4afc-a0d9-5e58dc5bcb13",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 80,
+       "band_low_c": 24,
+       "band_high_c": 26,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "S5",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 200,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":200,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.0619523636996746,
+      "input_tokens": 1111,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "490a8bd0854b1421c1209792f0b14268f4fa489271523c599ed579d5542c6f3b",
+      "request_id": "c0f1a904-d77b-43d6-bbf5-f650f1f23e02",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 200,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "S6",
+     "result": {
+      "request": {
+       "interval": null,
+       "demand_estimate": 75,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": [
+        "What time window should the rooms be open for this evening?",
+        "Which hours should the study rooms be open (start and end time)?"
+       ]
+      },
+      "questions": [
+       "What time window should the rooms be open for this evening?",
+       "Which hours should the study rooms be open (start and end time)?"
+      ],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [
+       "missing hard field: interval"
+      ],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":null,\"demand_estimate\":75,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[\"What time window should the rooms be open for this evening?\"]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.231855347752571,
+      "input_tokens": 1101,
+      "output_tokens": 131,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "4ee593e46a5b6aeed6a7357b3cc07c30d9cdef667798ae0617cb8b1d7789df05",
+      "request_id": "4c08f88e-e1f5-4a57-bbf7-65f9fbe8a69c",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": null,
+       "demand_estimate": 75,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": [
+        "What time window should the rooms be open for this evening?"
+       ]
+      }
+     }
+    },
+    {
+     "id": "S7",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 130,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 25.5,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":130,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":25.5,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.0855963882058859,
+      "input_tokens": 1120,
+      "output_tokens": 129,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "775bd8a2fb21ef76e5932523f499b3d4a0e1edd69cfef0fa33ba4c462eff440d",
+      "request_id": "4a3dd5ea-04b4-4e02-8e9d-8975d7439bc5",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 130,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 25.5,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "S8",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 90,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": 20.0,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":90,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":20,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.444081423804164,
+      "input_tokens": 1110,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "c69d99ad11b23096f7fde81f64da87c77f1562b0314cac47ba38dc895794b856",
+      "request_id": "dd17af13-f0bc-42f7-b08e-7a8b332440d5",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 90,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": 20,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "A1",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 140,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": [
+         [
+          "20:00",
+          "22:00"
+         ]
+        ]
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":140,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[[\"20:00\",\"22:00\"]]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.3293695468455553,
+      "input_tokens": 1114,
+      "output_tokens": 141,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "ccec2548caa77f68468fc2bccd9179de709e22dae428c420fd24c52a00d9ae4f",
+      "request_id": "3b5b4501-efe7-463f-a2b7-104ecd2e1cd0",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 140,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": [
+         [
+          "20:00",
+          "22:00"
+         ]
+        ]
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "A2",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":120,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"high\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.1611868403851986,
+      "input_tokens": 1115,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "d85dedadfed741d483549b02ec5d94c7c93209df94c39652c6c2ee9827e18081",
+      "request_id": "66dec53e-781c-4af6-9377-98d8231c01f0",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "A3",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 110,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "low",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":110,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"low\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.1433849185705185,
+      "input_tokens": 1117,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "60164329a51d548e97f458fcda2f77796dedfbfcf0347c686a153c5f03f560d7",
+      "request_id": "a4b8baea-f6de-4c6f-95fb-a379c799df6a",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 110,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "low",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "A4",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "high"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":100,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"high\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.4822407774627209,
+      "input_tokens": 1114,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "0db98be11198501f59214273387544639b89813bbf6ebd615fca0da214bbc9da",
+      "request_id": "a1a85bae-38ef-4b59-b8da-3062194b0ae7",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "high"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "A5",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "low",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":120,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"low\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.3866801634430885,
+      "input_tokens": 1110,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "ab25abe8132180d923ebc5c94fdaffea4887127bdf88075c65627743e9ef04a1",
+      "request_id": "116d675e-9d14-451a-b194-5289e2b62add",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "low",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "A6",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 160,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "interval.end",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "interval.end",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":160,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"high\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval.end\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.4150710068643093,
+      "input_tokens": 1117,
+      "output_tokens": 133,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "dd2ba7967991d02eff66a7c650c41756defcb9411c56e432d235b6765313e4a9",
+      "request_id": "f9dba544-ec4c-485f-9dd4-c644ed797d50",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 160,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval.end",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "A7",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":120,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.4153941087424755,
+      "input_tokens": 1115,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "6345714f1850c6505854e96e887462ba0c4bcc5283a94086bd7f3ee25a6ee81a",
+      "request_id": "fb83b0e5-b7cd-4564-bfa7-c35e99228875",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "A8",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 90,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": [
+         [
+          "21:00",
+          "22:00"
+         ]
+        ]
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "high"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":90,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[[\"21:00\",\"22:00\"]]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"high\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.600498316809535,
+      "input_tokens": 1126,
+      "output_tokens": 141,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "0e80bccc55ceb9e47cec24f89a8467984da46d46f5499050782ddc35024362f0",
+      "request_id": "b65b1fd8-7be9-4481-8e98-314971a37541",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 90,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": [
+         [
+          "21:00",
+          "22:00"
+         ]
+        ]
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "high"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "C1",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 180,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":180,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.6421076394617558,
+      "input_tokens": 1125,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "38707429207e4ce8fa0eedd741ae2ad2e5a7be5e5e0c62ffc5b3917573cc55d3",
+      "request_id": "4be41e18-31ec-4667-8f64-da764bc58fce",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 180,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "C2",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":100,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.684758648276329,
+      "input_tokens": 1124,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "59cdc37f658625ac15e64d8603e7006c570e6d01d9bc046466ba8f5d0600ecf7",
+      "request_id": "49ffa084-6c3e-4256-95df-a182fb28b59d",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "C3",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 180,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":180,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.1220673024654388,
+      "input_tokens": 1118,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "ac1f38e61c563947fa519268388e6fc6d92f2e0bb1ad7e3e67c0c0483f6d88ff",
+      "request_id": "7b4c668d-c7d2-4473-a2db-cdc8a541b1d0",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 180,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "C4",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 200,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":200,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.294209074229002,
+      "input_tokens": 1111,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "a12cd7ce56a1c5de1c2fe84c03f4d9240299d3b0ab98a3757b99f34add250b8c",
+      "request_id": "d999cba7-0061-4bc2-914a-b604fd83a65a",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 200,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "C5",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 180,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":180,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.388535363599658,
+      "input_tokens": 1128,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "1f9c963be7e8f0400256d9562859f8259109fc3d40f4859d741c90c49e9f2448",
+      "request_id": "32430863-d201-4250-9850-2907c078c7d7",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 180,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "C6",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": null,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": [
+        "What is the expected maximum number of students to provide space for tonight?",
+        "About how many students should we provide seats for?"
+       ]
+      },
+      "questions": [
+       "What is the expected maximum number of students to provide space for tonight?",
+       "About how many students should we provide seats for?"
+      ],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [
+       "missing hard field: demand_estimate"
+      ],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":null,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[\"What is the expected maximum number of students to provide space for tonight?\"]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.4372380264103413,
+      "input_tokens": 1124,
+      "output_tokens": 144,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "a49eb7cf87be26f5a68d619b4a45b7e7b657e84ed894de2c55f7ed25ec71c6be",
+      "request_id": "cb6deefe-50a0-4a9b-bca7-cdc36f938e64",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": null,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": [
+        "What is the expected maximum number of students to provide space for tonight?"
+       ]
+      }
+     }
+    },
+    {
+     "id": "C7",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 140,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":140,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"high\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.4572116900235415,
+      "input_tokens": 1122,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "483e66517489c41a3be03228595d5fd03853776e05daeba184424963a2288ed7",
+      "request_id": "11e12da4-1741-4239-b92d-73c4ff99e3dc",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 140,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "C8",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 140,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":140,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.5580130238085985,
+      "input_tokens": 1129,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "e2916d43147e32e440e8bd5798599bfdb57abff1a00e5f02d0e3abfbbb5fc355",
+      "request_id": "39d70691-a557-4cf9-a56a-325112a524c4",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 140,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "F1",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "low",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":150,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"low\",\"lambda_T\":\"high\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.5711898282170296,
+      "input_tokens": 1135,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "459fcfc5b9c9d1b546abf63cd38c8102ddd44652c2a739a8c1e19f84a74fca71",
+      "request_id": "c61523d5-1c37-4a92-8496-15c07dd170e5",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "low",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "F2",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":120,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"high\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.4066322650760412,
+      "input_tokens": 1109,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "fd4a4045430784df648d02e80f5a904273127fa27f426a7386efb96d0ecf7043",
+      "request_id": "7a1f666f-816b-4d52-a4a2-44959b2d7c44",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "F3",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":100,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.282849607989192,
+      "input_tokens": 1124,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "c8d1b1be35519f577d8504a80c7039f9304e4645fcdad91a354decc991832cd0",
+      "request_id": "50ce9407-6762-47c0-94ae-eb5d7f11a52e",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "F4",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 130,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": 1,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":130,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":1,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.4766829274594784,
+      "input_tokens": 1116,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "b53a1f85c8ab80015f02d2f84e2ee72dd0286edb707618acca8811ef1765db5a",
+      "request_id": "abfae450-d360-46aa-b755-43e0c454a4f0",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 130,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": 1,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "F5",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 180,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":180,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.08774808421731,
+      "input_tokens": 1127,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "c7c00064626512c94749bc9dbd91acc2c5de8d271c9c1014e3fd07b2db134f81",
+      "request_id": "37f0484c-d10d-4938-af84-5d0eb355bd50",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 180,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "F6",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 110,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "low",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":110,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"low\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.4383012913167477,
+      "input_tokens": 1118,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "3c947bf63e6704e99ccb7a0322ff751b77c519afcfed16fdac9c761fcfdd5455",
+      "request_id": "c712fe96-33fd-425c-95b1-781d822458f8",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 110,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "low",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "F7",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":120,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.3323528375476599,
+      "input_tokens": 1113,
+      "output_tokens": 132,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "b292d602872709213a4b3a423db5db10f130cf2ebc19eef353f3b50a76fd1b9c",
+      "request_id": "85b02610-a4a6-4f2c-9d8c-b76002432fb6",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "F8",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "low",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":100,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"low\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.2367648147046566,
+      "input_tokens": 1127,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "c38f8bb5ffb60d081ca4ae9703b4de524cbbd43ad1ff753dd2c0725ed261c818",
+      "request_id": "210f1498-5fc0-4e47-9709-4f00cb17aff4",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 100,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "low",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "I1",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 350,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [
+        "Demand of 350 students exceeds the total capacity of 300 seats across the six study rooms."
+       ],
+       "clarifying_questions": [
+        "The request asks for 350 seats but the six rooms hold only 300 in total; should we cap at 300 or add overflow space?"
+       ]
+      },
+      "questions": [
+       "The request asks for 350 seats but the six rooms hold only 300 in total; should we cap at 300 or add overflow space?"
+      ],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":350,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[\"Demand of 350 students exceeds the total capacity of 300 seats across the six study rooms.\"],\"clarifying_questions\":[\"The request asks for 350 seats but the six rooms hold only 300 in total; should we cap at 300 or add overflow space?\"]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.5256729256361723,
+      "input_tokens": 1111,
+      "output_tokens": 179,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "5f7e4b330f872159ac2f7846acbddca8fb168d11e2022fc6bc2b85e6285ef076",
+      "request_id": "3c8e9937-fe74-49ad-bd53-fcd3b5904bfb",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 350,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [
+        "Demand of 350 students exceeds the total capacity of 300 seats across the six study rooms."
+       ],
+       "clarifying_questions": [
+        "The request asks for 350 seats but the six rooms hold only 300 in total; should we cap at 300 or add overflow space?"
+       ]
+      }
+     }
+    },
+    {
+     "id": "I2",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 22.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_high_c",
+        "band_low_c",
+        "interval"
+       ],
+       "conflicts": [
+        "Target temperature 22 \u00b0C is outside the stated comfort band 24-27 \u00b0C.",
+        "target 22 \u00b0C outside band 24-27 \u00b0C"
+       ],
+       "clarifying_questions": [
+        "Should the target be 22 \u00b0C (outside the 24-27 \u00b0C band) or should it be set within the band, e.g. 26 \u00b0C?"
+       ]
+      },
+      "questions": [
+       "Should the target be 22 \u00b0C (outside the 24-27 \u00b0C band) or should it be set within the band, e.g. 26 \u00b0C?"
+      ],
+      "defaults_filled": [
+       "band_high_c",
+       "band_low_c",
+       "interval"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":120,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":22,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\"],\"conflicts\":[\"Target temperature 22 \u00b0C is outside the stated comfort band 24-27 \u00b0C.\"],\"clarifying_questions\":[\"Should the target be 22 \u00b0C (outside the 24-27 \u00b0C band) or should it be set within the band, e.g. 26 \u00b0C?\"]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.6074190307408571,
+      "input_tokens": 1116,
+      "output_tokens": 184,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "39b7bc1fd5c7dbda1e9d18831123aab7be6a83b758590a3adef6ceb107a44857",
+      "request_id": "e3c8b7bf-7231-40a4-9385-f0e245a6ca9a",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 22,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c"
+       ],
+       "conflicts": [
+        "Target temperature 22 \u00b0C is outside the stated comfort band 24-27 \u00b0C."
+       ],
+       "clarifying_questions": [
+        "Should the target be 22 \u00b0C (outside the 24-27 \u00b0C band) or should it be set within the band, e.g. 26 \u00b0C?"
+       ]
+      }
+     }
+    },
+    {
+     "id": "I3",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": 0,
+        "no_move_windows": [
+         [
+          "18:00",
+          "22:00"
+         ]
+        ]
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [
+        "Closing B201 at 20:00 while students are in it requires relocating seated students, contradicting the no-moves rule"
+       ],
+       "clarifying_questions": [
+        "Should students in B201 be relocated at 20:00 despite the no-moves rule, or should B201 stay open?"
+       ]
+      },
+      "questions": [
+       "Should students in B201 be relocated at 20:00 despite the no-moves rule, or should B201 stay open?"
+      ],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":150,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":0,\"no_move_windows\":[[\"18:00\",\"22:00\"]]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[\"Closing B201 at 20:00 while students are in it requires relocating seated students, contradicting the no-moves rule\"],\"clarifying_questions\":[\"Should students in B201 be relocated at 20:00 despite the no-moves rule, or should B201 stay open?\"]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.3606051001697779,
+      "input_tokens": 1129,
+      "output_tokens": 192,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "fb5cf9131c64eff3a7e3f78e21d603a2929d05699dd45e215a1dda36cffdc15d",
+      "request_id": "4ba396e7-6a8f-4768-9ff8-bbbad3e8115c",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": 0,
+        "no_move_windows": [
+         [
+          "18:00",
+          "22:00"
+         ]
+        ]
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [
+        "Closing B201 at 20:00 while students are in it requires relocating seated students, contradicting the no-moves rule"
+       ],
+       "clarifying_questions": [
+        "Should students in B201 be relocated at 20:00 despite the no-moves rule, or should B201 stay open?"
+       ]
+      }
+     }
+    },
+    {
+     "id": "I4",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 200,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": 3.0,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [
+        "Power cap of 3 kW is likely too low to cool 200 students across six rooms while keeping everyone comfortable"
+       ],
+       "clarifying_questions": [
+        "Is the 3 kW cap a hard limit, or can it be raised to meet the comfort requirement for 200 students?"
+       ]
+      },
+      "questions": [
+       "Is the 3 kW cap a hard limit, or can it be raised to meet the comfort requirement for 200 students?"
+      ],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":200,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":3,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"high\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[\"Power cap of 3 kW is likely too low to cool 200 students across six rooms while keeping everyone comfortable\"],\"clarifying_questions\":[\"Is the 3 kW cap a hard limit, or can it be raised to meet the comfort requirement for 200 students?\"]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.9400900416076183,
+      "input_tokens": 1113,
+      "output_tokens": 180,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "4dabbd39ee25f216dbb039900b6daac831d96b3692ad7f836601a942e4bb2fc0",
+      "request_id": "845b26fa-58ec-4f61-9c29-bbf49f366454",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 200,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": 3,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "high",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [
+        "Power cap of 3 kW is likely too low to cool 200 students across six rooms while keeping everyone comfortable"
+       ],
+       "clarifying_questions": [
+        "Is the 3 kW cap a hard limit, or can it be raised to meet the comfort requirement for 200 students?"
+       ]
+      }
+     }
+    },
+    {
+     "id": "I5",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": 5.0,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":150,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":5,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.3797788321971893,
+      "input_tokens": 1116,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "ed1b10139a4f895ea2ec3854325abfd792911964e5c131904e716e8fd2395298",
+      "request_id": "04e23b99-082f-4185-b7b5-080184ca6c27",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": 5,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "I6",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":120,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.463175566866994,
+      "input_tokens": 1112,
+      "output_tokens": 122,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "b38adb314fcd0968e09d8ddae9eabdf4015476320840d12c591b028e82f41c82",
+      "request_id": "3330ff17-2166-43dc-a55e-4903b1ba0861",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 120,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "I7",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      },
+      "questions": [],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":150,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":null,\"no_move_windows\":[]},\"weight_levels\":{\"lambda_M\":\"default\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[],\"clarifying_questions\":[]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.587583215907216,
+      "input_tokens": 1113,
+      "output_tokens": 130,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "bdb8cdb94fe3a4011e31adc0978a5d808c0b4aef7b096f115d1ec9b076219554",
+      "request_id": "2fcffda2-afca-40f7-99ca-1152a4d2505f",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 150,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": null,
+        "no_move_windows": []
+       },
+       "weight_levels": {
+        "lambda_M": "default",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [],
+       "clarifying_questions": []
+      }
+     }
+    },
+    {
+     "id": "I8",
+     "result": {
+      "request": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 140,
+       "band_low_c": 24.0,
+       "band_high_c": 27.0,
+       "target_c": 26.0,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": 0,
+        "no_move_windows": [
+         [
+          "18:00",
+          "22:00"
+         ]
+        ]
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "band",
+        "band_high_c",
+        "band_low_c",
+        "interval",
+        "target_c"
+       ],
+       "conflicts": [
+        "Keeping students exactly where they sit all evening contradicts putting everyone in Building A by 20:00, which requires relocating seated students"
+       ],
+       "clarifying_questions": [
+        "Should the 'everyone in Building A by 20:00' requirement override the no-move rule, or should students stay put even if that means not all are in Building A?"
+       ]
+      },
+      "questions": [
+       "Should the 'everyone in Building A by 20:00' requirement override the no-move rule, or should students stay put even if that means not all are in Building A?"
+      ],
+      "defaults_filled": [
+       "band",
+       "band_high_c",
+       "band_low_c",
+       "interval",
+       "target_c"
+      ],
+      "errors": [],
+      "source": "L1"
+     },
+     "transcript": {
+      "role": "L1",
+      "text": "{\"interval\":{\"start\":\"18:00\",\"end\":\"22:00\"},\"demand_estimate\":140,\"band_low_c\":24,\"band_high_c\":27,\"target_c\":26,\"energy_budget_kwh\":null,\"power_cap_kw\":null,\"relocation\":{\"max_moves_per_student\":0,\"no_move_windows\":[[\"18:00\",\"22:00\"]]},\"weight_levels\":{\"lambda_M\":\"high\",\"lambda_T\":\"default\",\"lambda_S\":\"default\"},\"defaults_filled\":[\"interval\",\"band_low_c\",\"band_high_c\",\"target_c\"],\"conflicts\":[\"Keeping students exactly where they sit all evening contradicts putting everyone in Building A by 20:00, which requires relocating seated students\"],\"clarifying_questions\":[\"Should the 'everyone in Building A by 20:00' requirement override the no-move rule, or should students stay put even if that means not all are in Building A?\"]}",
+      "model": "deepseek-flash",
+      "cached": false,
+      "latency_s": 1.7549914922565222,
+      "input_tokens": 1120,
+      "output_tokens": 206,
+      "stop_reason": "stop",
+      "error": null,
+      "prompt_hash": "346e2c17b8f919615cddff7bafa0ebb1fb04b65a25815b75f257f6998d08e24e",
+      "request_id": "af3d012e-ae40-4f03-b605-d38fbccbd8cc",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "cache_hit_tokens": 896,
+      "data": {
+       "interval": {
+        "start": "18:00",
+        "end": "22:00"
+       },
+       "demand_estimate": 140,
+       "band_low_c": 24,
+       "band_high_c": 27,
+       "target_c": 26,
+       "energy_budget_kwh": null,
+       "power_cap_kw": null,
+       "relocation": {
+        "max_moves_per_student": 0,
+        "no_move_windows": [
+         [
+          "18:00",
+          "22:00"
+         ]
+        ]
+       },
+       "weight_levels": {
+        "lambda_M": "high",
+        "lambda_T": "default",
+        "lambda_S": "default"
+       },
+       "defaults_filled": [
+        "interval",
+        "band_low_c",
+        "band_high_c",
+        "target_c"
+       ],
+       "conflicts": [
+        "Keeping students exactly where they sit all evening contradicts putting everyone in Building A by 20:00, which requires relocating seated students"
+       ],
+       "clarifying_questions": [
+        "Should the 'everyone in Building A by 20:00' requirement override the no-move rule, or should students stay put even if that means not all are in Building A?"
+       ]
+      }
+     }
+    }
+   ],
+   "summary": {
+    "n": 40,
+    "valid_share": 1.0,
+    "field_accuracy": 0.9895833333333333,
+    "field_accuracy_by_category": {
+     "straightforward": 1.0,
+     "ambiguous_preferences": 1.0,
+     "changing_demand": 0.9895833333333333,
+     "equipment_faults": 0.9895833333333333,
+     "infeasible_constraints": 0.96875
+    },
+    "hard_constraint_omissions": 0,
+    "weight_levels_correct_share": 0.925,
+    "weight_direction_correct_share_nondefault": 1.0,
+    "clarification_correct_share": 1.0,
+    "max_questions": 2,
+    "success": {
+     "zero_hard_omissions": true,
+     "weight_direction_ge_90pct": true
+    }
+   }
   }
+ },
+ "meta": {
+  "experiment": "E2",
+  "prompt_hashes": {
+   "L1": "fcc087320195",
+   "L2": "e1a7d2b3f1e8",
+   "L3": "40fa23fd2d33",
+   "L4": "d108e8c8ff09",
+   "L4_explain": "3e001d1635ae",
+   "L5": "5419e186dc3f"
+  },
+  "model": "deepseek-flash",
+  "prompts_frozen": true
  },
  "plan_direction": {
   "structured_form": {
+   "scenario": "fault",
+   "seeds": [
+    0,
+    1,
+    2
+   ],
+   "checks": [
+    {
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "weight": "lambda_M",
+     "level": "high",
+     "metric": "moves",
+     "default_mean": 120.33333333333333,
+     "compiled_mean": 74.0,
+     "delta": -46.33333333333333,
+     "direction": "intended"
+    },
+    {
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "weight": "lambda_T",
+     "level": "high",
+     "metric": "dev_c",
+     "default_mean": 0.022429999999999995,
+     "compiled_mean": 0.027286666666666664,
+     "delta": 0.004856666666666669,
+     "direction": "opposite"
+    },
+    {
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "low",
+      "lambda_S": "default"
+     },
+     "weight": "lambda_T",
+     "level": "low",
+     "metric": "dev_c",
+     "default_mean": 0.022429999999999995,
+     "compiled_mean": 0.022703333333333336,
+     "delta": 0.0002733333333333407,
+     "direction": "intended"
+    },
+    {
+     "levels": {
+      "lambda_M": "default",
+      "lambda_T": "default",
+      "lambda_S": "high"
+     },
+     "weight": "lambda_S",
+     "level": "high",
+     "metric": "switches",
+     "default_mean": 10.666666666666666,
+     "compiled_mean": 10.666666666666666,
+     "delta": 0.0,
+     "direction": "unchanged"
+    },
+    {
+     "levels": {
+      "lambda_M": "low",
+      "lambda_T": "default",
+      "lambda_S": "default"
+     },
+     "weight": "lambda_M",
+     "level": "low",
+     "metric": "moves",
+     "default_mean": 120.33333333333333,
+     "compiled_mean": 126.33333333333333,
+     "delta": 6.0,
+     "direction": "intended"
+    },
+    {
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "high"
+     },
+     "weight": "lambda_M",
+     "level": "high",
+     "metric": "moves",
+     "default_mean": 120.33333333333333,
+     "compiled_mean": 73.33333333333333,
+     "delta": -47.0,
+     "direction": "intended"
+    },
+    {
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "default",
+      "lambda_S": "high"
+     },
+     "weight": "lambda_S",
+     "level": "high",
+     "metric": "switches",
+     "default_mean": 10.666666666666666,
+     "compiled_mean": 8.0,
+     "delta": -2.666666666666666,
+     "direction": "intended"
+    },
+    {
+     "levels": {
+      "lambda_M": "low",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "weight": "lambda_M",
+     "level": "low",
+     "metric": "moves",
+     "default_mean": 120.33333333333333,
+     "compiled_mean": 126.33333333333333,
+     "delta": 6.0,
+     "direction": "intended"
+    },
+    {
+     "levels": {
+      "lambda_M": "low",
+      "lambda_T": "high",
+      "lambda_S": "default"
+     },
+     "weight": "lambda_T",
+     "level": "high",
+     "metric": "dev_c",
+     "default_mean": 0.022429999999999995,
+     "compiled_mean": 0.027286666666666664,
+     "delta": 0.004856666666666669,
+     "direction": "opposite"
+    },
+    {
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "low",
+      "lambda_S": "default"
+     },
+     "weight": "lambda_M",
+     "level": "high",
+     "metric": "moves",
+     "default_mean": 120.33333333333333,
+     "compiled_mean": 74.0,
+     "delta": -46.33333333333333,
+     "direction": "intended"
+    },
+    {
+     "levels": {
+      "lambda_M": "high",
+      "lambda_T": "low",
+      "lambda_S": "default"
+     },
+     "weight": "lambda_T",
+     "level": "low",
+     "metric": "dev_c",
+     "default_mean": 0.022429999999999995,
+     "compiled_mean": 0.022703333333333336,
+     "delta": 0.0002733333333333407,
+     "direction": "intended"
+    }
+   ],
+   "intended_share": 0.7272727272727273
+  },
+  "llm_compiler": {
    "scenario": "fault",
    "seeds": [
     0,

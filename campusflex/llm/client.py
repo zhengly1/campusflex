@@ -53,6 +53,10 @@ DEFAULT_EFFORT = {"L1": "medium", "L2": "low", "L3": "low", "L4": "medium", "L5"
 DEFAULT_MAX_TOKENS = {"L1": 1200, "L2": 2500, "L3": 800, "L4": 600, "L5": 1500, "preflight": 50}
 FALLBACK_MAX_TOKENS = 2000
 REASONER_MIN_MAX_TOKENS = 8000          # deepseek-reasoner counts its chain of thought in max_tokens
+# DeepSeek V4 models (deepseek-flash, deepseek-v4-pro) think before answering unless told not to; the
+# thinking tokens count toward max_tokens and latency. The design needs short JSON replies within the
+# 20 s step budget at temperature 0, so thinking is disabled unless CAMPUSFLEX_DEEPSEEK_THINKING=1.
+DEEPSEEK_THINKING = os.environ.get("CAMPUSFLEX_DEEPSEEK_THINKING", "").strip().lower() in ("1", "true", "yes", "on")
 
 
 @dataclass
@@ -207,6 +211,7 @@ class DeepSeekJSONClient:
         enforce_schema: bool = True,
         effort: dict[str, str] | None = None,  # accepted for interface parity; unused
         client: Any = None,
+        thinking: bool | None = None,
     ):
         import openai  # optional dependency
 
@@ -226,6 +231,7 @@ class DeepSeekJSONClient:
             self.default_max_tokens = FALLBACK_MAX_TOKENS
         self.temperature = temperature
         self.enforce_schema = enforce_schema
+        self.thinking = DEEPSEEK_THINKING if thinking is None else bool(thinking)
 
     @property
     def _reasoner(self) -> bool:
@@ -238,7 +244,8 @@ class DeepSeekJSONClient:
     def generation_settings(self, role: str, effort: str | None = None) -> dict[str, Any]:
         return {"provider": "deepseek", "json_mode": True,
                 "temperature": None if self._reasoner else self.temperature,
-                "max_tokens": self.max_tokens_for(role), "enforce_schema": self.enforce_schema}
+                "max_tokens": self.max_tokens_for(role), "enforce_schema": self.enforce_schema,
+                "thinking": True if self._reasoner else self.thinking}
 
     def complete_json(self, *, role: str, system: str, user: str, schema: dict[str, Any],
                       effort: str | None = None) -> LLMResponse:
@@ -253,6 +260,7 @@ class DeepSeekJSONClient:
         }
         if not self._reasoner:
             kwargs["temperature"] = self.temperature  # the reasoner ignores sampling parameters
+            kwargs["extra_body"] = {"thinking": {"type": "enabled" if self.thinking else "disabled"}}
         t0 = time.monotonic()
 
         def fail(msg: str) -> LLMResponse:
