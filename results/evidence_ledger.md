@@ -2,7 +2,7 @@
 
 | # | Item | LLM | Artifact | Status | Evidence |
 |---|---|---|---|---|---|
-| 0 | v1 core, 160 episodes, 13 tests | No | results/v1/summary.json | Executed | tests: 204 passed |
+| 0 | v1 core, 160 episodes, 13 tests | No | results/v1/summary.json | Executed | tests: 208 passed |
 | 1 | Predicted-vs-realized V log; Ω term | No | results/vgap_dev.csv | Executed |  |
 | 2 | MQTT device layer and its tests | No | tests/test_iot.py | Executed | test_iot.py passed in results/test_results.txt, incl. 3 test(s) through a real MQTT broker |
 | 3 | E5 scripted suite (120 fixtures) | No | results/e5_scripted.json | Executed |  |

@@ -1,0 +1,7952 @@
+{
+ "summary": {
+  "scenario": "fault",
+  "seed": 10,
+  "policy": "C",
+  "mismatch": false,
+  "kwh": 39.7824,
+  "service_pct": 100.0,
+  "dev_c": 0.00548,
+  "V_deg_person_h": 3.2775,
+  "occupied_person_h": 597.667,
+  "unserved_person_min": 0,
+  "moves": 114,
+  "forced_moves": 114,
+  "loss_of_seat": 0,
+  "switches": 8,
+  "hard_violations": 0,
+  "score": 73.4825,
+  "max_occupied_temp_c": 27.205,
+  "score_cfg_weights": 73.4825,
+  "vgap_first_interval": -0.0,
+  "llm_selection_rate": 0.125,
+  "staged_selection_rate": 0.125,
+  "llm_l2_calls": 11,
+  "llm_l2_plans": 48,
+  "llm_l2_valid": 47,
+  "llm_l2_selected": 3,
+  "llm_l2_fallbacks": 0,
+  "llm_l2_empty": 0
+ },
+ "steps": [
+  {
+   "step": 0,
+   "clock": "18:00",
+   "state_version": 1,
+   "demand": 122,
+   "served": 122,
+   "unserved": 0,
+   "counts": [
+    52,
+    0,
+    0,
+    70,
+    0,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "u": [
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "T_start": [
+    26.4,
+    27.0,
+    26.8,
+    26.2,
+    27.0,
+    26.5
+   ],
+   "T_end": [
+    26.1851,
+    27.1286,
+    26.9545,
+    26.0039,
+    27.0784,
+    26.604
+   ],
+   "t_out": 29.469655811102818,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 1.5749999999999997,
+   "V": 0.0,
+   "occ_h": 20.333333333333332,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 2,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 1.575,
+   "pred_V": 0.0,
+   "pred_E": 6.602941,
+   "pred_omega": 0.0,
+   "trigger": "periodic"
+  },
+  {
+   "step": 1,
+   "clock": "18:10",
+   "state_version": 2,
+   "demand": 122,
+   "served": 122,
+   "unserved": 0,
+   "counts": [
+    52,
+    0,
+    0,
+    70,
+    0,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "u": [
+    0.9421,
+    0.0,
+    0.0,
+    0.5473,
+    0.0,
+    0.0
+   ],
+   "T_start": [
+    26.1851,
+    27.1286,
+    26.9545,
+    26.0039,
+    27.0784,
+    26.604
+   ],
+   "T_end": [
+    26.0,
+    27.2462,
+    27.0952,
+    26.0,
+    27.1517,
+    26.7014
+   ],
+   "t_out": 29.386322477769486,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 1.219518331995254,
+   "V": 0.0,
+   "occ_h": 20.333333333333332,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 1.219518,
+   "pred_V": 0.0,
+   "pred_E": 5.939859,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 2,
+   "clock": "18:20",
+   "state_version": 3,
+   "demand": 122,
+   "served": 122,
+   "unserved": 0,
+   "counts": [
+    52,
+    0,
+    0,
+    70,
+    0,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "u": [
+    0.5327,
+    0.0,
+    0.0,
+    0.5345,
+    0.0,
+    0.0
+   ],
+   "T_start": [
+    26.0,
+    27.2462,
+    27.0952,
+    26.0,
+    27.1517,
+    26.7014
+   ],
+   "T_end": [
+    26.0,
+    27.3533,
+    27.223,
+    26.0,
+    27.22,
+    26.7925
+   ],
+   "t_out": 29.30298914443615,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 0.9376380512682215,
+   "V": 0.0,
+   "occ_h": 20.333333333333332,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 0.937638,
+   "pred_V": 0.0,
+   "pred_E": 5.625828,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 3,
+   "clock": "18:30",
+   "state_version": 4,
+   "demand": 142,
+   "served": 142,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    0,
+    12
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "u": [
+    0.5736,
+    0.0,
+    0.0,
+    0.5308,
+    0.0,
+    1.0
+   ],
+   "T_start": [
+    26.0,
+    27.3533,
+    27.223,
+    26.0,
+    27.22,
+    26.7925
+   ],
+   "T_end": [
+    26.0,
+    27.4505,
+    27.3385,
+    26.0,
+    27.2834,
+    26.4632
+   ],
+   "t_out": 29.219655811102818,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 1.453985787893736,
+   "V": 0.0,
+   "occ_h": 23.666666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 1,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 1.453986,
+   "pred_V": 0.0,
+   "pred_E": 7.729092,
+   "pred_omega": 0.0,
+   "trigger": "periodic"
+  },
+  {
+   "step": 4,
+   "clock": "18:40",
+   "state_version": 5,
+   "demand": 161,
+   "served": 161,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    0,
+    31
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "u": [
+    0.5678,
+    0.0,
+    0.0,
+    0.5272,
+    0.0,
+    1.0
+   ],
+   "T_start": [
+    26.0,
+    27.4505,
+    27.3385,
+    26.0,
+    27.2834,
+    26.4632
+   ],
+   "T_end": [
+    26.0,
+    27.5383,
+    27.4426,
+    26.0,
+    27.3423,
+    26.2217
+   ],
+   "t_out": 29.136322477769486,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 1.4475557467414728,
+   "V": 0.0,
+   "occ_h": 26.833333333333332,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 1.447556,
+   "pred_V": 0.0,
+   "pred_E": 7.833564,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 5,
+   "clock": "18:50",
+   "state_version": 6,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.562,
+    0.0,
+    0.0,
+    0.5235,
+    1.0,
+    1.0
+   ],
+   "T_start": [
+    26.0,
+    27.5383,
+    27.4426,
+    26.0,
+    27.3423,
+    26.2217
+   ],
+   "T_end": [
+    26.0,
+    27.6172,
+    27.5358,
+    26.0,
+    26.9928,
+    26.0024
+   ],
+   "t_out": 29.05298914443615,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.0411257055892094,
+   "V": 0.4467151669185606,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 1,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.446715,
+   "pred_first_E": 2.041126,
+   "pred_V": 0.446715,
+   "pred_E": 10.556204,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 6,
+   "clock": "19:00",
+   "state_version": 7,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.5562,
+    0.0,
+    0.0,
+    0.5198,
+    1.0,
+    0.5429
+   ],
+   "T_start": [
+    26.0,
+    27.6172,
+    27.5358,
+    26.0,
+    26.9928,
+    26.0024
+   ],
+   "T_end": [
+    26.0,
+    27.6877,
+    27.6188,
+    26.0,
+    26.6517,
+    26.0
+   ],
+   "t_out": 28.969655811102818,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 1.8366402398575368,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 1.83664,
+   "pred_V": 0.0,
+   "pred_E": 9.927852,
+   "pred_omega": 0.0,
+   "trigger": "periodic"
+  },
+  {
+   "step": 7,
+   "clock": "19:10",
+   "state_version": 8,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.6606,
+    0.0,
+    0.0,
+    0.5861,
+    1.0,
+    0.6515
+   ],
+   "T_start": [
+    26.0,
+    27.6877,
+    27.6188,
+    26.0,
+    26.6517,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    27.8328,
+    27.7839,
+    26.0,
+    26.3692,
+    26.0
+   ],
+   "t_out": 30.473268184731683,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 1.9996781502837087,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 1.999678,
+   "pred_V": 0.0,
+   "pred_E": 10.884441,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 8,
+   "clock": "19:20",
+   "state_version": 9,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.7651,
+    0.0,
+    0.0,
+    0.6524,
+    1.0,
+    0.7648
+   ],
+   "T_start": [
+    26.0,
+    27.8328,
+    27.7839,
+    26.0,
+    26.3692,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    28.0486,
+    28.0266,
+    26.0,
+    26.1434,
+    26.0
+   ],
+   "t_out": 31.976880558360545,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.1648352828264574,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 2.164835,
+   "pred_V": 0.0,
+   "pred_E": 11.902317,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 9,
+   "clock": "19:30",
+   "state_version": 10,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.7593,
+    0.0,
+    0.0,
+    0.6487,
+    0.8297,
+    0.7586
+   ],
+   "T_start": [
+    26.0,
+    28.0486,
+    28.0266,
+    26.0,
+    26.1434,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    28.2489,
+    28.2504,
+    26.0,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.893547225027213,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.064881454853148,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 2.064881,
+   "pred_V": 0.0,
+   "pred_E": 11.579133,
+   "pred_omega": 0.0,
+   "trigger": "periodic"
+  },
+  {
+   "step": 10,
+   "clock": "19:40",
+   "state_version": 11,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.7535,
+    0.0,
+    0.0,
+    0.6451,
+    0.5202,
+    0.7523
+   ],
+   "T_start": [
+    26.0,
+    28.2489,
+    28.2504,
+    26.0,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    28.4343,
+    28.4564,
+    26.0,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.81021389169388,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 1.8906105734169114,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 1.890611,
+   "pred_V": 0.0,
+   "pred_E": 11.343663,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 11,
+   "clock": "19:50",
+   "state_version": 12,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.7477,
+    0.0,
+    0.0,
+    0.6414,
+    0.5144,
+    0.746
+   ],
+   "T_start": [
+    26.0,
+    28.4343,
+    28.4564,
+    26.0,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    28.6058,
+    28.6456,
+    26.0,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.726880558360545,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "E": 1.8783708009647206,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 1.878371,
+   "pred_V": 0.0,
+   "pred_E": 11.270225,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 12,
+   "clock": "20:00",
+   "state_version": 13,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.7419,
+    1.0,
+    0.0,
+    0.0,
+    0.5086,
+    0.7397
+   ],
+   "T_start": [
+    26.0,
+    28.6058,
+    28.6456,
+    26.0,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    28.2015,
+    28.8191,
+    26.2678,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.643547225027213,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.2780585832956404,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 1,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "L2:p3",
+   "source": "L2",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 2.278059,
+   "pred_V": 4.318542,
+   "pred_E": 13.601685,
+   "pred_omega": 0.0,
+   "trigger": "fault,band,periodic"
+  },
+  {
+   "step": 13,
+   "clock": "20:10",
+   "state_version": 14,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.7361,
+    1.0,
+    0.0,
+    0.0,
+    0.5028,
+    0.7334
+   ],
+   "T_start": [
+    26.0,
+    28.2015,
+    28.8191,
+    26.2678,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    27.814,
+    28.9778,
+    26.5292,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.56021389169388,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.2683908273043554,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "L2:p3>1",
+   "source": "carry:L2",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 2.268391,
+   "pred_V": 4.113481,
+   "pred_E": 13.521456,
+   "pred_omega": 0.0,
+   "trigger": "fault,band"
+  },
+  {
+   "step": 14,
+   "clock": "20:20",
+   "state_version": 15,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    0,
+    0,
+    70,
+    16,
+    35
+   ],
+   "open": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "u": [
+    0.7303,
+    1.0,
+    0.0,
+    0.0,
+    0.497,
+    0.7271
+   ],
+   "T_start": [
+    26.0,
+    27.814,
+    28.9778,
+    26.5292,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    27.4422,
+    29.1224,
+    26.7841,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.476880558360545,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.25872307131307,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "L2:p3>1>1",
+   "source": "carry:L2",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 2.258723,
+   "pred_V": 3.973465,
+   "pred_E": 13.441227,
+   "pred_omega": 0.0,
+   "trigger": "fault,band"
+  },
+  {
+   "step": 15,
+   "clock": "20:30",
+   "state_version": 16,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    41,
+    0,
+    0,
+    45,
+    35
+   ],
+   "open": [
+    1,
+    1,
+    0,
+    0,
+    1,
+    1
+   ],
+   "u": [
+    0.7246,
+    1.0,
+    0.0,
+    0.0,
+    0.7027,
+    0.7209
+   ],
+   "T_start": [
+    26.0,
+    27.4422,
+    29.1224,
+    26.7841,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    27.2051,
+    29.2538,
+    26.8695,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.393547225027213,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.261833093099562,
+   "V": 2.2118705807066115,
+   "occ_h": 30.166666666666664,
+   "M": 70,
+   "forced_moves": 70,
+   "K": 1,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101A102B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 2.211871,
+   "pred_first_E": 2.261833,
+   "pred_V": 2.845618,
+   "pred_E": 13.570999,
+   "pred_omega": 0.0,
+   "trigger": "fault,band,periodic"
+  },
+  {
+   "step": 16,
+   "clock": "20:40",
+   "state_version": 17,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    41,
+    0,
+    0,
+    45,
+    35
+   ],
+   "open": [
+    1,
+    1,
+    0,
+    0,
+    1,
+    1
+   ],
+   "u": [
+    0.7188,
+    1.0,
+    0.0,
+    0.0,
+    0.6969,
+    0.7146
+   ],
+   "T_start": [
+    26.0,
+    27.2051,
+    29.2538,
+    26.8695,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    26.976,
+    29.3728,
+    26.9517,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.31021389169388,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.252165337108277,
+   "V": 0.6189181450168733,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101A102B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.618918,
+   "pred_first_E": 2.252165,
+   "pred_V": 0.618918,
+   "pred_E": 13.509666,
+   "pred_omega": 0.0,
+   "trigger": "band"
+  },
+  {
+   "step": 17,
+   "clock": "20:50",
+   "state_version": 18,
+   "demand": 181,
+   "served": 181,
+   "unserved": 0,
+   "counts": [
+    60,
+    41,
+    0,
+    0,
+    45,
+    35
+   ],
+   "open": [
+    1,
+    1,
+    0,
+    0,
+    1,
+    1
+   ],
+   "u": [
+    0.713,
+    1.0,
+    0.0,
+    0.0,
+    0.6911,
+    0.7083
+   ],
+   "T_start": [
+    26.0,
+    26.976,
+    29.3728,
+    26.9517,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    26.7545,
+    29.4801,
+    27.0309,
+    26.0,
+    26.0
+   ],
+   "t_out": 31.226880558360545,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 2.242497581116991,
+   "V": 0.0,
+   "occ_h": 30.166666666666664,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101A102B202B203",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 2.242498,
+   "pred_V": 0.0,
+   "pred_E": 13.198008,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 18,
+   "clock": "21:00",
+   "state_version": 19,
+   "demand": 94,
+   "served": 94,
+   "unserved": 0,
+   "counts": [
+    49,
+    0,
+    0,
+    0,
+    45,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "u": [
+    0.643,
+    0.0,
+    0.0,
+    0.0,
+    0.6853,
+    0.0
+   ],
+   "T_start": [
+    26.0,
+    26.7545,
+    29.4801,
+    27.0309,
+    26.0,
+    26.0
+   ],
+   "T_end": [
+    26.0,
+    26.9831,
+    29.5764,
+    27.1071,
+    26.0,
+    26.1801
+   ],
+   "t_out": 31.143547225027213,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 0.9691844909744898,
+   "V": 0.0,
+   "occ_h": 15.666666666666666,
+   "M": 44,
+   "forced_moves": 44,
+   "K": 2,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 0.969184,
+   "pred_V": 0.0,
+   "pred_E": 5.815107,
+   "pred_omega": 0.0,
+   "trigger": "demand,periodic"
+  },
+  {
+   "step": 19,
+   "clock": "21:10",
+   "state_version": 20,
+   "demand": 94,
+   "served": 94,
+   "unserved": 0,
+   "counts": [
+    49,
+    0,
+    0,
+    0,
+    45,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "u": [
+    0.6372,
+    0.0,
+    0.0,
+    0.0,
+    0.6795,
+    0.0
+   ],
+   "T_start": [
+    26.0,
+    26.9831,
+    29.5764,
+    27.1071,
+    26.0,
+    26.1801
+   ],
+   "T_end": [
+    26.0,
+    27.1954,
+    29.6623,
+    27.1803,
+    26.0,
+    26.351
+   ],
+   "t_out": 31.06021389169388,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 0.9622400465300457,
+   "V": 0.0,
+   "occ_h": 15.666666666666666,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 0.96224,
+   "pred_V": 0.0,
+   "pred_E": 4.8112,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 20,
+   "clock": "21:20",
+   "state_version": 21,
+   "demand": 94,
+   "served": 94,
+   "unserved": 0,
+   "counts": [
+    49,
+    0,
+    0,
+    0,
+    45,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "u": [
+    0.6315,
+    0.0,
+    0.0,
+    0.0,
+    0.6737,
+    0.0
+   ],
+   "T_start": [
+    26.0,
+    27.1954,
+    29.6623,
+    27.1803,
+    26.0,
+    26.351
+   ],
+   "T_end": [
+    26.0,
+    27.3924,
+    29.7383,
+    27.2506,
+    26.0,
+    26.5129
+   ],
+   "t_out": 30.976880558360545,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 0.955295602085601,
+   "V": 0.0,
+   "occ_h": 15.666666666666666,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 0.955296,
+   "pred_V": 0.0,
+   "pred_E": 3.821182,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 21,
+   "clock": "21:30",
+   "state_version": 22,
+   "demand": 94,
+   "served": 94,
+   "unserved": 0,
+   "counts": [
+    49,
+    0,
+    0,
+    0,
+    45,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "u": [
+    0.6257,
+    0.0,
+    0.0,
+    0.0,
+    0.668,
+    0.0
+   ],
+   "T_start": [
+    26.0,
+    27.3924,
+    29.7383,
+    27.2506,
+    26.0,
+    26.5129
+   ],
+   "T_end": [
+    26.0,
+    27.5747,
+    29.8052,
+    27.318,
+    26.0,
+    26.6663
+   ],
+   "t_out": 30.893547225027213,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 0.9483511576411564,
+   "V": 0.0,
+   "occ_h": 15.666666666666666,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 0.948351,
+   "pred_V": 0.0,
+   "pred_E": 2.845053,
+   "pred_omega": 0.0,
+   "trigger": "periodic"
+  },
+  {
+   "step": 22,
+   "clock": "21:40",
+   "state_version": 23,
+   "demand": 94,
+   "served": 94,
+   "unserved": 0,
+   "counts": [
+    49,
+    0,
+    0,
+    0,
+    45,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "u": [
+    0.6199,
+    0.0,
+    0.0,
+    0.0,
+    0.6622,
+    0.0
+   ],
+   "T_start": [
+    26.0,
+    27.5747,
+    29.8052,
+    27.318,
+    26.0,
+    26.6663
+   ],
+   "T_end": [
+    26.0,
+    27.7433,
+    29.8633,
+    27.3827,
+    26.0,
+    26.8114
+   ],
+   "t_out": 30.81021389169388,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 0.9414067131967121,
+   "V": 0.0,
+   "occ_h": 15.666666666666666,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 0.941407,
+   "pred_V": 0.0,
+   "pred_E": 1.882813,
+   "pred_omega": 0.0,
+   "trigger": null
+  },
+  {
+   "step": 23,
+   "clock": "21:50",
+   "state_version": 24,
+   "demand": 94,
+   "served": 94,
+   "unserved": 0,
+   "counts": [
+    49,
+    0,
+    0,
+    0,
+    45,
+    0
+   ],
+   "open": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "u": [
+    0.6141,
+    0.0,
+    0.0,
+    0.0,
+    0.6564,
+    0.0
+   ],
+   "T_start": [
+    26.0,
+    27.7433,
+    29.8633,
+    27.3827,
+    26.0,
+    26.8114
+   ],
+   "T_end": [
+    26.0,
+    27.8987,
+    29.9133,
+    27.4446,
+    26.0,
+    26.9485
+   ],
+   "t_out": 30.726880558360545,
+   "health": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "E": 0.9344622687522675,
+   "V": 0.0,
+   "occ_h": 15.666666666666666,
+   "M": 0,
+   "forced_moves": 0,
+   "K": 0,
+   "LS": 0,
+   "held": false,
+   "violations": 0,
+   "drift": 0,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "ack": true,
+   "pred_first_V": 0.0,
+   "pred_first_E": 0.934462,
+   "pred_V": 0.0,
+   "pred_E": 0.934462,
+   "pred_omega": 0.0,
+   "trigger": null
+  }
+ ],
+ "decisions": [
+  {
+   "step": 0,
+   "state_version": 1,
+   "plan_id": "m:A101B201",
+   "source": "mask",
+   "trigger": "periodic",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "U": 0.0,
+     "E": 6.6029,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 6.7629
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.079,
+     "V": 0.0,
+     "M": 0,
+     "K": 3,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.319
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.126,
+     "V": 0.0,
+     "M": 0,
+     "K": 3,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.366
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A103B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.4381,
+     "V": 0.0,
+     "M": 0,
+     "K": 3,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.6781
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.74,
+     "V": 0.0,
+     "M": 0,
+     "K": 3,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.98
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "L2": 4
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 3.7765510994940996,
+     "input_tokens": 1696,
+     "output_tokens": 654,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "aeb5361bd9d2343a548cd303b799744adaeff6c6a25bebc98ad5d1e8a282b1e9",
+     "request_id": "949ef8c5-ae0b-4fe4-8af5-b11854c6ea50",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 640,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "precool_all_open",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A101",
+           "A102",
+           "A103",
+           "B201",
+           "B202",
+           "B203"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A101",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "B201",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 25.5
+          },
+          "move": null
+         }
+        ],
+        "rationale": "All rooms idle and AC-capable; open full capacity (300 seats vs 122 demand) and pre-cool the largest rooms sequentially toward target so arriving students find comfortable temperatures despite 29.5C outdoors."
+       },
+       {
+        "plan_id": "stage_small_rooms",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "B203",
+           "B202"
+          ],
+          "close": [],
+          "precool": {
+           "room": "B203",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+10",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 25.5
+          },
+          "move": null
+         }
+        ],
+        "rationale": "Stagger opening of smaller rooms with pre-cooling so the coldest rooms are ready first; keeps large rooms in reserve and avoids over-cooling unused space."
+       },
+       {
+        "plan_id": "precool_then_consolidate",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A101",
+           "B201"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A101",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "B201",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+40",
+          "open": [
+           "A102",
+           "A103",
+           "B202",
+           "B203"
+          ],
+          "close": [],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Pre-cool the two largest rooms first to absorb most of the 122 students, then open remaining rooms later if demand persists, reducing simultaneous AC load early."
+       },
+       {
+        "plan_id": "deep_precool_primary",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A101"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A101",
+           "target_c": 23.0
+          },
+          "move": null
+         },
+         {
+          "at": "+10",
+          "open": [
+           "B201"
+          ],
+          "close": [],
+          "precool": {
+           "room": "B201",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [
+           "A102",
+           "A103",
+           "B202",
+           "B203"
+          ],
+          "close": [],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Deep pre-cool the 60-seat A101 and 70-seat B201 to buffer against the hot evening; open overflow rooms only if needed at +30."
+       }
+      ]
+     },
+     "step": 0
+    }
+   ],
+   "forecast": {
+    "demand": [
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 1,
+   "state_version": 2,
+   "plan_id": "m:A101B201",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "U": 0.0,
+     "E": 5.9399,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 5.9399
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 7.4901,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 7.5701
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.2729,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.3529
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A103B201",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.612,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.692
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A102B201",
+     "source": "mask",
+     "U": 0.0,
+     "E": 9.3616,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 9.4416
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 48,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A101 switched 1 step(s) ago"
+      },
+      {
+       "code": "dwell_room",
+       "detail": "B201 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B201 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A101 switched 1 step(s) ago"
+      },
+      {
+       "code": "dwell_room",
+       "detail": "B201 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A101 switched 1 step(s) ago"
+      },
+      {
+       "code": "dwell_room",
+       "detail": "B201 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A101 switched 1 step(s) ago"
+      }
+     ]
+    }
+   ],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 2,
+   "state_version": 3,
+   "plan_id": "m:A101B201",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201",
+     "source": "mask",
+     "U": 0.0,
+     "E": 5.6258,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 5.6258
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 7.2445,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 7.3245
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.0174,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.0974
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A103B201",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.3935,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.4735
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A102B201",
+     "source": "mask",
+     "U": 0.0,
+     "E": 9.1473,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 9.2273
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122,
+     122
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 3,
+   "state_version": 4,
+   "plan_id": "m:A101B201B203",
+   "source": "mask",
+   "trigger": "periodic",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 7.7291,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 7.8091
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.4889,
+     "V": 0.0863,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0006,
+     "score_U": 0.0,
+     "score_J": 9.259
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A103B201",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.8926,
+     "V": 0.0428,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0003,
+     "score_U": 0.0,
+     "score_J": 9.3148
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 10.1728,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 10.3328
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 10.5808,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 10.7408
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "L2": 5
+   },
+   "n_rejected": 4,
+   "rejected_sample": [
+    {
+     "plan_id": "p2",
+     "source": "L2",
+     "violations": [
+      {
+       "code": "capacity",
+       "detail": "move of 34 into A102 exceeds 50 seats (25 already moved in at +20)"
+      }
+     ]
+    },
+    {
+     "plan_id": "L2:p1",
+     "source": "L2",
+     "violations": [
+      {
+       "code": "capacity",
+       "detail": "move of 45 into B202 at +20 exceeds the 33 free seats predicted then"
+      }
+     ]
+    },
+    {
+     "plan_id": "L2:p3",
+     "source": "L2",
+     "violations": [
+      {
+       "code": "capacity",
+       "detail": "move of 35 into B203 at +20 exceeds the 23 free seats predicted then"
+      }
+     ]
+    },
+    {
+     "plan_id": "L2:p4",
+     "source": "L2",
+     "violations": [
+      {
+       "code": "capacity",
+       "detail": "move of 40 into A103 at +30 exceeds the 28 free seats predicted then"
+      }
+     ]
+    }
+   ],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 4.430124707520008,
+     "input_tokens": 1696,
+     "output_tokens": 908,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "f7b9a6b7840d4555fd41f51ca5017ad0aee37074ea8eb3854358b0e1a9f8d6a7",
+     "request_id": "5090861f-de55-4e97-886e-df777bb7195e",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 640,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "p1",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "B202"
+          ],
+          "close": [],
+          "precool": {
+           "room": "B202",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": 45
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [
+           "A102"
+          ],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Pre-cool idle B202, then split the full B201 group: 45 into B202, remaining 25 into A102, freeing B201."
+       },
+       {
+        "plan_id": "p2",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 25
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "B201",
+           "count": 18
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A102",
+           "count": "all"
+          }
+         }
+        ],
+        "rationale": "Open and pre-cool A102; relieve the crowded A101 by moving 18 into B201's freed seats and the rest into A102."
+       },
+       {
+        "plan_id": "p3",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "B203"
+          ],
+          "close": [],
+          "precool": {
+           "room": "B203",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "B203",
+           "count": 35
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A102",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Pre-cool small B203 and A102 to spread A101's 52 occupants, reducing density in the warmest room."
+       },
+       {
+        "plan_id": "p4",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+30",
+          "open": [
+           "B202"
+          ],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Pre-cool A103 for 30 min, then split B201: 40 into A103 and 30 into B202, closing B201."
+       },
+       {
+        "plan_id": "p5",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "B202",
+           "B203"
+          ],
+          "close": [],
+          "precool": {
+           "room": "B202",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "B202",
+           "count": 45
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "B203",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A101",
+           "count": 52
+          }
+         }
+        ],
+        "rationale": "Pre-cool B202; move A101 occupants into B202/B203, then refill A101 from B201 to balance load across working rooms."
+       }
+      ]
+     },
+     "step": 3
+    }
+   ],
+   "forecast": {
+    "demand": [
+     142,
+     142,
+     142,
+     142,
+     142,
+     142,
+     142,
+     142,
+     142
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 4,
+   "state_version": 5,
+   "plan_id": "m:A101B201B203",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 7.8336,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 7.8336
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 10.3244,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 10.4044
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A103B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 10.7558,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 10.8358
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A102B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 11.5125,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 11.5925
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.2466,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 13.4066
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 32,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B203 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B203 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B203 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B203 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B203 switched 1 step(s) ago"
+      }
+     ]
+    }
+   ],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     161,
+     161,
+     161,
+     161,
+     161,
+     161,
+     161,
+     161,
+     161
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 5,
+   "state_version": 6,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 10.5562,
+     "V": 0.4467,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0025,
+     "score_U": 0.0,
+     "score_J": 14.2099
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A103B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 10.9947,
+     "V": 0.6322,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0035,
+     "score_U": 0.0,
+     "score_J": 16.1326
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.5367,
+     "V": 0.4467,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0025,
+     "score_U": 0.0,
+     "score_J": 17.2704
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 14.2967,
+     "V": 0.4467,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0025,
+     "score_U": 0.0,
+     "score_J": 18.0304
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A102B201B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 11.7567,
+     "V": 0.853,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0047,
+     "score_U": 0.0,
+     "score_J": 18.6606
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 6,
+   "state_version": 7,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "trigger": "periodic",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 9.9279,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 9.9279
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 12.9575,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 13.0375
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.7203,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 13.8003
+    },
+    {
+     "rank": 4,
+     "plan_id": "L2:s4",
+     "source": "L2",
+     "U": 0.0,
+     "E": 13.7592,
+     "V": 0.0,
+     "M": 16,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 14.8792
+    },
+    {
+     "rank": 5,
+     "plan_id": "L2:s2",
+     "source": "L2",
+     "U": 0.0,
+     "E": 12.8619,
+     "V": 0.0,
+     "M": 35,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 15.1219
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "L2": 4
+   },
+   "n_rejected": 32,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B202 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B202 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B202 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B202 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B202 switched 1 step(s) ago"
+      }
+     ]
+    }
+   ],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 2.9382003992795944,
+     "input_tokens": 1960,
+     "output_tokens": 599,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "a3d63f535be0550fea68ed219618db6bd890ccdb0008199068f20a5dd209005a",
+     "request_id": "229406e1-2856-4f67-96ce-e59a78c6b82e",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 1280,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "s1",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A102",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Pre-cool idle A102 (50 seats) then relocate the full B203 group (35) into it, relieving the warmest packed room while staying within capacity."
+       },
+       {
+        "plan_id": "s2",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A103",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Alternative: pre-cool A103 (40 seats) and move all 35 B203 occupants there, leaving A102 free as a buffer."
+       },
+       {
+        "plan_id": "s3",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A102",
+           "count": 20
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A102",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Split B203 into A102 in two ordered moves (20 then remaining 15) to keep each move within free seats."
+       },
+       {
+        "plan_id": "s4",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "A102",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B202"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Consolidate the lightly loaded B202 (16) into pre-cooled A102, freeing B202 as spare capacity for later steps."
+       }
+      ]
+     },
+     "step": 6
+    }
+   ],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 7,
+   "state_version": 8,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 10.8844,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 10.8844
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 14.4997,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 14.5797
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 15.3377,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 15.4177
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A102A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 18.953,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 19.113
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.2451,
+     "V": 0.4975,
+     "M": 35,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0027,
+     "score_U": 0.0,
+     "score_J": 19.4851
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 8,
+   "state_version": 9,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 11.9023,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 11.9023
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 16.0023,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 16.0823
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 17.0523,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 17.1323
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A102A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 21.1523,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 21.3123
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 14.3325,
+     "V": 1.0535,
+     "M": 35,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0058,
+     "score_U": 0.0,
+     "score_J": 25.0208
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 9,
+   "state_version": 10,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "trigger": "periodic",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 11.5791,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 11.5791
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 15.6791,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 15.7591
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 16.7291,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 16.8091
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A102A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 20.8291,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 20.9891
+    },
+    {
+     "rank": 5,
+     "plan_id": "L2:precool_a103_b202_shift",
+     "source": "L2",
+     "U": 0.0,
+     "E": 15.2636,
+     "V": 0.693,
+     "M": 45,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0038,
+     "score_U": 0.0,
+     "score_J": 23.5879
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "L2": 5
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 4.382185637950897,
+     "input_tokens": 1696,
+     "output_tokens": 802,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "0b9f2d34547552dcef77ea2fc1a5c897c0851ac00d143bf7bfe62834baa8a293",
+     "request_id": "f8326e09-b58d-4dff-97fd-bb634074ec10",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 640,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "precool_a102_relief",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A102",
+           "count": 20
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 30
+          }
+         }
+        ],
+        "rationale": "Pre-cool idle A102 (50 seats) then relieve the two full rooms A101 and B201 into it, reducing density and heat load in the packed rooms."
+       },
+       {
+        "plan_id": "precool_a103_split",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         }
+        ],
+        "rationale": "Pre-cool idle A103 (40 seats) and move 40 of B201's 70 occupants out, halving the densest room's load."
+       },
+       {
+        "plan_id": "precool_a102_b203",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A102",
+           "count": 35
+          }
+         }
+        ],
+        "rationale": "Pre-cool A102 and empty the fully packed B203 (35 seats) into it, giving B203 a fresh cool start and reducing B203's thermal stress."
+       },
+       {
+        "plan_id": "precool_a103_b202_shift",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "A103",
+           "count": 16
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "B202",
+           "count": 29
+          }
+         }
+        ],
+        "rationale": "Pre-cool A103, shift B202's 16 occupants there, then use B202's freed 45 seats to offload 29 from the full A101, balancing density across rooms."
+       },
+       {
+        "plan_id": "precool_a102_a103_dual",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+0",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [
+           "A102",
+           "A103"
+          ],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A102",
+           "count": 20
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 30
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A103",
+           "count": 35
+          }
+         }
+        ],
+        "rationale": "Pre-cool both idle rooms A102 and A103, then spread the three fully packed rooms (A101, B201, B203) into them, cutting peak density and heat accumulation across the evening."
+       }
+      ]
+     },
+     "step": 9
+    }
+   ],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 10,
+   "state_version": 11,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 11.3437,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 11.3437
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 15.4437,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 15.5237
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 16.4937,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 16.5737
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A102A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 20.5937,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 20.7537
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A102B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 14.8644,
+     "V": 2.2475,
+     "M": 35,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0124,
+     "score_U": 0.0,
+     "score_J": 35.1043
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 11,
+   "state_version": 12,
+   "plan_id": "m:A101B201B202B203",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 11.2702,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 11.2702
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 15.3702,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 15.4502
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 16.4202,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 16.5002
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A102A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 20.5202,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 20.6802
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A102B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 14.8073,
+     "V": 2.8824,
+     "M": 35,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0159,
+     "score_U": 0.0,
+     "score_J": 40.1266
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B201B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 12,
+   "state_version": 13,
+   "plan_id": "L2:p3",
+   "source": "L2",
+   "trigger": "fault,band,periodic",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "L2:p3",
+     "source": "L2",
+     "U": 0.0,
+     "E": 13.6017,
+     "V": 4.3185,
+     "M": 70,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0239,
+     "score_U": 0.0,
+     "score_J": 52.51
+    },
+    {
+     "rank": 2,
+     "plan_id": "L2:p1",
+     "source": "L2",
+     "U": 0.0,
+     "E": 13.5795,
+     "V": 13.4274,
+     "M": 70,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0742,
+     "score_U": 0.0,
+     "score_J": 125.3583
+    },
+    {
+     "rank": 3,
+     "plan_id": "L2:p2",
+     "source": "L2",
+     "U": 0.0,
+     "E": 17.3684,
+     "V": 18.3913,
+     "M": 70,
+     "K": 3,
+     "Omega": 0.0,
+     "dev_mean": 0.1016,
+     "score_U": 0.0,
+     "score_J": 168.9391
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.5184,
+     "V": 6.7521,
+     "M": 0,
+     "K": 0,
+     "Omega": 31.1476,
+     "dev_mean": 0.0373,
+     "score_U": 0.0,
+     "score_J": 187.1256
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 12.6184,
+     "V": 6.7521,
+     "M": 0,
+     "K": 1,
+     "Omega": 31.1476,
+     "dev_mean": 0.0373,
+     "score_U": 0.0,
+     "score_J": 191.3056
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "L2": 4
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 2.976861111819744,
+     "input_tokens": 1696,
+     "output_tokens": 711,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "3c86556778f06545252fe02acc74f3eee26f45cc845f473ff4a82b77919f45bc",
+     "request_id": "1db9ca40-3ff8-42ad-a424-e9d1ba66bce6",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 1536,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "p1",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 50
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "B201 AC offline with 70 occupants; pre-cool idle A102 (50 seats) and split B201: 50 to A102, remaining 20 to B202 (29 free seats)."
+       },
+       {
+        "plan_id": "p2",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102",
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 50
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Same split but route the remaining 20 B201 occupants to A103 (40 seats) instead of B202, keeping B202 untouched."
+       },
+       {
+        "plan_id": "p3",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 50
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Longer pre-cool of A102 to 24C before transferring B201 occupants, giving the offline-AC room's students a cooler destination."
+       },
+       {
+        "plan_id": "p4",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 50
+          }
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Quick pre-cool then early evacuation of B201 to reduce heat exposure in the room with failed AC."
+       }
+      ]
+     },
+     "step": 12
+    }
+   ],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": {
+    "plan_id": "p3",
+    "steps": [
+     {
+      "at": "+0",
+      "open": [
+       "A102"
+      ],
+      "close": [],
+      "precool": {
+       "room": "A102",
+       "target_c": 24.0
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [],
+      "move": {
+       "from": "B201",
+       "to": "A102",
+       "count": 50
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [],
+      "move": {
+       "from": "B201",
+       "to": "B202",
+       "count": "all"
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [
+       "B201"
+      ]
+     }
+    ],
+    "rationale": "Longer pre-cool of A102 to 24C before transferring B201 occupants, giving the offline-AC room's students a cooler destination."
+   },
+   "committed": "L2:p3",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 13,
+   "state_version": 14,
+   "plan_id": "L2:p3>1",
+   "source": "carry:L2",
+   "trigger": "fault,band",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "L2:p3>1",
+     "source": "carry:L2",
+     "U": 0.0,
+     "E": 13.5215,
+     "V": 4.1135,
+     "M": 70,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0227,
+     "score_U": 0.0,
+     "score_J": 50.7093
+    },
+    {
+     "rank": 2,
+     "plan_id": "L2:p2",
+     "source": "L2",
+     "U": 0.0,
+     "E": 17.4103,
+     "V": 7.9515,
+     "M": 70,
+     "K": 2,
+     "Omega": 0.3534,
+     "dev_mean": 0.0439,
+     "score_U": 0.0,
+     "score_J": 86.7961
+    },
+    {
+     "rank": 3,
+     "plan_id": "L2:p1",
+     "source": "L2",
+     "U": 0.0,
+     "E": 17.5592,
+     "V": 17.496,
+     "M": 70,
+     "K": 2,
+     "Omega": 1.2012,
+     "dev_mean": 0.0967,
+     "score_U": 0.0,
+     "score_J": 166.6922
+    },
+    {
+     "rank": 4,
+     "plan_id": "L2:p3",
+     "source": "L2",
+     "U": 0.0,
+     "E": 17.3259,
+     "V": 17.6243,
+     "M": 90,
+     "K": 2,
+     "Omega": 1.2012,
+     "dev_mean": 0.0974,
+     "score_U": 0.0,
+     "score_J": 168.6851
+    },
+    {
+     "rank": 5,
+     "plan_id": "L2:p4",
+     "source": "L2",
+     "U": 0.0,
+     "E": 17.3259,
+     "V": 17.6243,
+     "M": 90,
+     "K": 2,
+     "Omega": 1.2012,
+     "dev_mean": 0.0974,
+     "score_U": 0.0,
+     "score_J": 168.6851
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "carry": 1,
+    "L2": 4
+   },
+   "n_rejected": 32,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A102 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A102 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A102 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A102 switched 1 step(s) ago"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B202",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A102 switched 1 step(s) ago"
+      }
+     ]
+    }
+   ],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 3.9352045599371195,
+     "input_tokens": 1696,
+     "output_tokens": 928,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "d30ec4a8d0d0849f8537a70ebf97b166ecf309b26f59cb0e3d66e4d3ac891f31",
+     "request_id": "09b686ca-ccf5-4600-8393-83917e7a96bf",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 640,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "p1",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": 16
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 14
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "B201 AC offline with 70 occupants; pre-cool idle A103, then split B201 across A103 (40), B202 (16 free), A102 (14 of 50 free), and close B201."
+       },
+       {
+        "plan_id": "p2",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+0",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 30
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Longer pre-cool of A103 and A102 before relocating B201 occupants into two cooled rooms (40 + 30)."
+       },
+       {
+        "plan_id": "p3",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": 16
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 14
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A102",
+           "count": 20
+          }
+         }
+        ],
+        "rationale": "Relieve B201 as in p1, then thin the full A101 into A102's remaining free seats to reduce heat load in the warmest occupied room."
+       },
+       {
+        "plan_id": "p4",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": 16
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 14
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A102",
+           "count": 20
+          }
+         }
+        ],
+        "rationale": "Relieve B201 as in p1, then move part of B203 into A102's remaining free seats to spread load away from the full room."
+       }
+      ]
+     },
+     "step": 13
+    }
+   ],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": {
+    "plan_id": "p3",
+    "steps": [
+     {
+      "at": "+0",
+      "open": [
+       "A102"
+      ],
+      "close": [],
+      "precool": {
+       "room": "A102",
+       "target_c": 24.0
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [],
+      "move": {
+       "from": "B201",
+       "to": "A102",
+       "count": 50
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [],
+      "move": {
+       "from": "B201",
+       "to": "B202",
+       "count": "all"
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [
+       "B201"
+      ]
+     }
+    ],
+    "rationale": "Longer pre-cool of A102 to 24C before transferring B201 occupants, giving the offline-AC room's students a cooler destination."
+   },
+   "committed": "L2:p3>1",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 14,
+   "state_version": 15,
+   "plan_id": "L2:p3>1>1",
+   "source": "carry:L2",
+   "trigger": "fault,band",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "L2:p3>1>1",
+     "source": "carry:L2",
+     "U": 0.0,
+     "E": 13.4412,
+     "V": 3.9735,
+     "M": 70,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.022,
+     "score_U": 0.0,
+     "score_J": 49.5089
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.629,
+     "V": 9.1551,
+     "M": 70,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0506,
+     "score_U": 0.0,
+     "score_J": 91.15
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A102A103B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 17.729,
+     "V": 9.1551,
+     "M": 70,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0506,
+     "score_U": 0.0,
+     "score_J": 95.33
+    },
+    {
+     "rank": 4,
+     "plan_id": "L2:p3",
+     "source": "L2",
+     "U": 0.0,
+     "E": 17.3523,
+     "V": 11.8252,
+     "M": 70,
+     "K": 2,
+     "Omega": 0.8932,
+     "dev_mean": 0.0653,
+     "score_U": 0.0,
+     "score_J": 119.887
+    },
+    {
+     "rank": 5,
+     "plan_id": "L2:p1",
+     "source": "L2",
+     "U": 0.0,
+     "E": 17.2523,
+     "V": 19.6874,
+     "M": 70,
+     "K": 2,
+     "Omega": 2.2175,
+     "dev_mean": 0.1088,
+     "score_U": 0.0,
+     "score_J": 187.9813
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "carry": 1,
+    "L2": 4
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 2.9737389478832483,
+     "input_tokens": 1696,
+     "output_tokens": 778,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "cd0b0ffa7f6fc04f55087396371f03255fff1135811ab99192f59322b38726cd",
+     "request_id": "86ed3cf7-7ecb-458f-ae46-d6fe63929ce1",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 1536,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "p1",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 30
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "B201 AC offline with 70 occupants; pre-cool idle A103 (40 seats) and split B201 into A103 (40) and idle A102 (30 of 50 seats)."
+       },
+       {
+        "plan_id": "p2",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": 16
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 14
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Spread B201 occupants across three working-AC rooms (A103 40, B202 16, A102 14) to reduce per-room heat load."
+       },
+       {
+        "plan_id": "p3",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+0",
+          "open": [],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": 30
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Longer pre-cool of A103 and A102 before relocating B201 occupants, giving cooler destinations."
+       },
+       {
+        "plan_id": "p4",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A102",
+           "count": 35
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201",
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Relocate B201 into pre-cooled A103 and shift B203 into A102, consolidating load into working-AC rooms."
+       }
+      ]
+     },
+     "step": 14
+    }
+   ],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": {
+    "plan_id": "p3",
+    "steps": [
+     {
+      "at": "+0",
+      "open": [
+       "A102"
+      ],
+      "close": [],
+      "precool": {
+       "room": "A102",
+       "target_c": 24.0
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [],
+      "move": {
+       "from": "B201",
+       "to": "A102",
+       "count": 50
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [],
+      "move": {
+       "from": "B201",
+       "to": "B202",
+       "count": "all"
+      }
+     },
+     {
+      "at": "+30",
+      "open": [],
+      "close": [
+       "B201"
+      ]
+     }
+    ],
+    "rationale": "Longer pre-cool of A102 to 24C before transferring B201 occupants, giving the offline-AC room's students a cooler destination."
+   },
+   "committed": "L2:p3>1>1",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 15,
+   "state_version": 16,
+   "plan_id": "m:A101A102B202B203",
+   "source": "mask",
+   "trigger": "fault,band,periodic",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.571,
+     "V": 2.8456,
+     "M": 70,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0157,
+     "score_U": 0.0,
+     "score_J": 40.6159
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A102A103B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 17.671,
+     "V": 2.8456,
+     "M": 70,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0157,
+     "score_U": 0.0,
+     "score_J": 44.7959
+    },
+    {
+     "rank": 3,
+     "plan_id": "L2:p3>1>1>1",
+     "source": "carry:L2",
+     "U": 0.0,
+     "E": 13.361,
+     "V": 3.9021,
+     "M": 70,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0216,
+     "score_U": 0.0,
+     "score_J": 48.8576
+    },
+    {
+     "rank": 4,
+     "plan_id": "L2:p4",
+     "source": "L2",
+     "U": 0.0,
+     "E": 17.0573,
+     "V": 24.0741,
+     "M": 70,
+     "K": 2,
+     "Omega": 3.1106,
+     "dev_mean": 0.133,
+     "score_U": 0.0,
+     "score_J": 226.4525
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A102A103B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 15.4468,
+     "V": 35.0554,
+     "M": 105,
+     "K": 3,
+     "Omega": 1.2421,
+     "dev_mean": 0.1937,
+     "score_U": 0.0,
+     "score_J": 307.3985
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "carry": 1,
+    "L2": 4
+   },
+   "n_rejected": 3,
+   "rejected_sample": [
+    {
+     "plan_id": "L2:p1",
+     "source": "L2",
+     "violations": [
+      {
+       "code": "capacity",
+       "detail": "move of 30 into B202 at +20 exceeds the 29 free seats predicted then"
+      }
+     ]
+    },
+    {
+     "plan_id": "L2:p2",
+     "source": "L2",
+     "violations": [
+      {
+       "code": "capacity",
+       "detail": "move of 30 into B202 at +30 exceeds the 29 free seats predicted then"
+      }
+     ]
+    },
+    {
+     "plan_id": "L2:p3",
+     "source": "L2",
+     "violations": [
+      {
+       "code": "capacity",
+       "detail": "move of 30 into B202 at +10 exceeds the 29 free seats predicted then"
+      }
+     ]
+    }
+   ],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 3.2699913289397955,
+     "input_tokens": 1696,
+     "output_tokens": 738,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "b3c02c1e11e45eac77c01f82ec7e816e5ce30069f0c1837de481e3cdb45288d4",
+     "request_id": "035db3a0-1204-4fc3-a318-dca315c0bdb3",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 640,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "p1",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "B201 AC offline and warm; pre-cool idle A103, split its 70 occupants into A103 (40) and B202 (30 free seats), then close B201."
+       },
+       {
+        "plan_id": "p2",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Same split as p1 but with a longer pre-cool to 24C before transferring B201 occupants, giving A103 more thermal headroom."
+       },
+       {
+        "plan_id": "p3",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Faster relief: brief pre-cool of A103 then immediate split of B201 occupants out of the faulty room."
+       },
+       {
+        "plan_id": "p4",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A103",
+           "count": 40
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "B202",
+           "count": 16
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B201",
+           "to": "A102",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B201"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Spread B201 occupants across A103, B202 and idle A102 to keep each destination well within comfort and capacity."
+       }
+      ]
+     },
+     "step": 15
+    }
+   ],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101A102B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 16,
+   "state_version": 17,
+   "plan_id": "m:A101A102B202B203",
+   "source": "mask",
+   "trigger": "band",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.5097,
+     "V": 0.6189,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0034,
+     "score_U": 0.0,
+     "score_J": 18.461
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A102A103B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 17.6097,
+     "V": 0.6189,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0034,
+     "score_U": 0.0,
+     "score_J": 22.641
+    },
+    {
+     "rank": 3,
+     "plan_id": "L2:s3",
+     "source": "L2",
+     "U": 0.0,
+     "E": 16.5057,
+     "V": 11.9159,
+     "M": 35,
+     "K": 2,
+     "Omega": 1.2831,
+     "dev_mean": 0.0658,
+     "score_U": 0.0,
+     "score_J": 119.2252
+    },
+    {
+     "rank": 4,
+     "plan_id": "L2:s1",
+     "source": "L2",
+     "U": 0.0,
+     "E": 16.1377,
+     "V": 21.3082,
+     "M": 35,
+     "K": 2,
+     "Omega": 2.457,
+     "dev_mean": 0.1177,
+     "score_U": 0.0,
+     "score_J": 198.6914
+    },
+    {
+     "rank": 5,
+     "plan_id": "L2:s2",
+     "source": "L2",
+     "U": 0.0,
+     "E": 16.06,
+     "V": 25.188,
+     "M": 51,
+     "K": 2,
+     "Omega": 3.8878,
+     "dev_mean": 0.1392,
+     "score_U": 0.0,
+     "score_J": 236.3351
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "L2": 4
+   },
+   "n_rejected": 56,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "41 moves from A102 but only 0 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "41 moves from A102 but only 0 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "41 moves from A102 but only 0 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "B201 switched 1 step(s) ago"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "41 moves from A102 but only 0 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    }
+   ],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 2.841723443940282,
+     "input_tokens": 1895,
+     "output_tokens": 639,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "7d334255b1b49068e273b4f07130864a05ce82e002b9550857fa604924d1c421",
+     "request_id": "8716b12d-5f52-450b-9803-59221da75c36",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 640,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "s1",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A103",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "B203 is full and warm; A103 idle with working AC, pre-cooled then absorbs all 35 B203 occupants (40 seats)."
+       },
+       {
+        "plan_id": "s2",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "A103",
+           "count": 16
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A103",
+           "count": 24
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Relieve the two warmest full rooms into pre-cooled A103: 16 from B202 then 24 from B203, fitting 40 seats exactly."
+       },
+       {
+        "plan_id": "s3",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A103",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Delayed transfer: give A103 longer to cool before moving all 35 B203 occupants, reducing peak heat load timing."
+       },
+       {
+        "plan_id": "s4",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.0
+          },
+          "move": null
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A103",
+           "count": 20
+          }
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "A103",
+           "count": 16
+          }
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Early split: 20 from B203 plus 16 from B202 into pre-cooled A103 (36 of 40 seats), easing both warm rooms sooner."
+       }
+      ]
+     },
+     "step": 16
+    }
+   ],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101A102B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 17,
+   "state_version": 18,
+   "plan_id": "m:A101A102B202B203",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101A102B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.198,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 13.198
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101A102B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 13.798,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 13.878
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A102A103B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 17.298,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 17.378
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A102A103B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 17.898,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 18.058
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A102B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 11.7925,
+     "V": 9.3489,
+     "M": 35,
+     "K": 2,
+     "Omega": 3.5332,
+     "dev_mean": 0.0517,
+     "score_U": 0.0,
+     "score_J": 102.9765
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 48,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "41 moves from A102 but only 0 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "41 moves from A102 but only 0 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "41 moves from A102 but only 0 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "41 moves from A102 but only 0 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 16 students are movable"
+      }
+     ]
+    }
+   ],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181,
+     181
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101A102B202B203",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 18,
+   "state_version": 19,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "trigger": "demand,periodic",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 5.8151,
+     "V": 0.0,
+     "M": 44,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.6151
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 7.1736,
+     "V": 0.0,
+     "M": 29,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.9936
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 5.6306,
+     "V": 0.0,
+     "M": 55,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 9.0906
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 6.4151,
+     "V": 0.0,
+     "M": 44,
+     "K": 3,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 9.2951
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 7.7736,
+     "V": 0.0,
+     "M": 29,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 9.6736
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "L2": 5
+   },
+   "n_rejected": 0,
+   "rejected_sample": [],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 3.6783841531723738,
+     "input_tokens": 1696,
+     "output_tokens": 728,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "5fb0783cefb65da4b7c7bcd806f3bb02ee87909ef7455a40656a26c002ca6621",
+     "request_id": "d7774921-7e9f-444d-b050-5bf8742be80a",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 640,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "precool-A103-relieve-A102",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A102",
+           "to": "A103",
+           "count": 15
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A102",
+           "to": "A101",
+           "count": 14
+          }
+         }
+        ],
+        "rationale": "A102 is warmest (26.75C) and near capacity; pre-cool idle A103 then split A102's occupants into A103 and A101 to reduce heat load and restore comfort margin."
+       },
+       {
+        "plan_id": "precool-A103-relieve-A102-single",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A102",
+           "to": "A103",
+           "count": "all"
+          }
+         }
+        ],
+        "rationale": "Simpler variant: pre-cool A103 and move all of A102's 29 occupants into it (40 seats), emptying the warmest room."
+       },
+       {
+        "plan_id": "precool-A103-relieve-B202",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "A103",
+           "count": 15
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "B203",
+           "count": 11
+          }
+         }
+        ],
+        "rationale": "B202 is at 26.0C with 26 occupants; pre-cool A103 and redistribute B202 occupants into A103 and B203 to lower density and thermal load."
+       },
+       {
+        "plan_id": "precool-A103-consolidate-B203",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B203",
+           "to": "A103",
+           "count": "all"
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [
+           "B203"
+          ],
+          "precool": null,
+          "move": null
+         }
+        ],
+        "rationale": "Consolidate the lightly loaded B203 (15 occupants) into pre-cooled A103, freeing B203 and reducing simultaneous cooling load."
+       },
+       {
+        "plan_id": "precool-A103-relieve-A101",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A103",
+           "count": 20
+          }
+         }
+        ],
+        "rationale": "A101 holds 24 occupants at 26.0C; pre-cool A103 and shift 20 occupants there to lower A101 density and hold comfort through the evening."
+       }
+      ]
+     },
+     "step": 18
+    }
+   ],
+   "forecast": {
+    "demand": [
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B202",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 19,
+   "state_version": 20,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 4.8112,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 4.8112
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 5.3112,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 5.3912
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101A103B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.2279,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.3079
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101A103B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 8.7279,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 8.8879
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 60,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 24 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_room",
+       "detail": "A102 switched 1 step(s) ago"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 24 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 24 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 24 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    }
+   ],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B202",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 20,
+   "state_version": 21,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 3.8212,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 3.8212
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 4.2212,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 4.3012
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 5.0196,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 5.0996
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 5.4196,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 5.5796
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 6.5545,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 6.6345
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 48,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 24 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 24 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 24 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 24 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    }
+   ],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B202",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 21,
+   "state_version": 22,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "trigger": "periodic",
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 2.8451,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 2.8451
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 3.1451,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 3.2251
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 3.9552,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 4.0352
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 4.2552,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 4.4152
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 4.8951,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 4.9751
+    }
+   ],
+   "n_candidates": {
+    "mask": 64,
+    "L2": 5
+   },
+   "n_rejected": 48,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    }
+   ],
+   "llm": [
+    {
+     "role": "L2",
+     "text": "",
+     "model": "deepseek-flash",
+     "cached": true,
+     "latency_s": 3.987755548208952,
+     "input_tokens": 1696,
+     "output_tokens": 789,
+     "stop_reason": "stop",
+     "error": null,
+     "prompt_hash": "f6f7467f94a447934415e75dd51c1ff673824a1f07c1018345516ae0a3e85ced",
+     "request_id": "4fb2dd68-51b4-4179-8277-f088754bd498",
+     "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+     "cache_hit_tokens": 640,
+     "data": {
+      "plans": [
+       {
+        "plan_id": "precool-A102-spill",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A102",
+           "count": 10
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "A102",
+           "count": 10
+          }
+         }
+        ],
+        "rationale": "A101 and B202 are near capacity; pre-cool idle A102 and shift a few students to relieve crowding and reduce heat load in the full rooms."
+       },
+       {
+        "plan_id": "precool-A103-relief",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "A103",
+           "count": 15
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A103",
+           "count": 10
+          }
+         }
+        ],
+        "rationale": "A103 is idle with working AC; pre-cool it and move students out of the two fullest rooms to lower their temperatures."
+       },
+       {
+        "plan_id": "precool-B203-spill",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "B203"
+          ],
+          "close": [],
+          "precool": {
+           "room": "B203",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "B203",
+           "count": 20
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "B203",
+           "count": 10
+          }
+         }
+        ],
+        "rationale": "B203 is idle and cool; pre-cool and use its 35 seats to relieve B202 (full) and A101."
+       },
+       {
+        "plan_id": "precool-A102-then-A103",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "A102"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A102",
+           "target_c": 25.0
+          },
+          "move": null
+         },
+         {
+          "at": "+0",
+          "open": [
+           "A103"
+          ],
+          "close": [],
+          "precool": {
+           "room": "A103",
+           "target_c": 25.5
+          },
+          "move": null
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "A102",
+           "count": 20
+          }
+         },
+         {
+          "at": "+20",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "A101",
+           "to": "A103",
+           "count": 15
+          }
+         }
+        ],
+        "rationale": "Pre-cool both idle A-wing rooms and split the overflow from the two full rooms across them."
+       },
+       {
+        "plan_id": "precool-B203-early",
+        "steps": [
+         {
+          "at": "+0",
+          "open": [
+           "B203"
+          ],
+          "close": [],
+          "precool": {
+           "room": "B203",
+           "target_c": 24.5
+          },
+          "move": null
+         },
+         {
+          "at": "+10",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "B203",
+           "count": 15
+          }
+         },
+         {
+          "at": "+30",
+          "open": [],
+          "close": [],
+          "precool": null,
+          "move": {
+           "from": "B202",
+           "to": "B203",
+           "count": 10
+          }
+         }
+        ],
+        "rationale": "Staged relief of B202 into pre-cooled B203, spreading moves over time to keep B202 below capacity while its temperature recovers."
+       }
+      ]
+     },
+     "step": 21
+    }
+   ],
+   "forecast": {
+    "demand": [
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B202",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 22,
+   "state_version": 23,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 1.8828,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 1.8828
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 2.0828,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 2.1628
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 2.8661,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 2.9461
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 3.0661,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 3.2261
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 3.2495,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 3.3295
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 48,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    }
+   ],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B202",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  },
+  {
+   "step": 23,
+   "state_version": 24,
+   "plan_id": "m:A101B202",
+   "source": "mask",
+   "trigger": null,
+   "ranking": [
+    {
+     "rank": 1,
+     "plan_id": "m:A101B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 0.9345,
+     "V": 0.0,
+     "M": 0,
+     "K": 0,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 0.9345
+    },
+    {
+     "rank": 2,
+     "plan_id": "m:A101B201B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 1.0345,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 1.1145
+    },
+    {
+     "rank": 3,
+     "plan_id": "m:A101B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 1.4261,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 1.5061
+    },
+    {
+     "rank": 4,
+     "plan_id": "m:A101B201B202B203",
+     "source": "mask",
+     "U": 0.0,
+     "E": 1.5261,
+     "V": 0.0,
+     "M": 0,
+     "K": 2,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 1.6861
+    },
+    {
+     "rank": 5,
+     "plan_id": "m:A101A103B202",
+     "source": "mask",
+     "U": 0.0,
+     "E": 1.6178,
+     "V": 0.0,
+     "M": 0,
+     "K": 1,
+     "Omega": 0.0,
+     "dev_mean": 0.0,
+     "score_U": 0.0,
+     "score_J": 1.6978
+    }
+   ],
+   "n_candidates": {
+    "mask": 64
+   },
+   "n_rejected": 48,
+   "rejected_sample": [
+    {
+     "plan_id": "m:none",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A101",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A102",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:A103",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    },
+    {
+     "plan_id": "m:B201",
+     "source": "mask",
+     "violations": [
+      {
+       "code": "dwell_student",
+       "detail": "49 moves from A101 but only 39 students are movable"
+      },
+      {
+       "code": "dwell_student",
+       "detail": "45 moves from B202 but only 26 students are movable"
+      }
+     ]
+    }
+   ],
+   "llm": [],
+   "forecast": {
+    "demand": [
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94,
+     94
+    ],
+    "adjustments": [],
+    "conflicts": []
+   },
+   "notes": {},
+   "macro": null,
+   "committed": "m:A101B202",
+   "ack": true,
+   "outcomes": {
+    "A101": "ack",
+    "A102": "ack",
+    "A103": "ack",
+    "B201": "ack",
+    "B202": "ack",
+    "B203": "ack"
+   },
+   "rejected": []
+  }
+ ],
+ "counters": {
+  "unvalidated_executed": 0,
+  "rejected": 0,
+  "duplicates": 0,
+  "stale": 0,
+  "no_ack": 0,
+  "drift": 0,
+  "deferred_close": 0,
+  "dropped_moves": 0
+ },
+ "provenance": {
+  "kind": "replay of the live E1 C/D run (recorded replies, no API call)",
+  "arm": "arm_C",
+  "scenario": "fault",
+  "seed": 10,
+  "repeat": 0,
+  "model": "deepseek-flash",
+  "config_hash": "de54345ef023",
+  "verified": true,
+  "steps": 24,
+  "recorded_l2_replies": 11,
+  "replay_misses": 0,
+  "differing_steps": [],
+  "l2_committed_steps": 3
+ }
+}

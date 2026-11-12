@@ -67,6 +67,8 @@ def _run_one(argv: list[str]) -> None:
         from .iot import make_device_layer
 
         layer = make_device_layer(a.device)
+        print(f"device layer: {layer.name}" + (f" (FALLBACK: {layer.fallback_reason})" if layer.fallback else ""),
+              file=sys.stderr)
     r = run_episode(make_scenario(a.scenario, a.seed, mismatch=a.mismatch), make_policy(a.policy, cfg), cfg,
                     device_layer=layer, keep_decisions=bool(a.save))
     if a.save:

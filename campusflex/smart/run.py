@@ -17,13 +17,13 @@ from typing import Any
 
 import numpy as np
 
-from ..config import END_MIN, ROOM_BY_ID, ROOM_IDS, START_MIN, STEP_MIN, PlannerConfig
+from ..config import END_MIN, ROOM_BY_ID, ROOM_IDS, START_MIN, STEP_MIN, PlannerConfig, clock_str
 from .devices import DEVICES, DeviceState
 from .dsa import RoomEstimator, score_detection
 from .iot import SmartIoT
 from .occupants import Occupants, campus_habits
 from .physics import DT_H, E_MAX_LUX, TICK_MIN, SmartPlant
-from .profiles import ProfileStore, slot_of
+from .profiles import ProfileStore, slot_label, slot_of
 from .scheduler import RoomView
 from .sensors import SensorFault, SensorSuite
 
@@ -82,11 +82,12 @@ def _differs(state: DeviceState, device: str, value: dict[str, Any]) -> bool:
 
 def run_day(plan: DayPlan, scheduler: Any, store: ProfileStore | None = None, learn: bool = False,
             habits: dict | None = None, seed: int | None = None, bus: Any = None,
-            models: dict[str, Any] | None = None) -> dict[str, Any]:
+            models: dict[str, Any] | None = None, trace: list[dict[str, Any]] | None = None) -> dict[str, Any]:
     """Simulate one evening; returns metrics, adjustments, anomaly flags and the identified models.
 
     ``models`` (room → ``ThermalRLS``) carries the identified thermal models from evening to
-    evening; without it every evening starts identification from scratch."""
+    evening; without it every evening starts identification from scratch. A ``trace`` list
+    receives one record per tick (``trace_tick``); recording only reads the state."""
     from ..iot.bus import InProcessBus
 
     seed = plan.seed if seed is None else seed
@@ -122,6 +123,8 @@ def run_day(plan: DayPlan, scheduler: Any, store: ProfileStore | None = None, le
             recs = plant.step(minute, t_out, occupancy)
             iot.publish_sensors([sensors.read(recs[r]) for r in ROOM_IDS])
             ests = {r: est[r].update(iot.telemetry[r], t_out, iot.applied[r]) for r in ROOM_IDS}
+            during = {r: plant.devices[r].to_dict() for r in ROOM_IDS} if trace is not None else {}
+            events: list[dict[str, Any]] = []
             # ------------------------------------------------------------ metrics
             for r in ROOM_IDS:
                 rec, n = recs[r], occupancy[r]
@@ -149,6 +152,7 @@ def run_day(plan: DayPlan, scheduler: Any, store: ProfileStore | None = None, le
             for r in ROOM_IDS:
                 for a in occ.react(recs[r], plant.devices[r], slot, ac_available=ac_available[r]):
                     ack = iot.command(r, a.device, a.value, minute, source="user")
+                    events.append(_event(r, a.device, a.value, "user", ack))
                     if ack is None or not ack.ok:
                         if ack is not None and ack.reason == "ac_offline":
                             ac_available[r] = False
@@ -186,9 +190,13 @@ def run_day(plan: DayPlan, scheduler: Any, store: ProfileStore | None = None, le
                     if d == "ac" and value.get("setpoint") is not None and not ac_available[r]:
                         continue
                     ack = iot.command(r, d, value, minute)
+                    events.append(_event(r, d, value, "scheduler", ack))
                     sched_cmds += 1
                     if ack is not None and not ack.ok and ack.reason == "ac_offline":
                         ac_available[r] = False
+            if trace is not None:
+                trace.append(trace_tick(minute, t_out, recs, iot.telemetry, ests, during, events, sensors,
+                                        [f for e in est.values() for f in e.flags if f["minute"] == minute]))
         # ------------------------------------------------------ learn from the day
         if learn and store is not None:
             for (r, sl), acc in slot_acc.items():
@@ -225,6 +233,49 @@ def run_day(plan: DayPlan, scheduler: Any, store: ProfileStore | None = None, le
         "detection": score_detection(flags, plan.faults),
         "identified": {r: ({k: round(v, 3) for k, v in x.items()} if x else None) for r, x in ident.items()},
         "adjustment_log": adjustments,
+    }
+
+
+def _event(room: str, device: str, value: dict[str, Any], by: str, ack: Any) -> dict[str, Any]:
+    return {"room": room, "device": device, "value": dict(value), "by": by,
+            "ok": bool(ack is not None and ack.ok), "reason": "" if ack is None else ack.reason}
+
+
+def _r(x: float | None, nd: int) -> float | None:
+    return None if x is None else round(float(x), nd)
+
+
+def trace_tick(minute: int, t_out: float, recs: dict[str, Any], telemetry: dict[str, dict[str, Any]],
+               ests: dict[str, Any], during: dict[str, dict[str, Any]], events: list[dict[str, Any]],
+               sensors: SensorSuite, flags: list[dict[str, Any]]) -> dict[str, Any]:
+    """One tick of an evening, per-room arrays in ``ROOM_IDS`` order: truth, sensor reading
+    (None = dropout), DSA estimate, the device states applied during the tick, the commands
+    sent at its end (``events``: by user or scheduler) and the faults flagged."""
+    def col(f: Any) -> list[Any]:
+        return [f(r) for r in ROOM_IDS]
+
+    def tel(r: str, k: str, nd: int) -> float | None:
+        return _r(telemetry.get(r, {}).get(k), nd)
+
+    return {
+        "minute": minute, "clock": clock_str(minute), "slot": slot_label(slot_of(minute)),
+        "t_out": round(t_out, 2), "occupancy": col(lambda r: recs[r].occupancy),
+        "temp_true": col(lambda r: _r(recs[r].temp_c, 2)), "temp_sensor": col(lambda r: tel(r, "temp_c", 2)),
+        "temp_est": col(lambda r: _r(ests[r].temp_c, 2)),
+        "co2_true": col(lambda r: _r(recs[r].co2_ppm, 0)), "co2_sensor": col(lambda r: tel(r, "co2_ppm", 0)),
+        "co2_est": col(lambda r: _r(ests[r].co2_ppm, 0)),
+        "lux_true": col(lambda r: _r(recs[r].lux, 0)), "lux_sensor": col(lambda r: tel(r, "lux", 0)),
+        "lux_est": col(lambda r: _r(ests[r].lux, 0)),
+        "setpoint": col(lambda r: during[r]["ac_setpoint"] if during[r]["ac_fan"] > 0 else None),
+        "fan": col(lambda r: during[r]["ac_fan"] if during[r]["ac_setpoint"] is not None else 0),
+        "light": col(lambda r: during[r]["light"]), "vent": col(lambda r: during[r]["vent"]),
+        "curtain": col(lambda r: during[r]["curtain"]), "projector": col(lambda r: int(during[r]["projector"])),
+        "sockets": col(lambda r: int(during[r]["sockets"])),
+        "kw": col(lambda r: _r(sum(recs[r].power_kw.values()), 3)),
+        "suspect": col(lambda r: dict(ests[r].faulty)),
+        "fault_active": col(lambda r: {s: f.kind for s in ("temp", "co2", "lux")
+                                       if (f := sensors.fault_at(r, s, minute)) is not None}),
+        "events": events, "flags": [dict(f) for f in flags],
     }
 
 

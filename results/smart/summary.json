@@ -46,7 +46,7 @@
   "space_plan": "core planner arm A (masks only, no LLM)",
   "tick_min": 2,
   "start_profiles": null,
-  "seconds": 5.1,
+  "seconds": 5.0,
   "note": "simulated estimates on a synthetic campus; occupants' habits are synthetic"
  },
  "eval": {
@@ -746,6 +746,584 @@
      "fan": 2
     }
    ]
+  }
+ ],
+ "profile_grid": [
+  {
+   "room": "A101",
+   "slot": "18:00-19:00",
+   "setpoint": 25.7,
+   "fan": 1,
+   "lux": 315,
+   "curtain": 50,
+   "projector": false,
+   "projector_p": 0.19,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 5.85,
+    "fan": 5.85,
+    "lux": 19.33,
+    "curtain": 3.96,
+    "projector": 3.86
+   }
+  },
+  {
+   "room": "A101",
+   "slot": "19:00-20:00",
+   "setpoint": 24.7,
+   "fan": 1,
+   "lux": 272,
+   "curtain": 0,
+   "projector": true,
+   "projector_p": 0.81,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 22.01,
+    "fan": 22.01,
+    "lux": 5.14,
+    "curtain": 8.26,
+    "projector": 8.05
+   }
+  },
+  {
+   "room": "A101",
+   "slot": "20:00-21:00",
+   "setpoint": 25.1,
+   "fan": 1,
+   "lux": 382,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.47,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 6.21,
+    "fan": 6.21,
+    "lux": 3.39,
+    "curtain": 2.95,
+    "projector": 11.82
+   }
+  },
+  {
+   "room": "A101",
+   "slot": "21:00-22:00",
+   "setpoint": 26.0,
+   "fan": 1,
+   "lux": 487,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.2,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 6.75,
+    "fan": 6.75,
+    "lux": 2.64,
+    "curtain": 2.64,
+    "projector": 5.55
+   }
+  },
+  {
+   "room": "A102",
+   "slot": "18:00-19:00",
+   "setpoint": 25.2,
+   "fan": 1,
+   "lux": 335,
+   "curtain": 50,
+   "projector": false,
+   "projector_p": 0.29,
+   "source": {
+    "setpoint": "slot",
+    "fan": "slot",
+    "lux": "slot",
+    "curtain": "slot",
+    "projector": "slot"
+   },
+   "evidence": {
+    "setpoint": 0.0,
+    "fan": 0.0,
+    "lux": 0.0,
+    "curtain": 0.0,
+    "projector": 0.0
+   }
+  },
+  {
+   "room": "A102",
+   "slot": "19:00-20:00",
+   "setpoint": 24.2,
+   "fan": 2,
+   "lux": 279,
+   "curtain": 10,
+   "projector": true,
+   "projector_p": 0.79,
+   "source": {
+    "setpoint": "slot",
+    "fan": "slot",
+    "lux": "slot",
+    "curtain": "slot",
+    "projector": "slot"
+   },
+   "evidence": {
+    "setpoint": 0.0,
+    "fan": 0.0,
+    "lux": 0.0,
+    "curtain": 0.0,
+    "projector": 0.0
+   }
+  },
+  {
+   "room": "A102",
+   "slot": "20:00-21:00",
+   "setpoint": 24.6,
+   "fan": 2,
+   "lux": 384,
+   "curtain": 30,
+   "projector": true,
+   "projector_p": 0.62,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 10.98,
+    "fan": 10.98,
+    "lux": 2.71,
+    "curtain": 0.77,
+    "projector": 3.38
+   }
+  },
+  {
+   "room": "A102",
+   "slot": "21:00-22:00",
+   "setpoint": 25.5,
+   "fan": 1,
+   "lux": 496,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.15,
+   "source": {
+    "setpoint": "slot",
+    "fan": "slot",
+    "lux": "slot",
+    "curtain": "slot",
+    "projector": "slot"
+   },
+   "evidence": {
+    "setpoint": 0.0,
+    "fan": 0.0,
+    "lux": 0.0,
+    "curtain": 0.0,
+    "projector": 0.0
+   }
+  },
+  {
+   "room": "A103",
+   "slot": "18:00-19:00",
+   "setpoint": 25.2,
+   "fan": 1,
+   "lux": 335,
+   "curtain": 50,
+   "projector": false,
+   "projector_p": 0.29,
+   "source": {
+    "setpoint": "slot",
+    "fan": "slot",
+    "lux": "slot",
+    "curtain": "slot",
+    "projector": "slot"
+   },
+   "evidence": {
+    "setpoint": 0.0,
+    "fan": 0.0,
+    "lux": 0.0,
+    "curtain": 0.0,
+    "projector": 0.0
+   }
+  },
+  {
+   "room": "A103",
+   "slot": "19:00-20:00",
+   "setpoint": 24.5,
+   "fan": 2,
+   "lux": 305,
+   "curtain": 10,
+   "projector": true,
+   "projector_p": 0.84,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 0.63,
+    "fan": 0.63,
+    "lux": 0.63,
+    "curtain": 0.13,
+    "projector": 0.63
+   }
+  },
+  {
+   "room": "A103",
+   "slot": "20:00-21:00",
+   "setpoint": 24.8,
+   "fan": 1,
+   "lux": 381,
+   "curtain": 30,
+   "projector": true,
+   "projector_p": 0.51,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 0.63,
+    "fan": 0.63,
+    "lux": 0.13,
+    "curtain": 0.13,
+    "projector": 0.13
+   }
+  },
+  {
+   "room": "A103",
+   "slot": "21:00-22:00",
+   "setpoint": 25.5,
+   "fan": 1,
+   "lux": 496,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.15,
+   "source": {
+    "setpoint": "slot",
+    "fan": "slot",
+    "lux": "slot",
+    "curtain": "slot",
+    "projector": "slot"
+   },
+   "evidence": {
+    "setpoint": 0.0,
+    "fan": 0.0,
+    "lux": 0.0,
+    "curtain": 0.0,
+    "projector": 0.0
+   }
+  },
+  {
+   "room": "B201",
+   "slot": "18:00-19:00",
+   "setpoint": 25.0,
+   "fan": 1,
+   "lux": 312,
+   "curtain": 60,
+   "projector": false,
+   "projector_p": 0.3,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 34.06,
+    "fan": 34.06,
+    "lux": 36.88,
+    "curtain": 8.29,
+    "projector": 5.09
+   }
+  },
+  {
+   "room": "B201",
+   "slot": "19:00-20:00",
+   "setpoint": 24.0,
+   "fan": 2,
+   "lux": 263,
+   "curtain": 10,
+   "projector": true,
+   "projector_p": 0.96,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 42.44,
+    "fan": 42.44,
+    "lux": 3.49,
+    "curtain": 7.04,
+    "projector": 8.19
+   }
+  },
+  {
+   "room": "B201",
+   "slot": "20:00-21:00",
+   "setpoint": 24.4,
+   "fan": 2,
+   "lux": 374,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.45,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 11.33,
+    "fan": 11.33,
+    "lux": 2.97,
+    "curtain": 2.3,
+    "projector": 11.48
+   }
+  },
+  {
+   "room": "B201",
+   "slot": "21:00-22:00",
+   "setpoint": 25.2,
+   "fan": 1,
+   "lux": 488,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.07,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 4.38,
+    "fan": 4.38,
+    "lux": 2.18,
+    "curtain": 2.18,
+    "projector": 2.69
+   }
+  },
+  {
+   "room": "B202",
+   "slot": "18:00-19:00",
+   "setpoint": 25.0,
+   "fan": 2,
+   "lux": 385,
+   "curtain": 60,
+   "projector": false,
+   "projector_p": 0.29,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "slot"
+   },
+   "evidence": {
+    "setpoint": 1.33,
+    "fan": 1.33,
+    "lux": 0.72,
+    "curtain": 0.65,
+    "projector": 0.0
+   }
+  },
+  {
+   "room": "B202",
+   "slot": "19:00-20:00",
+   "setpoint": 24.0,
+   "fan": 3,
+   "lux": 291,
+   "curtain": 20,
+   "projector": true,
+   "projector_p": 0.84,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 11.52,
+    "fan": 11.52,
+    "lux": 4.07,
+    "curtain": 3.12,
+    "projector": 6.81
+   }
+  },
+  {
+   "room": "B202",
+   "slot": "20:00-21:00",
+   "setpoint": 24.3,
+   "fan": 1,
+   "lux": 382,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.43,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 10.92,
+    "fan": 10.92,
+    "lux": 2.12,
+    "curtain": 2.12,
+    "projector": 7.73
+   }
+  },
+  {
+   "room": "B202",
+   "slot": "21:00-22:00",
+   "setpoint": 24.9,
+   "fan": 1,
+   "lux": 495,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.26,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 3.91,
+    "fan": 3.91,
+    "lux": 1.31,
+    "curtain": 0.77,
+    "projector": 1.79
+   }
+  },
+  {
+   "room": "B203",
+   "slot": "18:00-19:00",
+   "setpoint": 25.5,
+   "fan": 2,
+   "lux": 424,
+   "curtain": 50,
+   "projector": false,
+   "projector_p": 0.36,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 4.66,
+    "fan": 4.66,
+    "lux": 11.18,
+    "curtain": 2.25,
+    "projector": 4.82
+   }
+  },
+  {
+   "room": "B203",
+   "slot": "19:00-20:00",
+   "setpoint": 24.6,
+   "fan": 3,
+   "lux": 278,
+   "curtain": 10,
+   "projector": true,
+   "projector_p": 0.54,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 4.73,
+    "fan": 4.73,
+    "lux": 3.62,
+    "curtain": 6.25,
+    "projector": 7.06
+   }
+  },
+  {
+   "room": "B203",
+   "slot": "20:00-21:00",
+   "setpoint": 25.0,
+   "fan": 2,
+   "lux": 384,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.48,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 6.57,
+    "fan": 6.57,
+    "lux": 3.02,
+    "curtain": 2.25,
+    "projector": 7.84
+   }
+  },
+  {
+   "room": "B203",
+   "slot": "21:00-22:00",
+   "setpoint": 25.7,
+   "fan": 2,
+   "lux": 508,
+   "curtain": 30,
+   "projector": false,
+   "projector_p": 0.07,
+   "source": {
+    "setpoint": "room",
+    "fan": "room",
+    "lux": "room",
+    "curtain": "room",
+    "projector": "room"
+   },
+   "evidence": {
+    "setpoint": 4.71,
+    "fan": 4.71,
+    "lux": 4.46,
+    "curtain": 1.44,
+    "projector": 2.56
+   }
   }
  ],
  "persona_text": {

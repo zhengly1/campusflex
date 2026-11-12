@@ -14,3 +14,5 @@ venv/
 # never commit credentials
 *.env
 .env*
+# output of scripts/demo.sh
+demo_out/

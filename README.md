@@ -46,7 +46,7 @@ printf 'listener 1883 127.0.0.1\nallow_anonymous true\n' > ~/mosquitto.conf
 | 8 | L5 review + E6 (stretch) | `python -m campusflex e6 review --kind random\|llm` · `python -m campusflex e6 evaluate` | partly |
 | – | Tables / ledger | `python -m campusflex tables` · `python -m campusflex ledger` | no |
 | – | Items 5–8 in one go (after `export DEEPSEEK_API_KEY=…`) | `scripts/run_live.sh [--reduced] [--prices IN HIT OUT]` · resume with `--from STEP` | yes |
-| – | One episode / dashboard | `python -m campusflex run --scenario fault --seed 10 --policy arm_B --device bus --save results/demo_episode.json` · `streamlit run campusflex/dashboard/app.py -- --episode results/demo_episode.json` | no |
+| – | One episode / dashboard | `python -m campusflex run --scenario fault --seed 10 --policy arm_B --device bus --save results/demo_episode.json` · `streamlit run campusflex/dashboard/app.py -- --episode results/demo_episode.json [--smart-dir results/smart]` | no |
 
 `scripts/run_live.sh` runs `llm-check` first (it must report `ready`: key, balance, latency and
 an unchanged freeze record), then E1 C/D, E5 live, T1, E2–E4, the L5 review, E6, tables and the
@@ -177,6 +177,33 @@ rewriting the held-out notices after the gate labels later LLM results `prompts_
 `notices_frozen=false`. When a teammate rewrites the held-out notices (`data/notice_corpus.json`, `heldout`), re-run
 `python -m campusflex freeze --force` **before** any held-out run.
 
+## Demo
+
+```bash
+python -m venv --system-site-packages .venv && .venv/bin/pip install -e ".[iot,dashboard]"   # once
+conda create -y -p ~/mosquitto-env -c conda-forge mosquitto=2.0.20                          # once (see Install)
+scripts/demo.sh            # writes only to demo_out/; Ctrl-C stops the dashboard and the broker it started
+```
+
+1. **IoT** – one evening of the planner over MQTT (the script starts Mosquitto from
+   `~/mosquitto-env` when nothing listens on 1883; `device layer: bus:mqtt` confirms the broker
+   was used, a fallback to the in-process bus is printed as such).
+2. **LLM** – the live E1 C/D fault episode (arm C, seed 10) rebuilt from the recorded
+   `deepseek-flash` replies in `results/e1_CD_traces.jsonl.gz` with a client that cannot reach the
+   network (`python -m campusflex.dashboard.replay_llm_demo`): every L2 prompt hashes to a
+   recorded reply and each step must commit the same plan as the live run, otherwise nothing is
+   written. With `DEEPSEEK_API_KEY` set the script also makes one live call per role
+   (`llm-check --repeats 1`, about a cent).
+3. **Smart devices** – the IoT · AI · DSA extension: one line per arm and the learned slot
+   personas are printed, the full JSON goes to `demo_out/smart.log`.
+4. **Dashboard** – Streamlit on `127.0.0.1:8501`, two pages. *Decision trace*: the replayed LLM
+   episode (L2 plans in the ranking, the model's transcripts, a provenance banner); switch to
+   `demo_out/episode_mqtt.json` in the sidebar. *Smart devices*: the extension's results from
+   `demo_out/smart` (see below). From a laptop: `ssh -L 8501:127.0.0.1:8501 <user>@<server>`.
+
+`results/demo_episode_llm.json` is the same verified replay, kept for the dashboard without
+running the script.
+
 ## Smart device extension (IoT · AI · DSA)
 
 `campusflex/smart/` runs every device of every room on top of the core: the core planner
@@ -230,6 +257,16 @@ none in 20 fault-free evenings); identified R and C within 23 % and 11 % of Tabl
 The extension saves no energy against a good occupancy rule: the AC dominates and runs near
 its Table 6 capacity in full rooms.
 
+The dashboard's *Smart devices* page (`campusflex/dashboard/smart_page.py`) shows these
+results in four tabs: the evaluation table, energy by device and the paired comparisons; the
+learning curve, the slot personas and what the memory recommends for every room and slot
+(and whether from the room's own evidence, the slot pool or the default); fault detection and
+thermal identification; and one evaluation evening traced every 2 minutes in every arm
+(`results/smart/evening.json`, `--trace-day`, default seed 100 with a stuck temperature sensor
+and a drifting CO₂ sensor in A101): true / sensor / estimated temperature, CO₂ and
+illuminance, every device's state, each command by user or scheduler, the fault flags, and
+all rooms at a chosen time. Recording the trace does not change the evening.
+
 ## Where each part of the PDF lives
 
 | PDF | Module |
@@ -258,11 +295,11 @@ its Table 6 capacity in full rooms.
 
 ## Tests
 
-`pytest` → 204 passed (`results/test_results.txt`, run with paho-mqtt, streamlit and a local
+`pytest` → 208 passed (`results/test_results.txt`, run with paho-mqtt, streamlit and a local
 Mosquitto 2.0.20 broker; the MQTT tests also pass on amqtt 0.12.1). Without paho-mqtt/a broker
 the three real-broker tests are skipped, and without streamlit the dashboard tests
 (`tests/test_dashboard.py`, Streamlit AppTest: every step of an episode renders, each metric is
-the logged value) are skipped: 199 passed, 4 skipped. `tests/test_core.py` holds the 13 core invariants; the others cover the plan
+the logged value, on both pages) are skipped: 200 passed, 4 skipped. `tests/test_core.py` holds the 13 core invariants; the others cover the plan
 language/validator/graph, IoT layer (incl. drift, partial acks, out-of-order commands), L1/L3/L4
 roles and their grounding, L5, the DeepSeek client (`tests/test_llm_client.py`, fake transport,
 no network), the experiment protocol checks incl. the prompt/notice freeze (`tests/test_experiments.py`),

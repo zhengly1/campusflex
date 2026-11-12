@@ -206,5 +206,29 @@ def test_small_experiment_learns_and_writes_its_memory(tmp_path):
     saved = json.loads((tmp_path / "profiles.json").read_text())
     assert saved["days"] == 4 and saved["n_adjustments"] > 0
     assert (tmp_path / "personas.md").read_text().startswith("# Learned usage personas")
-    warm = S.run_arm(("smart", [], [], saved))                      # a saved memory is a valid starting point
+    assert len(res["profile_grid"]) == 6 * 4 and {"room", "slot", "setpoint", "source"} <= set(res["profile_grid"][0])
+    evg = json.loads((tmp_path / "evening.json").read_text())       # one evaluation evening, traced in every arm
+    assert set(evg["arms"]) == set(S.ARMS) and evg["meta"]["eval_day_index"] == S.TRACE_DAY
+    for x in evg["arms"].values():
+        assert x["metrics"]["adjustments"] == sum(e["by"] == "user" and e["ok"] for t in x["ticks"] for e in t["events"])
+    warm = S.run_arm(("smart", [], [], saved, 0))                   # a saved memory is a valid starting point
     assert warm["profiles"]["days"] == 4
+
+
+def test_trace_records_the_evening_without_changing_it():
+    from campusflex.experiments.smart import eval_faults
+    from campusflex.smart.run import day_plan, run_day
+
+    plan = day_plan(20, "steady", 100)
+    plan.faults = eval_faults(plan, 0)                              # A101: temperature stuck, CO2 drift
+    plain = run_day(plan, SmartScheduler(ProfileStore(), use_dsa=True), models={})
+    ticks: list = []
+    traced = run_day(plan, SmartScheduler(ProfileStore(), use_dsa=True), models={}, trace=ticks)
+    assert traced == plain and len(ticks) == 120
+    events = [e for t in ticks for e in t["events"]]
+    assert sum(e["by"] == "user" and e["ok"] for e in events) == plain["adjustments"]
+    assert sum(e["by"] == "scheduler" for e in events) == plain["scheduler_commands"]
+    assert [f for t in ticks for f in t["flags"]] == plain["flags"]
+    stuck = next(t for t in ticks if t["fault_active"][0].get("temp") == "stuck")
+    assert stuck["clock"] == "19:00" and ticks[-1]["suspect"][0].get("temp") == "stuck"
+    assert all(len(t[f]) == 6 for t in ticks for f in ("temp_true", "temp_sensor", "temp_est", "setpoint", "kw"))

@@ -1,7 +1,8 @@
 """CampusFlex dashboard (Table 11): rooms, temperatures, assignments, candidate ranking with
-source (mask, rule, L2) and the L4 dialogue.
+source (mask, rule, L2) and the L4 dialogue; a second page shows the smart device extension
+(``smart_page.py``).
 
-    streamlit run campusflex/dashboard/app.py -- --episode results/demo_episode.json
+    streamlit run campusflex/dashboard/app.py -- --episode results/demo_episode.json [--smart-dir results/smart]
 
 Every number on screen is read straight from a log field of the episode JSON written by
 ``EpisodeResult.save``; each table column / metric label is the field name it came from.
@@ -39,7 +40,8 @@ def _arg_episode() -> str:
 
 
 @st.cache_data
-def load_episode(path: str) -> dict[str, Any]:
+def load_episode(path: str, mtime: float = 0.0) -> dict[str, Any]:
+    """``mtime`` is part of the cache key, so a regenerated file is read again."""
     return json.loads(Path(path).read_text())
 
 
@@ -48,16 +50,20 @@ def per_room_frame(steps: list[dict[str, Any]], field: str) -> pd.DataFrame:
     return pd.DataFrame.from_dict(rows, orient="index", columns=list(ROOM_IDS))
 
 
-def main() -> None:
-    st.set_page_config(page_title="CampusFlex dashboard", layout="wide")
+def decision_trace() -> None:
     st.title("CampusFlex – decision trace")
     st.caption("Simulated estimates from a synthetic six-room campus. Labels are the log field names.")
     path = st.sidebar.text_input("Episode JSON", _arg_episode())
     if not Path(path).exists():
         st.warning(f"{path} not found. Create it with `python -m campusflex.dashboard.export_demo`.")
         return
-    ep = load_episode(path)
+    ep = load_episode(path, Path(path).stat().st_mtime)
     summ, steps, decs = ep.get("summary", {}), ep.get("steps", []), ep.get("decisions", [])
+    prov = ep.get("provenance")
+    if isinstance(prov, dict):
+        st.info(f"provenance: {prov.get('kind')} – {prov.get('arm')} {prov.get('scenario')} seed {prov.get('seed')}, "
+                f"model {prov.get('model')}, {prov.get('recorded_l2_replies')} recorded L2 replies, "
+                f"verified against the live trace: {prov.get('verified')}")
 
     st.subheader("summary")
     keys = [k for k in ("scenario", "seed", "policy", "kwh", "service_pct", "dev_c", "moves", "switches", "score",
@@ -124,6 +130,13 @@ def main() -> None:
     if dec.get("rejected_sample"):
         st.subheader("rejected plans (decisions[*].rejected_sample)")
         st.json(dec["rejected_sample"], expanded=False)
+
+
+def main() -> None:
+    st.set_page_config(page_title="CampusFlex dashboard", layout="wide")
+    st.navigation([st.Page(decision_trace, title="Decision trace", default=True),
+                   st.Page("smart_page.py", title="Smart devices",
+                           url_path="smart")]).run()
 
 
 main()

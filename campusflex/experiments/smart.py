@@ -13,8 +13,10 @@ Arms: ``static`` (fixed settings while a room is open), ``rule`` (occupancy on/o
 ``smart_profiles_only`` (learned profiles, raw sensor readings) and ``smart`` (both).
 
 Outputs: ``results/smart/summary.json``, ``results/smart/profiles.json`` (the learned
-memory of the ``smart`` arm; ``--profiles`` loads it as the starting point) and
-``results/smart/personas.md``. All values are simulated estimates.
+memory of the ``smart`` arm; ``--profiles`` loads it as the starting point),
+``results/smart/personas.md`` and ``results/smart/evening.json`` (every arm's two-minute
+trace of one evaluation evening, ``--trace-day``, for the dashboard). All values are
+simulated estimates.
 """
 from __future__ import annotations
 
@@ -30,7 +32,7 @@ import numpy as np
 
 from ..config import ROOM_IDS, START_MIN, STEP_MIN
 from ..smart.occupants import campus_habits
-from ..smart.profiles import ATTRS, ProfileStore, narrate
+from ..smart.profiles import ATTRS, SLOTS, ProfileStore, narrate, slot_label
 from ..smart.run import DayPlan, day_plan, identification_error, run_day
 from ..smart.scheduler import RuleScheduler, SmartScheduler, StaticScheduler
 from ..smart.sensors import SensorFault
@@ -44,6 +46,7 @@ EVAL_SEEDS = tuple(range(100, 110))
 ARMS = ("static", "rule", "smart_dsa_only", "smart_profiles_only", "smart")
 FAULT_KINDS = (("temp", "stuck", 0.0), ("co2", "drift", 6.0), ("lux", "spike", 400.0), ("co2", "stuck", 0.0),
                ("temp", "drift", 0.04))
+TRACE_DAY = 0           # evaluation evening traced for the dashboard: seed 100, temperature stuck + CO2 drift
 
 
 def eval_faults(plan: DayPlan, i: int) -> list[SensorFault]:
@@ -92,18 +95,46 @@ def _scheduler(arm: str, store: ProfileStore | None):
     return SmartScheduler(store, use_dsa=True)
 
 
-def run_arm(args: tuple[str, list[DayPlan], list[DayPlan], dict[str, Any] | None]) -> dict[str, Any]:
-    arm, train, ev, start_profiles = args
+def run_arm(args: tuple[str, list[DayPlan], list[DayPlan], dict[str, Any] | None, int]) -> dict[str, Any]:
+    arm, train, ev, start_profiles, trace_day = args
     learns = arm in ("smart", "smart_profiles_only")
     store = (ProfileStore.from_dict(start_profiles) if start_profiles else ProfileStore()) if learns else None
     models: dict[str, Any] = {}
     train_rows = [run_day(p, _scheduler(arm, store), store=store, learn=learns, models=models) for p in train]
-    eval_rows = [run_day(p, _scheduler(arm, store), store=store, learn=False, models=models) for p in ev]
+    ticks: list[dict[str, Any]] = []
+    eval_rows = [run_day(p, _scheduler(arm, store), store=store, learn=False, models=models,
+                         trace=ticks if i == trace_day else None) for i, p in enumerate(ev)]
     for r in train_rows + eval_rows:
         r.pop("adjustment_log", None)
     return {"arm": arm, "train": train_rows, "eval": eval_rows,
             "profiles": store.to_dict() if store is not None else None,
-            "identification": identification_error(eval_rows[-1:])}
+            "identification": identification_error(eval_rows[-1:]), "trace": ticks}
+
+
+def profile_grid(store: ProfileStore) -> list[dict[str, Any]]:
+    """What the learned memory recommends for every room and time slot, and where each value
+    comes from (``room`` evidence, the campus-wide ``slot`` pool, or the ``default``)."""
+    rows = []
+    for room in ROOM_IDS:
+        for k in range(len(SLOTS)):
+            rec = store.recommend(room, k)
+            rows.append({"room": room, "slot": slot_label(k), "setpoint": rec["setpoint"], "fan": rec["fan"],
+                         "lux": round(rec["lux"]), "curtain": rec["curtain"], "projector": rec["projector"],
+                         "projector_p": round(rec["projector_p"], 2), "source": rec["source"],
+                         "evidence": rec["evidence"]})
+    return rows
+
+
+def evening(arms: dict[str, Any], ev: list[DayPlan], trace_day: int) -> dict[str, Any]:
+    """The traced evaluation evening of every arm (same space plan, faults and occupants)."""
+    p = ev[trace_day]
+    keep = ("kwh", "kwh_by_device", "discomfort_pct", "adjustments", "adjustments_by_device",
+            "scheduler_commands", "detection", "flags")
+    return {"meta": {"eval_day_index": trace_day, "day": p.day, "scenario": p.scenario, "seed": p.seed,
+                     "tick_min": 2, "note": "simulated estimates; per-room arrays in the order of rooms"},
+            "rooms": list(ROOM_IDS), "faults": [f.to_dict() for f in p.faults],
+            "arms": {a: {"metrics": {k: arms[a]["eval"][trace_day][k] for k in keep}, "ticks": arms[a]["trace"]}
+                     for a in ARMS}}
 
 
 def _mean(rows: list[dict[str, Any]], key: str, sub: str | None = None) -> float:
@@ -160,12 +191,14 @@ def compare(a_rows: list[dict[str, Any]], b_rows: list[dict[str, Any]]) -> dict[
 
 
 def run(train_days: int = len(TRAIN_SEEDS), eval_days: int = len(EVAL_SEEDS), workers: int | None = None,
-        llm: bool = False, start_profiles: str | None = None, out_dir: Path = OUT) -> dict[str, Any]:
+        llm: bool = False, start_profiles: str | None = None, out_dir: Path = OUT,
+        trace_day: int = TRACE_DAY) -> dict[str, Any]:
     t0 = time.time()
     train, ev = make_plans(train_days, eval_days, workers)
+    trace_day = min(max(0, trace_day), len(ev) - 1)
     start = json.loads(Path(start_profiles).read_text()) if start_profiles else None
     with ProcessPoolExecutor(max_workers=len(ARMS), mp_context=_ctx()) as ex:
-        arms = {r["arm"]: r for r in ex.map(run_arm, [(a, train, ev, start) for a in ARMS])}
+        arms = {r["arm"]: r for r in ex.map(run_arm, [(a, train, ev, start, trace_day) for a in ARMS])}
     habits = campus_habits()
     store = ProfileStore.from_dict(arms["smart"]["profiles"])
     smart_eval = arms["smart"]["eval"]
@@ -200,12 +233,14 @@ def run(train_days: int = len(TRAIN_SEEDS), eval_days: int = len(EVAL_SEEDS), wo
         "faults_injected": [f for r in smart_eval for f in r["faults"]],
         "thermal_identification": arms["smart"]["identification"],
         "personas": text["personas"],
+        "profile_grid": profile_grid(store),
         "persona_text": {"source": text["source"], "lines": text["lines"],
                          **({"llm_note": llm_note} if llm_note else {})},
     }
     out_dir.mkdir(parents=True, exist_ok=True)
     write_json(out_dir / "summary.json", res)
     store.save(out_dir / "profiles.json")
+    (out_dir / "evening.json").write_text(json.dumps(evening(arms, ev, trace_day), separators=(",", ":")))
     (out_dir / "personas.md").write_text(
         "# Learned usage personas per time slot\n\n"
         f"Learned over {train_days} simulated evenings from {store.n_adjustments} manual adjustments "
@@ -220,8 +255,12 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--workers", type=int, default=None)
     ap.add_argument("--llm", action="store_true", help="describe the personas with the LLM (numbers checked)")
     ap.add_argument("--profiles", default=None, help="start from a saved profiles.json instead of an empty memory")
+    ap.add_argument("--out-dir", default=str(OUT),
+                    help="where to write summary.json, profiles.json, personas.md and evening.json")
+    ap.add_argument("--trace-day", type=int, default=TRACE_DAY,
+                    help="index of the evaluation evening traced in evening.json (default %(default)s)")
     a = ap.parse_args(argv)
-    res = run(a.train_days, a.eval_days, a.workers, a.llm, a.profiles)
+    res = run(a.train_days, a.eval_days, a.workers, a.llm, a.profiles, Path(a.out_dir), a.trace_day)
     print(json.dumps({k: res[k] for k in ("eval", "profile_accuracy", "anomaly_detection", "thermal_identification")},
                      indent=1))
 

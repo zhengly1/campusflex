@@ -18,9 +18,9 @@ llm = ["openai>=1.40"]          # DeepSeek (OpenAI-compatible API), the default 
 claude = ["anthropic>=2.0"]      # optional alternative provider
 agent = ["langgraph>=0.2"]
 iot = ["paho-mqtt>=2.0"]
-dashboard = ["streamlit>=1.30", "pandas>=1.5"]
+dashboard = ["streamlit>=1.36", "pandas>=1.5"]   # 1.36: st.navigation
 test = ["pytest>=7"]
-all = ["openai>=1.40", "anthropic>=2.0", "langgraph>=0.2", "paho-mqtt>=2.0", "streamlit>=1.30", "pandas>=1.5", "pytest>=7"]
+all = ["openai>=1.40", "anthropic>=2.0", "langgraph>=0.2", "paho-mqtt>=2.0", "streamlit>=1.36", "pandas>=1.5", "pytest>=7"]
 
 [project.scripts]
 campusflex = "campusflex.__main__:main"
